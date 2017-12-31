@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import { auth, provider } from '../../firebase.js';
 
 class LandingPage extends Component {
+
   login = () => {
     auth.signInWithPopup(provider)
       .then((result) => {
@@ -13,6 +15,17 @@ class LandingPage extends Component {
   }
 
   render() {
+    const { currentUser } = this.props;
+    const userKeys = Object.keys(currentUser);
+    //if currentUser has one key, redirect to edit profile
+    if (userKeys.length === 1) {
+      return <Redirect to="/editProfile" />;
+    }
+    //if currentUser has > 1 key, redirect to dash
+    if (userKeys.length > 1) {
+      return <Redirect to="/dash" />;
+    }
+
     return (
       <div>
         <h1>Mental Health App</h1>
@@ -27,5 +40,6 @@ class LandingPage extends Component {
 export default LandingPage;
 
 LandingPage.propTypes = {
-  loginSuccess: PropTypes.func
+  loginSuccess: PropTypes.func,
+  currentUser: PropTypes.object
 };
