@@ -44,8 +44,7 @@ class EditProfile extends Component {
   }
 
   //logo - from persisted component?
-  //submit button- raisedbutton
-  //clear button- raisedbutton
+
   render() {
     return (<div>
       <form>
@@ -70,6 +69,8 @@ class EditProfile extends Component {
           <p>Select challenges you identify with.</p>
           {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
         </div>
+        <RaisedButton label="Submit Profile" onClick={this.submitProfile} />
+        <RaisedButton label="Clear Profile" onClick={this.clearProfile} />
       </form>
     </div>);
   }
