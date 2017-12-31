@@ -44,7 +44,7 @@ class CreateProfile extends Component {
   }
 
   submitProfile = () => {
-    // if we make another form, things might get hairy in the form object we're accessing from the store? 
+    // if we make another form, things might get hairy in the form object we're accessing from the store?
     const { submitProfile, currentUser, userChallenges, form } = this.props;
     const newUser = Object.assign({}, currentUser, { userChallenges }, form['object Object'].values);
     submitProfile(newUser);
@@ -53,6 +53,10 @@ class CreateProfile extends Component {
   //logo - from persisted component?
 
   render() {
+    const userKeys = Object.keys(this.props.currentUser);
+    if (userKeys.length > 2) {
+      return <Redirect to="/editProfile" />;
+    }
     return (<div>
       <form>
         {/* if user has photo, display photo and button to change it (or adjust button below to say 'Change Photo') */}
