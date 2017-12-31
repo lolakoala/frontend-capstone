@@ -1,16 +1,20 @@
 import EditProfile from '../components/EditProfile/EditProfile.js';
 import { connect } from 'react-redux';
-import { getAllChallenges } from '../actions/actions';
+import { getAllChallenges, addUserChallenge } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
   allChallenges: store.allChallenges,
-  form: store.form
+  form: store.form,
+  userChallenges: store.userChallenges
 });
 
 const mapDispatchToProps = (dispatch) => ({
   getAllChallenges: () => {
     dispatch(getAllChallenges());
+  },
+  addUserChallenge: (challenge) => {
+    dispatch(addUserChallenge(challenge));
   }
 });
 

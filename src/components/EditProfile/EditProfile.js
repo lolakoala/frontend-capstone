@@ -26,8 +26,24 @@ class EditProfile extends Component {
   uploadPhoto = () => {
     //dunno wtf will happen here
   }
+
+  addChallenge = challenge => {
+    // change color of chip
+    // add challenge to userChallenges
+    this.props.addUserChallenge(challenge);
+  }
+
+  renderChip = (challenge, index) => {
+    return (
+      <Chip
+        key={`${challenge}${index}`}
+        onClick={() => { this.addChallenge(challenge); }}>
+        {challenge}
+      </Chip>
+    );
+  }
+
   //logo - from persisted component?
-  //checkboxes of challenges- chips from material ui
   //submit button- raisedbutton
   //clear button- raisedbutton
   render() {
@@ -50,6 +66,10 @@ class EditProfile extends Component {
           rows={5}
           rowsMax={10}
         />
+        <div>
+          <p>Select challenges you identify with.</p>
+          {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
+        </div>
       </form>
     </div>);
   }
@@ -66,5 +86,7 @@ EditProfile.propTypes = {
   currentUser: PropTypes.object,
   getAllChallenges: PropTypes.func,
   allChallenges: PropTypes.array,
-  form: PropTypes.object
+  form: PropTypes.object,
+  addUserChallenge: PropTypes.func,
+  userChallenges: PropTypes.array
 };
