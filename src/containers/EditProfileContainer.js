@@ -4,7 +4,8 @@ import { getAllChallenges } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
-  allChallenges: store.allChallenges
+  allChallenges: store.allChallenges,
+  form: store.form
 });
 
 const mapDispatchToProps = (dispatch) => ({
