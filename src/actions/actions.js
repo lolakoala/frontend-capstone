@@ -3,7 +3,7 @@ const getUser = email => {
   //if user exists, return user object
   //if user doesn't exist, just return object with email
   // if (!user) {
-    return { email };
+  return { email };
   // }
 };
 
