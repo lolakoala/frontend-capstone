@@ -36,3 +36,10 @@ export const getAllChallenges = () => {
     challenges
   };
 };
+
+export const addUserChallenge = challenge => {
+  return {
+    type: 'ADD_USER_CHALLENGE',
+    challenge
+  };
+};
