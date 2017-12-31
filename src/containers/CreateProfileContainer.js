@@ -1,6 +1,11 @@
 import CreateProfile from '../components/CreateProfile/CreateProfile.js';
 import { connect } from 'react-redux';
-import { getAllChallenges, addUserChallenge } from '../actions/actions';
+import {
+  getAllChallenges,
+  addUserChallenge,
+  submitProfile,
+  clearProfile
+} from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
@@ -9,12 +14,18 @@ const mapStateToProps =  store => ({
   userChallenges: store.userChallenges
 });
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   getAllChallenges: () => {
     dispatch(getAllChallenges());
   },
-  addUserChallenge: (challenge) => {
+  addUserChallenge: challenge => {
     dispatch(addUserChallenge(challenge));
+  },
+  submitProfile: newUser => {
+    dispatch(submitProfile(newUser));
+  },
+  clearProfile: () => {
+    dispatch(clearProfile());
   }
 });
 

@@ -43,6 +43,13 @@ class CreateProfile extends Component {
     );
   }
 
+  submitProfile = () => {
+    // if we make another form, things might get hairy in the form object we're accessing from the store? 
+    const { submitProfile, currentUser, userChallenges, form } = this.props;
+    const newUser = Object.assign({}, currentUser, { userChallenges }, form['object Object'].values);
+    submitProfile(newUser);
+  }
+
   //logo - from persisted component?
 
   render() {
@@ -70,7 +77,7 @@ class CreateProfile extends Component {
           {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
         </div>
         <RaisedButton label="Submit Profile" onClick={this.submitProfile} />
-        <RaisedButton label="Clear Profile" onClick={this.clearProfile} />
+        <RaisedButton label="Clear Profile" onClick={this.props.clearProfile} />
       </form>
     </div>);
   }
@@ -89,5 +96,7 @@ CreateProfile.propTypes = {
   allChallenges: PropTypes.array,
   form: PropTypes.object,
   addUserChallenge: PropTypes.func,
-  userChallenges: PropTypes.array
+  userChallenges: PropTypes.array,
+  submitProfile: PropTypes.func,
+  clearProfile: PropTypes.func
 };

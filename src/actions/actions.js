@@ -43,3 +43,21 @@ export const addUserChallenge = challenge => {
     challenge
   };
 };
+
+const postUser = newUser => {
+  // post request to server to post new user
+};
+
+export const submitProfile = newUser => {
+  postUser(newUser);
+  return {
+    type: 'SUBMIT_PROFILE',
+    newUser
+  };
+};
+
+export const clearProfile = () => {
+  return {
+    type: 'CLEAR_PROFILE'
+  };
+};
