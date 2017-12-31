@@ -18,6 +18,7 @@ class EditProfile extends Component {
   //submit button- raisedbutton
   //clear button- raisedbutton
   render() {
+    console.log(this.props.allChallenges)
     return (<div>
 
     </div>);
@@ -28,5 +29,6 @@ export default EditProfile;
 
 EditProfile.propTypes = {
   currentUser: PropTypes.object,
-  getAllChallenges: PropTypes.func
+  getAllChallenges: PropTypes.func,
+  allChallenges: PropTypes.array
 };

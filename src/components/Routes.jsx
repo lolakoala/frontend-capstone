@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 //import all containers/containerless components
 import LandingPageContainer from '../containers/LandingPageContainer';
 import SelectCityContainer from '../containers/SelectCityContainer';
+import EditProfileContainer from '../containers/EditProfileContainer';
 
 const Routes = () => {
   return (
@@ -11,6 +12,7 @@ const Routes = () => {
       {/* <Route path="/" component={ HeaderNavContainer }/> */}
       <Route exact path="/" component={ LandingPageContainer } />
       <Route exact path="/selectCity" component={ SelectCityContainer } />
+      <Route exact path="/editProfile" component={ EditProfileContainer } />
     </div>
   );
 

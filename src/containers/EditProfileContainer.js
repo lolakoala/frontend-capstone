@@ -8,7 +8,7 @@ const mapStateToProps =  store => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getChallenges: () => {
+  getAllChallenges: () => {
     dispatch(getAllChallenges());
   }
 });
