@@ -14,3 +14,11 @@ export const loginSuccess = email => {
     user
   };
 };
+
+export const addCity = (city, user) => {
+  const updatedUser = Object.assign({}, user, { city });
+  return {
+    type: 'ADD_CITY',
+    updatedUser
+  };
+};
