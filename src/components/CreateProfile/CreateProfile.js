@@ -16,7 +16,7 @@ const validate = values => {
   return errors;
 };
 
-class EditProfile extends Component {
+class CreateProfile extends Component {
 
   componentWillMount() {
     //get list of challenges from store
@@ -76,14 +76,14 @@ class EditProfile extends Component {
   }
 }
 
-const EditProfileForm = reduxForm({
-  form: 'EditProfile',
+const CreateProfileForm = reduxForm({
+  form: 'CreateProfile',
   validate
-})(EditProfile);
+})(CreateProfile);
 
-export default EditProfileForm;
+export default CreateProfileForm;
 
-EditProfile.propTypes = {
+CreateProfile.propTypes = {
   currentUser: PropTypes.object,
   getAllChallenges: PropTypes.func,
   allChallenges: PropTypes.array,
