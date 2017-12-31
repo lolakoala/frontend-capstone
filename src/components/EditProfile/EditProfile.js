@@ -8,6 +8,7 @@ class EditProfile extends Component {
 
   componentWillMount() {
     //get list of challenges from store
+    this.props.getAllChallenges();
   }
   //upload photo- raisedbutton
   //username- textfield from material ui
@@ -26,5 +27,6 @@ class EditProfile extends Component {
 export default EditProfile;
 
 EditProfile.propTypes = {
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  getAllChallenges: PropTypes.func
 };
