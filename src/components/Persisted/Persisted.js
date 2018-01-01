@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Avatar from 'material-ui/Avatar';
 
 
 // logo
@@ -16,9 +17,16 @@ import PropTypes from 'prop-types';
 // signout
 
 const Persisted = ({ currentUser }) => {
-  return (
+  const userInfo = <div>
+    <Avatar src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg" />
+    <h3>{currentUser.userName}</h3>
+  </div>;
 
-  )
+  return (
+    <div>
+      
+    </div>
+  );
 };
 
 export default Persisted;
