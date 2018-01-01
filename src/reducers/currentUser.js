@@ -4,6 +4,8 @@ const currentUser = (state = {}, action) => {
     return action.user;
   case 'ADD_CITY':
     return action.updatedUser;
+  case 'SUBMIT_PROFILE':
+    return action.newUser;
   default:
     return state;
   }

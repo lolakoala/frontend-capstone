@@ -1,5 +1,5 @@
 const getUser = email => {
-  //fetch user with matching email
+  //fetch user with matching email - get request w/ query params
   //if user exists, return user object
   //if user doesn't exist, just return object with email
   // if (!user) {
@@ -20,5 +20,44 @@ export const addCity = (city, user) => {
   return {
     type: 'ADD_CITY',
     updatedUser
+  };
+};
+
+const fetchAllChallenges = () => {
+  //get request to server for list of challenges
+  //below is just a bit of mock data to play with
+  return ['depression', 'anxiety'];
+};
+
+export const getAllChallenges = () => {
+  const challenges = fetchAllChallenges();
+  return {
+    type: 'GET_ALL_CHALLENGES',
+    challenges
+  };
+};
+
+export const addUserChallenge = challenge => {
+  return {
+    type: 'ADD_USER_CHALLENGE',
+    challenge
+  };
+};
+
+const postUser = newUser => {
+  // post request to server to post new user
+};
+
+export const submitProfile = newUser => {
+  postUser(newUser);
+  return {
+    type: 'SUBMIT_PROFILE',
+    newUser
+  };
+};
+
+export const clearProfile = () => {
+  return {
+    type: 'CLEAR_PROFILE'
   };
 };

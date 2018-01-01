@@ -21,7 +21,7 @@ export default class Root extends Component {
             <Routes />
           </MuiThemeProvider>
           {/*Below are Redux devtools. Uncomment to use.*/}
-          {/* <DevTools /> */}
+          <DevTools />
         </div>
       </BrowserRouter>
     );
