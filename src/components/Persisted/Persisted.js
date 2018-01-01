@@ -22,9 +22,9 @@ const Persisted = ({ currentUser }) => {
 
   return (
     <div>
+      {userKeys.length > 2 ? userInfo : null}
       <img src="http://one-call.ca/wp-content/uploads/2013/08/logo.png" alt="logo" />
       <RaisedButton label="PANIC" onClick={() => panic()} />
-      {userKeys.length > 2 ? userInfo : null}
     </div>
   );
 };
