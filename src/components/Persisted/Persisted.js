@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Avatar, RaisedButton } from 'material-ui';
-
-// if not on Dash, CreateProfile, LandingPage, or SelectCity
-// dash button
+import { Link } from 'react-router-dom';
 
 class Persisted extends Component {
   panic = () => {
@@ -20,13 +18,18 @@ class Persisted extends Component {
       <h3>{currentUser.userName}</h3>
     </div>;
 
-
     const signOutButton = <RaisedButton label="Sign Out" onClick={signOut} />;
+
+    const dashLink = <Link to='/dash'>Home</Link>;
+
+    const pathArray = ['/dash', '/', '/createProfile', '/selectCity'];
+    const pathIncluded = pathArray.find(path => path === pathname).length;
 
     return (
       <div>
         {userKeys.length > 2 ? userInfo : null}
         <img src="http://one-call.ca/wp-content/uploads/2013/08/logo.png" alt="logo" />
+        {!pathIncluded ? dashLink : null}
         <RaisedButton label="PANIC" onClick={this.panic} />
         {pathname !== '/' ? signOutButton : null}
       </div>
