@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { Chip, RaisedButton } from 'material-ui';
 import { Field, reduxForm } from 'redux-form';
 import { TextField } from 'redux-form-material-ui';
+import ReactUploadFile from 'react-upload-file';
+import options from './options';
 
 const validate = values => {
   const errors = {};
@@ -53,14 +55,26 @@ class CreateProfile extends Component {
   //logo - from persisted component?
 
   render() {
+    // const options = {
+    //   baseUrl: 'http://127.0.0.1',
+    //   query: {
+    //     warrior: 'fight'
+    //   }
+    // };
     const userKeys = Object.keys(this.props.currentUser);
     if (userKeys.length > 2) {
       return <Redirect to="/editProfile" />;
     }
     return (<div>
       <form>
-        {/* if user has photo, display photo and button to change it (or adjust button below to say 'Change Photo') */}
-        <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
+        {/* <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} /> */}
+        {/* This will go into finder to let you pick a file, but then throws an error. */}
+        <ReactUploadFile
+          options={options}
+          chooseFileButton={<RaisedButton label="Choose Photo" />}
+          uploadFileButton={<RaisedButton label="Upload Photo" />}
+        />
+
         <Field
           name="userName"
           component={TextField}
