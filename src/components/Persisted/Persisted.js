@@ -14,6 +14,7 @@ class Persisted extends Component {
     const userKeys = Object.keys(currentUser);
 
     const userInfo = <div>
+      {/* placeholder avatar, should fetch from server?  */}
       <Avatar src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg" alt="Your user photo"/>
       <h3>{currentUser.userName}</h3>
     </div>;
@@ -28,6 +29,7 @@ class Persisted extends Component {
     return (
       <div>
         {userKeys.length > 2 ? userInfo : null}
+        {/* placeholder logo */}
         <img src="http://one-call.ca/wp-content/uploads/2013/08/logo.png" alt="logo" />
         {!pathIncluded ? dashLink : null}
         <RaisedButton label="PANIC" onClick={this.panic} />
