@@ -46,6 +46,7 @@ class Dash extends Component {
               allChallenges={allChallenges}
               getAllChallenges={getAllChallenges}
               searchResults={searchResults}
+              search={search}
             />
           </Tab>
         </Tabs>
