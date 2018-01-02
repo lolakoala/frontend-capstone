@@ -1,15 +1,14 @@
-import LandingPage from '../components/LandingPage/LandingPage.js';
+import Dash from '../components/Dash/Dash.js';
 import { connect } from 'react-redux';
-import { loginSuccess } from '../actions/actions';
+import {  } from '../actions/actions';
 
 const mapStateToProps =  store => ({
-  currentUser: store.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loginSuccess: (email) => {
-    dispatch(loginSuccess(email));
-  }
+  // loginSuccess: (email) => {
+  //   dispatch(loginSuccess(email));
+  // }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LandingPage);
+export default connect(mapStateToProps, mapDispatchToProps)(Dash);
