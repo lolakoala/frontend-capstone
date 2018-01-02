@@ -18,10 +18,15 @@ class SearchBuddies extends Component {
   handleChange = (event, index, value) => this.setState({value});
 
   render() {
+    const { searchResults, allChallenges } = this.props;
+
+    if (searchResults.length) {
+      return <Redirect to="/searchResults" />;
+    }
     return (
       <div>
-        <DropDownMenu value={this.props.allChallenges[0]} onChange={this.handleChange}>
-          {this.props.allChallenges.map((challenge, index) => {
+        <DropDownMenu value={allChallenges[0]} onChange={this.handleChange}>
+          {allChallenges.map((challenge, index) => {
             return <MenuItem
               value={challenge}
               primaryText={challenge}
@@ -38,5 +43,6 @@ export default SearchBuddies;
 
 SearchBuddies.propTypes = {
   allChallenges: PropTypes.array,
-  getAllChallenges: PropTypes.func
+  getAllChallenges: PropTypes.func,
+  searchResults: PropTypes.array
 };

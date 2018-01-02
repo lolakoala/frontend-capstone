@@ -45,6 +45,7 @@ class Dash extends Component {
             <SearchBuddies
               allChallenges={allChallenges}
               getAllChallenges={getAllChallenges}
+              searchResults={searchResults}
             />
           </Tab>
         </Tabs>
