@@ -1,14 +1,20 @@
 import Dash from '../components/Dash/Dash.js';
 import { connect } from 'react-redux';
-import {} from '../actions/actions';
+import {
+  getInsuranceList,
+  getSpecialtyList
+} from '../actions/actions';
 
 const mapStateToProps =  store => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  // loginSuccess: (email) => {
-  //   dispatch(loginSuccess(email));
-  // }
+  getInsuranceList: () => {
+    dispatch(getInsuranceList());
+  },
+  getSpecialtyList: () => {
+    dispatch(getSpecialtyList());
+  }
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dash);

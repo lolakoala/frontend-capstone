@@ -74,3 +74,17 @@ export const signOut = () => {
     type: 'SIGN_OUT'
   };
 };
+
+const fetchInsuranceList = () => {
+  // get request to server for insurance list
+  // mock data to play with below
+  return ['medicaid', 'cigna', 'aetna'];
+};
+
+export const getInsuranceList = () => {
+  const insuranceList = fetchInsuranceList();
+  return {
+    type: 'GET_INSURANCE_LIST',
+    insuranceList
+  };
+};

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import DropDownMenu from 'material-ui/DropDownMenu';
-import MenuItem from 'material-ui/MenuItem';
+import { DropDownMenu, MenuItem } from 'material-ui';
 
 class SelectCity extends Component {
   constructor(props) {
     super(props);
-    this.state = {value: ''};
+    this.state = {value: 'Denver'};
   }
 
   handleChange = (event, index, value) => this.setState({value});
@@ -29,7 +28,7 @@ class SelectCity extends Component {
       <div>
         <h2>Please select your city.</h2>
         <DropDownMenu value={this.state.value} onChange={this.addCity}>
-          <MenuItem value="Denver" primaryText="denver" />
+          <MenuItem value="Denver" primaryText="Denver" />
         </DropDownMenu>
       </div>
     );

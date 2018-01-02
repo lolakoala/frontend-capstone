@@ -2,9 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Toolbar, Tabs, Tab } from 'material-ui';
 import { Link } from 'react-router-dom';
+import SearchProfessionals from '../SearchProfessionals/SearchProfessionals';
 
 
-const Dash = (props) => {
+const Dash = ({
+  getInsuranceList,
+  getSpecialtyList
+}) => {
   return (
     <div>
       <Toolbar>
@@ -16,7 +20,9 @@ const Dash = (props) => {
       </Toolbar>
       <Tabs>
         <Tab label="Search Professionals">
-          {/* Search Professionals Component here */}
+          <SearchProfessionals
+            getInsuranceList={getInsuranceList}
+            getSpecialtyList={getSpecialtyList} />
           <div>professionals</div>
         </Tab>
         <Tab label="Search Buddies">
@@ -31,5 +37,6 @@ const Dash = (props) => {
 export default Dash;
 
 Dash.propTypes = {
-
+  getInsuranceList: PropTypes.func,
+  getSpecialtyList: PropTypes.func
 };
