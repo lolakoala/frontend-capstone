@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
+import { Redirect } from 'react-router-dom';
 
 class SearchProfessionals extends Component {
   constructor() {
@@ -45,22 +46,28 @@ class SearchProfessionals extends Component {
   };
 
   render() {
-    const submitButton = <RaisedButton label="Submit" onClick={() => this.props.search({
+    const { searchResults, search, insuranceList, specialtyList } = this.props;
+    const { searchQuery, searchTopic } = this.state;
+
+    if (searchResults.length) {
+      return <Redirect to="/searchResults" />;
+    }
+    const submitButton = <RaisedButton label="Submit" onClick={() => search({
       group: 'professionals',
-      query: this.state.searchQuery,
-      topic: this.state.searchTopic
+      query: searchQuery,
+      topic: searchTopic
     })} />;
 
     return (
       <div>
-        <DropDownMenu value={this.state.searchQuery} onChange={this.handleQuery}>
+        <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
           <MenuItem value="select query" primaryText="Select search query." />
           <MenuItem value="insurance" primaryText="Search by insurance." />
           <MenuItem value="specialty" primaryText="Search by specialty." />
         </DropDownMenu>
-        {this.state.searchQuery === 'insurance' ? this.topicDropDown(this.props.insuranceList) : null}
-        {this.state.searchQuery === 'specialty' ? this.topicDropDown(this.props.specialtyList) : null}
-        {this.state.searchTopic ? submitButton : null}
+        {searchQuery === 'insurance' ? this.topicDropDown(insuranceList) : null}
+        {searchQuery === 'specialty' ? this.topicDropDown(specialtyList) : null}
+        {searchTopic ? submitButton : null}
       </div>
     );
   }
@@ -73,5 +80,6 @@ SearchProfessionals.propTypes = {
   getSpecialtyList: PropTypes.func,
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
-  search: PropTypes.func
+  search: PropTypes.func,
+  searchResults: PropTypes.array
 };

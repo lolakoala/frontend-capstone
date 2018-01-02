@@ -8,7 +8,8 @@ import {
 
 const mapStateToProps =  store => ({
   insuranceList: store.insuranceList,
-  specialtyList: store.specialtyList
+  specialtyList: store.specialtyList,
+  searchResults: store.searchResults
 });
 
 const mapDispatchToProps = (dispatch) => ({
