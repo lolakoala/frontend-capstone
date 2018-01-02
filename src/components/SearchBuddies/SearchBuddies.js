@@ -18,7 +18,7 @@ class SearchBuddies extends Component {
   handleChange = (event, index, value) => this.setState({value});
 
   render() {
-    const { searchResults, allChallenges, search } = this.props;
+    const { searchResults, allChallenges, search, currentUser } = this.props;
 
     if (searchResults.length) {
       return <Redirect to="/searchResults" />;
@@ -36,7 +36,8 @@ class SearchBuddies extends Component {
         </DropDownMenu>
         <RaisedButton label="Submit" onClick={() => search({
           group: 'users',
-          topic: this.state.value
+          topic: this.state.value,
+          city: currentUser.city
         })} />
       </div>
     );
@@ -49,5 +50,6 @@ SearchBuddies.propTypes = {
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,
   searchResults: PropTypes.array,
-  search: PropTypes.func
+  search: PropTypes.func,
+  currentUser: PropTypes.object
 };

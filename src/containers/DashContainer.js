@@ -12,7 +12,8 @@ const mapStateToProps =  store => ({
   insuranceList: store.insuranceList,
   specialtyList: store.specialtyList,
   searchResults: store.searchResults,
-  allChallenges: store.allChallenges
+  allChallenges: store.allChallenges,
+  currentUser: store.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({

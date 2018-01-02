@@ -46,7 +46,7 @@ class SearchProfessionals extends Component {
   };
 
   render() {
-    const { searchResults, search, insuranceList, specialtyList } = this.props;
+    const { searchResults, search, insuranceList, specialtyList, currentUser } = this.props;
     const { searchQuery, searchTopic } = this.state;
 
     if (searchResults.length) {
@@ -55,7 +55,8 @@ class SearchProfessionals extends Component {
     const submitButton = <RaisedButton label="Submit" onClick={() => search({
       group: 'professionals',
       query: searchQuery,
-      topic: searchTopic
+      topic: searchTopic,
+      city: currentUser.city
     })} />;
 
     return (
@@ -81,5 +82,6 @@ SearchProfessionals.propTypes = {
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
   search: PropTypes.func,
-  searchResults: PropTypes.array
+  searchResults: PropTypes.array,
+  currentUser: PropTypes.object
 };

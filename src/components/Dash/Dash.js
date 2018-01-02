@@ -19,7 +19,8 @@ class Dash extends Component {
       search,
       searchResults,
       allChallenges,
-      getAllChallenges
+      getAllChallenges,
+      currentUser
     } = this.props;
     return (
       <div>
@@ -39,6 +40,7 @@ class Dash extends Component {
               specialtyList={specialtyList}
               search={search}
               searchResults={searchResults}
+              currentUser={currentUser}
             />
           </Tab>
           <Tab label="Search Buddies">
@@ -47,6 +49,7 @@ class Dash extends Component {
               getAllChallenges={getAllChallenges}
               searchResults={searchResults}
               search={search}
+              currentUser={currentUser}
             />
           </Tab>
         </Tabs>
@@ -66,5 +69,6 @@ Dash.propTypes = {
   searchResults: PropTypes.array,
   clearSearchResults: PropTypes.func,
   allChallenges: PropTypes.array,
-  getAllChallenges: PropTypes.func
+  getAllChallenges: PropTypes.func,
+  currentUser: PropTypes.object
 };
