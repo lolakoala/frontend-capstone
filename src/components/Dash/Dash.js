@@ -9,7 +9,8 @@ const Dash = ({
   getInsuranceList,
   getSpecialtyList,
   insuranceList,
-  specialtyList
+  specialtyList,
+  search
 }) => {
   return (
     <div>
@@ -27,6 +28,7 @@ const Dash = ({
             getSpecialtyList={getSpecialtyList}
             insuranceList={insuranceList}
             specialtyList={specialtyList}
+            search={search}
           />
         </Tab>
         <Tab label="Search Buddies">
@@ -44,5 +46,6 @@ Dash.propTypes = {
   getInsuranceList: PropTypes.func,
   getSpecialtyList: PropTypes.func,
   insuranceList: PropTypes.array,
-  specialtyList: PropTypes.array
+  specialtyList: PropTypes.array,
+  search: PropTypes.func
 };

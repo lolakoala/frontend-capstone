@@ -16,34 +16,35 @@ class SearchProfessionals extends Component {
     this.props.getSpecialtyList();
   }
 
-  handleQuery = (event, index, value) => this.setState({
-    searchQuery: value,
-    searchTopic: ''
-  });
+  handleQuery = (event, index, value) => {
+    let searchTopic;
+
+    if (value === 'insurance') {
+      searchTopic = this.props.insuranceList[0];
+    }
+    if (value === 'specialty') {
+      searchTopic = this.props.specialtyList[0];
+    }
+    this.setState({
+      searchQuery: value,
+      searchTopic
+    });
+  };
 
   handleSearchTopic = (event, index, value) => this.setState({ searchTopic: value });
 
+  topicDropDown = list => {
+    const menuItems = list.map((elem, index) => {
+      return <MenuItem value={elem} primaryText={elem} key={`${elem}${index}`}/>;
+    });
+    return (
+      <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
+        {menuItems}
+      </DropDownMenu>
+    );
+  };
+
   render() {
-    // const insuranceDropDown = <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
-    //   {this.props.insuranceList.map((ins, index) => {
-    //     return <MenuItem value={ins} primaryText={ins} key={`${ins}${index}`}/>;
-    //   })}
-    // </DropDownMenu>;
-    //
-    // const specialtyDropDown = <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
-    //   {this.props.specialtyList.map((specialty, index) => {
-    //     return <MenuItem value={specialty} primaryText={specialty} key={`${specialty}${index}`}/>;
-    //   })}
-    // </DropDownMenu>;
-
-    const topicDropDown = list => {
-      return <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
-        {list.map((elem, index) => {
-          return <MenuItem value={elem} primaryText={elem} key={`${elem}${index}`}/>;
-        })}
-      </DropDownMenu>;
-    };
-
     const submitButton = <RaisedButton label="Submit" onClick={() => this.props.search({
       group: 'professionals',
       query: this.state.searchQuery,
@@ -57,8 +58,8 @@ class SearchProfessionals extends Component {
           <MenuItem value="insurance" primaryText="Search by insurance." />
           <MenuItem value="specialty" primaryText="Search by specialty." />
         </DropDownMenu>
-        {this.state.value === 'insurance' ? topicDropDown(this.props.insuranceList) : null}
-        {this.state.value === 'specialty' ? topicDropDown(this.props.specialtyList) : null}
+        {this.state.searchQuery === 'insurance' ? this.topicDropDown(this.props.insuranceList) : null}
+        {this.state.searchQuery === 'specialty' ? this.topicDropDown(this.props.specialtyList) : null}
         {this.state.searchTopic ? submitButton : null}
       </div>
     );
