@@ -4,6 +4,7 @@ import LandingPageContainer from '../containers/LandingPageContainer';
 import SelectCityContainer from '../containers/SelectCityContainer';
 import CreateProfileContainer from '../containers/CreateProfileContainer';
 import PersistedContainer from '../containers/PersistedContainer';
+import DashContainer from '../containers/DashContainer';
 
 
 const Routes = () => {
@@ -13,6 +14,7 @@ const Routes = () => {
       <Route exact path="/" component={ LandingPageContainer } />
       <Route exact path="/selectCity" component={ SelectCityContainer } />
       <Route exact path="/createProfile" component={ CreateProfileContainer } />
+      <Route exact path="/dash" component={ DashContainer } />
     </div>
   );
 
