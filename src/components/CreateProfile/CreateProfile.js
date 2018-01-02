@@ -23,13 +23,14 @@ class CreateProfile extends Component {
     this.props.getAllChallenges();
   }
 
+  // might not need this function if using react-upload
   uploadPhoto = () => {
     //dunno wtf will happen here
   }
 
   toggleChallenge = challenge => {
     const { userChallenges } = this.props;
-    
+
     if (userChallenges.includes(challenge)) {
       // change chip back to original color
       this.props.removeUserChallenge(challenge);
