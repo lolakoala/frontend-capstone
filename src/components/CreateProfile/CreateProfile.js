@@ -60,6 +60,7 @@ class CreateProfile extends Component {
       { userChallenges },
       { userName: form['object Object'].values.userName, aboutMe: form['object Object'].values.aboutMe }
     );
+    console.log(newUser)
     // somehow send image in submitProfile action?
     submitProfile(newUser);
   }
@@ -67,9 +68,9 @@ class CreateProfile extends Component {
   //logo - from persisted component?
 
   render() {
-    const userKeys = Object.keys(this.props.currentUser);
-    if (userKeys.length > 2) {
-      return <Redirect to="/dash" />;
+    // const userKeys = Object.keys(this.props.currentUser);
+    if (this.props.currentUser.userName) {
+      return <Redirect to="/" />;
     }
     return (<div>
       <form>

@@ -7,8 +7,8 @@ import { Link } from 'react-router-dom';
 // search users section
 
 class Dash extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       search: ''
     };

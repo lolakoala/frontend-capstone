@@ -14,7 +14,7 @@ const Routes = () => {
       <Route exact path="/" component={ LandingPageContainer } />
       <Route exact path="/selectCity" component={ SelectCityContainer } />
       <Route exact path="/createProfile" component={ CreateProfileContainer } />
-      <Route exact path="/dash" component={ DashContainer } />
+      {/* <Route exact path="/dash" component={ DashContainer } /> */}
     </div>
   );
 
