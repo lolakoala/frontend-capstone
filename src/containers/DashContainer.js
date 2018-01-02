@@ -2,7 +2,8 @@ import Dash from '../components/Dash/Dash.js';
 import { connect } from 'react-redux';
 import {
   getInsuranceList,
-  getSpecialtyList
+  getSpecialtyList,
+  search
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
@@ -16,6 +17,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   getSpecialtyList: () => {
     dispatch(getSpecialtyList());
+  },
+  search: searchObject => {
+    dispatch(search(searchObject));
   }
 });
 

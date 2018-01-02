@@ -102,3 +102,15 @@ export const getSpecialtyList = () => {
     specialtyList
   };
 };
+
+const sendSearch = searchObject => {
+  // use object contents to make get request to server with query params
+};
+
+export const search = searchObject => {
+  const searchResults = sendSearch(searchObject);
+  return {
+    type: 'SEARCH',
+    searchResults
+  };
+};
