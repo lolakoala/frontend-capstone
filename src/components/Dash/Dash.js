@@ -17,7 +17,6 @@ class Dash extends Component {
       insuranceList,
       specialtyList,
       search,
-      searchResults,
       allChallenges,
       getAllChallenges,
       currentUser
@@ -39,7 +38,6 @@ class Dash extends Component {
               insuranceList={insuranceList}
               specialtyList={specialtyList}
               search={search}
-              searchResults={searchResults}
               currentUser={currentUser}
             />
           </Tab>
@@ -47,7 +45,6 @@ class Dash extends Component {
             <SearchBuddies
               allChallenges={allChallenges}
               getAllChallenges={getAllChallenges}
-              searchResults={searchResults}
               search={search}
               currentUser={currentUser}
             />
@@ -66,7 +63,6 @@ Dash.propTypes = {
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
   search: PropTypes.func,
-  searchResults: PropTypes.array,
   clearSearchResults: PropTypes.func,
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,

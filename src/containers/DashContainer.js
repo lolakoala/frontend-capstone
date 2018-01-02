@@ -11,7 +11,6 @@ import {
 const mapStateToProps =  store => ({
   insuranceList: store.insuranceList,
   specialtyList: store.specialtyList,
-  searchResults: store.searchResults,
   allChallenges: store.allChallenges,
   currentUser: store.currentUser
 });

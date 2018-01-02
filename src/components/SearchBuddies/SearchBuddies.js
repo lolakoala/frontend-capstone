@@ -17,12 +17,18 @@ class SearchBuddies extends Component {
 
   handleChange = (event, index, value) => this.setState({value});
 
-  render() {
-    const { searchResults, allChallenges, search, currentUser } = this.props;
+  handleSubmit = () => {
+    this.props.search({
+      group: 'users',
+      topic: this.state.value,
+      city: this.props.currentUser.city
+    });
+    return <Redirect to="/buddyList" />;
+  }
 
-    if (searchResults.length) {
-      return <Redirect to="/searchResults" />;
-    }
+  render() {
+    const { allChallenges } = this.props;
+
     return (
       <div>
         <DropDownMenu value={allChallenges[0]} onChange={this.handleChange}>
@@ -34,11 +40,7 @@ class SearchBuddies extends Component {
             />;
           })}
         </DropDownMenu>
-        <RaisedButton label="Submit" onClick={() => search({
-          group: 'users',
-          topic: this.state.value,
-          city: currentUser.city
-        })} />
+        <RaisedButton label="Submit" onClick={this.handleSubmit} />
       </div>
     );
   }

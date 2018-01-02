@@ -4,15 +4,13 @@ import allChallenges from './allChallenges';
 import userChallenges from './userChallenges';
 import insuranceList from './insuranceList';
 import specialtyList from './specialtyList';
-import searchResults from './searchResults';
 
 const rootReducer = combineReducers({
   currentUser,
   allChallenges,
   userChallenges,
   insuranceList,
-  specialtyList,
-  searchResults
+  specialtyList
 });
 
 export default rootReducer;

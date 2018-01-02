@@ -109,10 +109,18 @@ const sendSearch = searchObject => {
 
 export const search = searchObject => {
   const searchResults = sendSearch(searchObject);
-  return {
-    type: 'SEARCH',
-    searchResults
-  };
+
+  if (searchObject.group === 'professionals') {
+    return {
+      type: 'SEARCH_PROFESSIONALS',
+      searchResults
+    };  
+  } else {
+    return {
+      type: 'SEARCH_BUDDIES',
+      searchResults
+    };
+  }
 };
 
 export const clearSearchResults = () => {

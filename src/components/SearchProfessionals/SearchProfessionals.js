@@ -45,19 +45,22 @@ class SearchProfessionals extends Component {
     );
   };
 
+  handleSubmit = () => {
+    this.props.search({
+      group: 'professionals',
+      query: this.state.searchQuery,
+      topic: this.state.searchTopic,
+      city: this.props.currentUser.city
+    });
+
+    return <Redirect to="/profsList" />;
+  }
+
   render() {
-    const { searchResults, search, insuranceList, specialtyList, currentUser } = this.props;
+    const { insuranceList, specialtyList } = this.props;
     const { searchQuery, searchTopic } = this.state;
 
-    if (searchResults.length) {
-      return <Redirect to="/searchResults" />;
-    }
-    const submitButton = <RaisedButton label="Submit" onClick={() => search({
-      group: 'professionals',
-      query: searchQuery,
-      topic: searchTopic,
-      city: currentUser.city
-    })} />;
+    const submitButton = <RaisedButton label="Submit" onClick={this.handleSubmit} />;
 
     return (
       <div>

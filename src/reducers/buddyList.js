@@ -1,6 +1,6 @@
-const searchResults = (state = [], action) => {
+const buddyList = (state = [], action) => {
   switch (action.type) {
-  case 'SEARCH':
+  case 'SEARCH_BUDDIES':
     return action.searchResults;
   case 'CLEAR_SEARCH_RESULTS':
     return [];
@@ -9,4 +9,4 @@ const searchResults = (state = [], action) => {
   }
 };
 
-export default searchResults;
+export default buddyList;
