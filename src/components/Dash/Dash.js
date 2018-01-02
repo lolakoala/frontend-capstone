@@ -19,7 +19,7 @@ const Dash = (props) => {
           {/* Search Professionals Component here */}
           <div>professionals</div>
         </Tab>
-        <Tab label="Search Users">
+        <Tab label="Search Buddies">
           {/* Search Users Component Here */}
           <div>users</div>
         </Tab>
