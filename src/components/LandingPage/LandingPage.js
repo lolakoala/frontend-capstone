@@ -9,6 +9,7 @@ class LandingPage extends Component {
   login = () => {
     auth.signInWithPopup(provider)
       .then((result) => {
+        // might need result.user.uid for some kind of authentication? 
         const userEmail = result.user.email;
         this.props.loginSuccess(userEmail);
       });
