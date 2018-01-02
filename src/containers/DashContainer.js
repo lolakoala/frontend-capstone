@@ -6,6 +6,8 @@ import {
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
+  insuranceList: store.insuranceList,
+  specialtyList: store.specialtyList
 });
 
 const mapDispatchToProps = (dispatch) => ({

@@ -7,7 +7,9 @@ import SearchProfessionals from '../SearchProfessionals/SearchProfessionals';
 
 const Dash = ({
   getInsuranceList,
-  getSpecialtyList
+  getSpecialtyList,
+  insuranceList,
+  specialtyList
 }) => {
   return (
     <div>
@@ -22,8 +24,10 @@ const Dash = ({
         <Tab label="Search Professionals">
           <SearchProfessionals
             getInsuranceList={getInsuranceList}
-            getSpecialtyList={getSpecialtyList} />
-          <div>professionals</div>
+            getSpecialtyList={getSpecialtyList}
+            insuranceList={insuranceList}
+            specialtyList={specialtyList}
+          />
         </Tab>
         <Tab label="Search Buddies">
           {/* Search Users Component Here */}
@@ -38,5 +42,7 @@ export default Dash;
 
 Dash.propTypes = {
   getInsuranceList: PropTypes.func,
-  getSpecialtyList: PropTypes.func
+  getSpecialtyList: PropTypes.func,
+  insuranceList: PropTypes.array,
+  specialtyList: PropTypes.array
 };

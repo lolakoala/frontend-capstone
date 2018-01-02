@@ -88,3 +88,17 @@ export const getInsuranceList = () => {
     insuranceList
   };
 };
+
+const fetchSpecialtyList = () => {
+  // get request to server for specialty list
+  // mock data to play with below
+  return ['relationships', 'anxiety', 'depression'];
+};
+
+export const getSpecialtyList = () => {
+  const specialtyList = fetchSpecialtyList();
+  return {
+    type: 'GET_SPECIALTY_LIST',
+    specialtyList
+  };
+};
