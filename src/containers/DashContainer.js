@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import {
   getInsuranceList,
   getSpecialtyList,
-  search
+  search,
+  clearSearchResults
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
@@ -21,6 +22,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   search: searchObject => {
     dispatch(search(searchObject));
+  },
+  clearSearchResults: () => {
+    dispatch(clearSearchResults());
   }
 });
 

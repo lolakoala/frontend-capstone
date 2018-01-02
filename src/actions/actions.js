@@ -114,3 +114,9 @@ export const search = searchObject => {
     searchResults
   };
 };
+
+export const clearSearchResults = () => {
+  return {
+    type: 'CLEAR_SEARCH_RESULTS'
+  };
+};
