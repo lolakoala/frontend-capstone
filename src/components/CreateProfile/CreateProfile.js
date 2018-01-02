@@ -27,17 +27,23 @@ class CreateProfile extends Component {
     //dunno wtf will happen here
   }
 
-  addChallenge = challenge => {
-    // change color of chip
-    // add challenge to userChallenges
-    this.props.addUserChallenge(challenge);
+  toggleChallenge = challenge => {
+    const { userChallenges } = this.props;
+    
+    if (userChallenges.includes(challenge)) {
+      // change chip back to original color
+      this.props.removeUserChallenge(challenge);
+    } else {
+      // change color of chip
+      this.props.addUserChallenge(challenge);
+    }
   }
 
   renderChip = (challenge, index) => {
     return (
       <Chip
         key={`${challenge}${index}`}
-        onClick={() => { this.addChallenge(challenge); }}>
+        onClick={() => { this.toggleChallenge(challenge); }}>
         {challenge}
       </Chip>
     );
@@ -62,7 +68,7 @@ class CreateProfile extends Component {
   render() {
     const userKeys = Object.keys(this.props.currentUser);
     if (userKeys.length > 2) {
-      return <Redirect to="/editProfile" />;
+      return <Redirect to="/dash" />;
     }
     return (<div>
       <form>
@@ -107,6 +113,7 @@ CreateProfile.propTypes = {
   allChallenges: PropTypes.array,
   form: PropTypes.object,
   addUserChallenge: PropTypes.func,
+  removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
   submitProfile: PropTypes.func,
   clearProfile: PropTypes.func
