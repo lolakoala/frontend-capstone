@@ -16,7 +16,10 @@ class SearchProfessionals extends Component {
     this.props.getSpecialtyList();
   }
 
-  handleQuery = (event, index, value) => this.setState({ searchQuery: value });
+  handleQuery = (event, index, value) => this.setState({
+    searchQuery: value,
+    searchTopic: ''
+  });
 
   handleSearchTopic = (event, index, value) => this.setState({ searchTopic: value });
 
@@ -24,6 +27,12 @@ class SearchProfessionals extends Component {
     const insuranceDropDown = <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
       {this.props.insuranceList.map((ins, index) => {
         return <MenuItem value={ins} primaryText={ins} key={`${ins}${index}`}/>;
+      })}
+    </DropDownMenu>;
+
+    const specialtyDropDown = <DropDownMenu value={this.state.searchTopic} onChange={this.handleSearchTopic}>
+      {this.props.specialtyList.map((specialty, index) => {
+        return <MenuItem value={specialty} primaryText={specialty} key={`${specialty}${index}`}/>;
       })}
     </DropDownMenu>;
 
