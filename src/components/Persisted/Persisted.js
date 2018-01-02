@@ -24,14 +24,13 @@ class Persisted extends Component {
     const dashLink = <Link to='/dash'>Home</Link>;
 
     const pathArray = ['/dash', '/', '/createProfile', '/selectCity'];
-    const pathIncluded = pathArray.find(path => path === pathname).length;
 
     return (
       <div>
         {userKeys.length > 2 ? userInfo : null}
         {/* placeholder logo */}
         <img src="http://one-call.ca/wp-content/uploads/2013/08/logo.png" alt="logo" />
-        {!pathIncluded ? dashLink : null}
+        {!pathArray.includes(pathname) ? dashLink : null}
         <RaisedButton label="PANIC" onClick={this.panic} />
         {pathname !== '/' ? signOutButton : null}
       </div>
