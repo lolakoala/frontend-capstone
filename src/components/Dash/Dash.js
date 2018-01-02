@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Toolbar, Tabs, Tab } from 'material-ui';
 import { Link } from 'react-router-dom';
 import SearchProfessionals from '../SearchProfessionals/SearchProfessionals';
+import SearchBuddies from '../SearchBuddies/SearchBuddies';
 
 class Dash extends Component {
   componentWillMount() {
@@ -16,7 +17,9 @@ class Dash extends Component {
       insuranceList,
       specialtyList,
       search,
-      searchResults
+      searchResults,
+      allChallenges,
+      getAllChallenges
     } = this.props;
     return (
       <div>
@@ -39,8 +42,10 @@ class Dash extends Component {
             />
           </Tab>
           <Tab label="Search Buddies">
-            {/* Search Users Component Here */}
-            <div>users</div>
+            <SearchBuddies
+              allChallenges={allChallenges}
+              getAllChallenges={getAllChallenges}
+            />
           </Tab>
         </Tabs>
       </div>
@@ -57,5 +62,7 @@ Dash.propTypes = {
   specialtyList: PropTypes.array,
   search: PropTypes.func,
   searchResults: PropTypes.array,
-  clearSearchResults: PropTypes.func
+  clearSearchResults: PropTypes.func,
+  allChallenges: PropTypes.array,
+  getAllChallenges: PropTypes.func
 };

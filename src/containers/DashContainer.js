@@ -4,13 +4,15 @@ import {
   getInsuranceList,
   getSpecialtyList,
   search,
-  clearSearchResults
+  clearSearchResults,
+  getAllChallenges
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   insuranceList: store.insuranceList,
   specialtyList: store.specialtyList,
-  searchResults: store.searchResults
+  searchResults: store.searchResults,
+  allChallenges: store.allChallenges
 });
 
 const mapDispatchToProps = (dispatch) => ({
@@ -25,6 +27,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   clearSearchResults: () => {
     dispatch(clearSearchResults());
+  },
+  getAllChallenges: () => {
+    dispatch(getAllChallenges());
   }
 });
 
