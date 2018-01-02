@@ -17,13 +17,14 @@ class Dash extends Component {
   render() {
     return (
       <div>
-        <Toolbar>
+        <p>hi</p>
+        {/* <Toolbar>
           <Link to="/chat">Chat</Link>
           <Link to="/preferredProffesionals">My Preferred Proffesionals</Link>
-          <Link to="/buddies">My Buddies</Link>
+          <Link to="/buddies">My Buddies</Link> */}
           {/* In My Toolbox, should we add ability to add your own resources? */}
-          <Link to="/toolbox">My Toolbox</Link>
-        </Toolbar>
+          {/* <Link to="/toolbox">My Toolbox</Link>
+        </Toolbar> */}
       </div>
     );
   }

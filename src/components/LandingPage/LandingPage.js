@@ -9,21 +9,23 @@ class LandingPage extends Component {
   login = () => {
     auth.signInWithPopup(provider)
       .then((result) => {
-        // might need result.user.uid for some kind of authentication? 
+        // might need result.user.uid for some kind of authentication?
         const userEmail = result.user.email;
         this.props.loginSuccess(userEmail);
       });
   }
 
   render() {
-    const { currentUser } = this.props;
-    const userKeys = Object.keys(currentUser);
+    const currentUser = this.props.currentUser;
+    console.log(currentUser)
+    // const userKeys = Object.keys(currentUser);
+
     //if currentUser has one key, redirect to edit profile
-    if (userKeys.length === 1) {
+    if (currentUser.email && !currentUser.userName) {
       return <Redirect to="/selectCity" />;
     }
     //if currentUser has > 1 key, redirect to dash
-    if (userKeys.length > 1) {
+    if (currentUser.userName) {
       return <Redirect to="/dash" />;
     }
 

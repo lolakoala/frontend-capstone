@@ -1,4 +1,4 @@
-import LandingPage from '../components/LandingPage/LandingPage.js';
+import Dash from '../components/Dash/Dash.js';
 import { connect } from 'react-redux';
 import {} from '../actions/actions';
 
@@ -11,4 +11,4 @@ const mapDispatchToProps = (dispatch) => ({
   // }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(LandingPage);
+export default connect(mapStateToProps, mapDispatchToProps)(Dash);
