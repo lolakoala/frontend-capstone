@@ -7,7 +7,7 @@ import { TextField } from 'redux-form-material-ui';
 
 const validate = values => {
   const errors = {};
-  const requiredFields = ['userName'];
+  const requiredFields = ['userName', 'aboutMe'];
   requiredFields.forEach(field => {
     if (!values[field]) {
       errors[field] = 'Required';
@@ -46,7 +46,14 @@ class CreateProfile extends Component {
   submitProfile = () => {
     // if we make another form, things might get hairy in the form object we're accessing from the store?
     const { submitProfile, currentUser, userChallenges, form } = this.props;
-    const newUser = Object.assign({}, currentUser, { userChallenges }, form['object Object'].values);
+    // userImage key on this object to send image?
+    const newUser = Object.assign(
+      {},
+      currentUser,
+      { userChallenges },
+      { userName: form['object Object'].values.userName, aboutMe: form['object Object'].values.aboutMe }
+    );
+    // somehow send image in submitProfile action?
     submitProfile(newUser);
   }
 
