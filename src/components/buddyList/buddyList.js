@@ -25,8 +25,19 @@ class BuddyList extends Component {
   };
 
   render() {
-    const { location } = this.props;
+    const { location, buddyList } = this.props;
     const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
+    const filteredBuddies = buddyList.filter(buddy => {
+      const searchableBuddy = Object.assign({}, buddy, { city: '' });
+      const buddyValues = Object.values(searchableBuddy);
+      let isMatch = false;
+      buddyValues.forEach(value => {
+        if (value.includes(this.state.value)) {
+          isMatch = true;
+        }
+      });
+      return isMatch === true;
+    });
 
     return (
       <div>
@@ -47,5 +58,6 @@ export default BuddyList;
 BuddyList.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  buddyList: PropTypes.object
 };
