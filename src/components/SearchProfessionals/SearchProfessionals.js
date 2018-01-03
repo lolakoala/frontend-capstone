@@ -53,7 +53,7 @@ class SearchProfessionals extends Component {
       city: this.props.currentUser.city
     });
 
-    return <Redirect to="/profsSearch" />;
+    return <Redirect to="/listProfsSearch" />;
   }
 
   render() {

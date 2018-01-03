@@ -17,10 +17,10 @@ class ListWrapper extends Component {
   componentWillMount() {
     const { currentUser, location, getBuddies, getPreferredProfs } = this.props;
 
-    if (location.pathname === '/userBuddies') {
+    if (location.pathname === '/listUserBuddies') {
       getBuddies(currentUser);
     }
-    if (location.pathname === '/userProfs') {
+    if (location.pathname === '/listUserProfs') {
       getPreferredProfs(currentUser);
     }
   }
@@ -37,19 +37,19 @@ class ListWrapper extends Component {
     let listName;
 
     switch (location.pathname) {
-    case '/userBuddies':
+    case '/listUserBuddies':
       list = userBuddies;
       listName = 'buddies';
       break;
-    case '/userProfs':
+    case '/listUserProfs':
       list = userProfs;
       listName = 'preferred professionals';
       break;
-    case '/profSearch':
+    case '/listProfSearch':
       list = profSearch;
       listName = 'professionals search results';
       break;
-    case '/buddySearch':
+    case '/listBuddySearch':
       list = buddySearch;
       listName = 'buddy search results';
       break;

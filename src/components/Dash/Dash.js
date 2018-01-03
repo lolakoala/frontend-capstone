@@ -25,8 +25,8 @@ class Dash extends Component {
       <div>
         <Toolbar>
           <Link to="/chat">Chat</Link>
-          <Link to="/preferredProffesionals">My Preferred Proffesionals</Link>
-          <Link to="/buddies">My Buddies</Link>
+          <Link to="/listUserProfs">My Preferred Proffesionals</Link>
+          <Link to="/listUserBuddies">My Buddies</Link>
           {/* In My Toolbox, should we add ability to add your own resources? */}
           <Link to="/toolbox">My Toolbox</Link>
         </Toolbar>
