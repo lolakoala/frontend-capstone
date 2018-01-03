@@ -4,6 +4,8 @@ const buddyList = (state = [], action) => {
     return action.searchResults;
   case 'CLEAR_SEARCH_RESULTS':
     return [];
+  case 'GET_BUDDIES':
+    return action.buddies;
   default:
     return state;
   }

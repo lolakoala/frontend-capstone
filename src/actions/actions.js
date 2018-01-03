@@ -114,7 +114,7 @@ export const search = searchObject => {
     return {
       type: 'SEARCH_PROFESSIONALS',
       searchResults
-    };  
+    };
   } else {
     return {
       type: 'SEARCH_BUDDIES',
@@ -126,5 +126,17 @@ export const search = searchObject => {
 export const clearSearchResults = () => {
   return {
     type: 'CLEAR_SEARCH_RESULTS'
+  };
+};
+
+const fetchBuddies = user => {
+  // get request to server for buddies
+};
+
+export const getBuddies = user => {
+  const buddies = fetchBuddies(user);
+  return {
+    type: 'GET_BUDDIES',
+    buddies
   };
 };

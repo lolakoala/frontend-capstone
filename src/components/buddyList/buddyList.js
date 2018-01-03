@@ -8,14 +8,23 @@ class BuddyList extends Component {
   constructor() {
     super();
     this.state = {
-
+      value: ''
     };
+  }
+
+  componentWillMount() {
+    const { currentUser, location, getBuddies } = this.props;
+
+    if (location.pathname === '/buddies') {
+      getBuddies(currentUser);
+    }
   }
 
   render() {
     return (
       <div>
-        
+        {/* search box, searches in real time */}
+        {/* list of buddies from buddyList, must be able to favorite*/}
       </div>
     );
   }
@@ -24,5 +33,7 @@ class BuddyList extends Component {
 export default BuddyList;
 
 BuddyList.propTypes = {
-
+  location: PropTypes.object,
+  getBuddies: PropTypes.func,
+  currentUser: PropTypes.object
 };
