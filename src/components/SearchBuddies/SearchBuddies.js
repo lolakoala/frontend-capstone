@@ -51,7 +51,6 @@ export default SearchBuddies;
 SearchBuddies.propTypes = {
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,
-  searchResults: PropTypes.array,
   search: PropTypes.func,
   currentUser: PropTypes.object
 };

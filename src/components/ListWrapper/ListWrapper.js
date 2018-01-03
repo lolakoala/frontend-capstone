@@ -15,10 +15,10 @@ class ListWrapper extends Component {
   componentWillMount() {
     const { currentUser, location, getBuddies, getPreferredProfs } = this.props;
 
-    if (location.pathname === '/buddies') {
+    if (location.pathname === '/userBuddies') {
       getBuddies(currentUser);
     }
-    if (location.pathname === '/preferredProfessionals') {
+    if (location.pathname === '/userProfs') {
       getPreferredProfs(currentUser);
     }
   }

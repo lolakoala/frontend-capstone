@@ -85,6 +85,5 @@ SearchProfessionals.propTypes = {
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
   search: PropTypes.func,
-  searchResults: PropTypes.array,
   currentUser: PropTypes.object
 };
