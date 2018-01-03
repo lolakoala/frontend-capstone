@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
+import ProfsList from '../ProfsList/ProfsList';
 
 // possible location.pathname
 // /buddies
@@ -9,7 +10,7 @@ import BuddyList from '../BuddyList/BuddyList';
 // /preferredProfessionals
 // /profsSearch
 
-class BuddyListWrapper extends Component {
+class ListWrapper extends Component {
   constructor() {
     super();
     this.state = {
@@ -34,12 +35,12 @@ class BuddyListWrapper extends Component {
     });
   };
 
-  filterBuddies = () => {
-    return this.props.buddyList.filter(buddy => {
-      const searchableBuddy = Object.assign({}, buddy, { city: '' });
-      const buddyValues = Object.values(searchableBuddy);
+  filterList = array => {
+    return array.filter(person => {
+      const searchablePerson = Object.assign({}, person, { city: '' });
+      const personValues = Object.values(searchablePerson);
       let isMatch = false;
-      buddyValues.forEach(value => {
+      personValues.forEach(value => {
         if (value.includes(this.state.value)) {
           isMatch = true;
         }
@@ -49,9 +50,20 @@ class BuddyListWrapper extends Component {
   }
 
   render() {
-    const { location, buddyList, currentUser } = this.props;
+    const { location, buddyList, currentUser, profsList } = this.props;
     const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
-    const buddiesToRender = this.state.value ? this.filterBuddies() : buddyList;
+    const buddiesToRender = this.state.value ? this.filterList(buddyList) : buddyList;
+    const profsToRender = this.state.value ? this.filterList(profsList) : profsList;
+    const buddyComponent = <BuddyList
+      buddies={buddiesToRender}
+      // action to toggle favorite
+      currentUser={currentUser}
+    />;
+    const profsComponent = <ProfsList
+      profs={profsToRender}
+      // action to toggle favorite
+      currentUser={currentUser}
+    />;
 
     return (
       <div>
@@ -60,19 +72,15 @@ class BuddyListWrapper extends Component {
           onChange={this.handleChange}
           hintText={`Type here to filter your ${list}.`}
         />
-        <BuddyList
-          buddies={buddiesToRender}
-          // action to toggle favorite
-          currentUser={currentUser}
-        />
+        {location.pathname.includes('bud') ? buddyComponent : profsComponent}
       </div>
     );
   }
 }
 
-export default BuddyListWrapper;
+export default ListWrapper;
 
-BuddyListWrapper.propTypes = {
+ListWrapper.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
   currentUser: PropTypes.object,

@@ -4,6 +4,8 @@ const profsList = (state = [], action) => {
     return action.searchResults;
   case 'CLEAR_SEARCH_RESULTS':
     return [];
+  case 'GET_PREFERRED_PROFS':
+    return action.profs;
   default:
     return state;
   }
