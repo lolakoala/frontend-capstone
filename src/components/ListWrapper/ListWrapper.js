@@ -8,7 +8,9 @@ class ListWrapper extends Component {
   constructor() {
     super();
     this.state = {
-      value: ''
+      value: '',
+      list: [],
+      listName: ''
     };
   }
 
@@ -21,6 +23,41 @@ class ListWrapper extends Component {
     if (location.pathname === '/userProfs') {
       getPreferredProfs(currentUser);
     }
+  }
+
+  componentDidMount() {
+    const {
+      location,
+      buddySearch,
+      profSearch,
+      userBuddies,
+      userProfs
+    } = this.props;
+    let list;
+    let listName;
+
+    switch (location.pathname) {
+    case '/userBuddies':
+      list = userBuddies;
+      listName = 'buddies';
+      break;
+    case '/userProfs':
+      list = userProfs;
+      listName = 'preferred professionals';
+      break;
+    case '/profSearch':
+      list = profSearch;
+      listName = 'professionals search results';
+      break;
+    case '/buddySearch':
+      list = buddySearch;
+      listName = 'buddy search results';
+      break;
+    default:
+      list = [];
+    }
+
+    return this.setState({ list, listName });
   }
 
   handleChange = (event) => {
@@ -44,17 +81,15 @@ class ListWrapper extends Component {
   }
 
   render() {
-    const { location, buddyList, currentUser, profsList, toggleFavorite } = this.props;
-    const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
-    const buddiesToRender = this.state.value ? this.filterList(buddyList) : buddyList;
-    const profsToRender = this.state.value ? this.filterList(profsList) : profsList;
+    const { location, currentUser, toggleFavorite } = this.props;
+    const listToRender = this.state.value ? this.filterList(this.state.list) : this.state.list;
     const buddyComponent = <BuddyList
-      buddies={buddiesToRender}
+      buddies={listToRender}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
     const profsComponent = <ProfsList
-      profs={profsToRender}
+      profs={listToRender}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
@@ -64,7 +99,7 @@ class ListWrapper extends Component {
         <TextField
           value={this.state.value}
           onChange={this.handleChange}
-          hintText={`Type here to filter your ${list}.`}
+          hintText={`Type here to filter your ${this.state.listName}.`}
         />
         {location.pathname.includes('bud') ? buddyComponent : profsComponent}
       </div>
@@ -78,8 +113,10 @@ ListWrapper.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
   currentUser: PropTypes.object,
-  buddyList: PropTypes.object,
+  buddySearch: PropTypes.object,
   getPreferredProfs: PropTypes.func,
-  profsList: PropTypes.array,
-  toggleFavorite: PropTypes.func
+  profSearch: PropTypes.array,
+  toggleFavorite: PropTypes.func,
+  userBuddies: PropTypes.array,
+  userProfs: PropTypes.array
 };
