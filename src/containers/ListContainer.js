@@ -8,8 +8,10 @@ import {
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
-  buddyList: store.buddyList,
-  profsList: store.profsList
+  userBuddies: store.userBuddies,
+  userProfs: store.userProfs,
+  profSearch: store.profSearch,
+  buddySearch: store.buddySearch
 });
 
 const mapDispatchToProps = (dispatch) => ({
