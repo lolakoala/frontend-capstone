@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import { getBuddies } from '../actions/actions';
 
 const mapStateToProps =  store => ({
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
+  buddyList: store.buddyList
 });
 
 const mapDispatchToProps = (dispatch) => ({
