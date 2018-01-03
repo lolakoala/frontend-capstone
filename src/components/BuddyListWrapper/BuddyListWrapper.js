@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 
-class BuddyList extends Component {
+class BuddyListWrapper extends Component {
   constructor() {
     super();
     this.state = {
@@ -24,10 +24,8 @@ class BuddyList extends Component {
     });
   };
 
-  render() {
-    const { location, buddyList } = this.props;
-    const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
-    const filteredBuddies = buddyList.filter(buddy => {
+  filterBuddies = () => {
+    return this.props.buddyList.filter(buddy => {
       const searchableBuddy = Object.assign({}, buddy, { city: '' });
       const buddyValues = Object.values(searchableBuddy);
       let isMatch = false;
@@ -38,6 +36,12 @@ class BuddyList extends Component {
       });
       return isMatch === true;
     });
+  }
+
+  render() {
+    const { location, buddyList } = this.props;
+    const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
+    const buddiesToRender = this.state.value ? this.filterBuddies() : buddyList;
 
     return (
       <div>
@@ -46,16 +50,15 @@ class BuddyList extends Component {
           onChange={this.handleChange}
           hintText={`Type here to filter your ${list}.`}
         />
-        {/* list of buddies from buddyList, must be able to favorite*/}
-        {/* if this.state.value, filter buddyList according to value */}
+        {/* list of buddies from buddiesToRender, must be able to favorite- will be it's own component */}
       </div>
     );
   }
 }
 
-export default BuddyList;
+export default BuddyListWrapper;
 
-BuddyList.propTypes = {
+BuddyListWrapper.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
   currentUser: PropTypes.object,

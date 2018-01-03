@@ -1,4 +1,4 @@
-import BuddyList from '../components/BuddyList/BuddyList.js';
+import BuddyListWrapper from '../components/BuddyListWrapper/BuddyListWrapper.js';
 import { connect } from 'react-redux';
 import { getBuddies } from '../actions/actions';
 
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch) => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(BuddyList);
+export default connect(mapStateToProps, mapDispatchToProps)(BuddyListWrapper);
