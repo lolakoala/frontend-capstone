@@ -7,7 +7,7 @@ import { TextField } from 'redux-form-material-ui';
 
 const validate = values => {
   const errors = {};
-  const requiredFields = ['userName'];
+  const requiredFields = ['userName', 'aboutMe'];
   requiredFields.forEach(field => {
     if (!values[field]) {
       errors[field] = 'Required';
@@ -23,21 +23,28 @@ class CreateProfile extends Component {
     this.props.getAllChallenges();
   }
 
+  // might not need this function if using react-upload
   uploadPhoto = () => {
     //dunno wtf will happen here
   }
 
-  addChallenge = challenge => {
-    // change color of chip
-    // add challenge to userChallenges
-    this.props.addUserChallenge(challenge);
+  toggleChallenge = challenge => {
+    const { userChallenges } = this.props;
+
+    if (userChallenges.includes(challenge)) {
+      // change chip back to original color
+      this.props.removeUserChallenge(challenge);
+    } else {
+      // change color of chip
+      this.props.addUserChallenge(challenge);
+    }
   }
 
   renderChip = (challenge, index) => {
     return (
       <Chip
         key={`${challenge}${index}`}
-        onClick={() => { this.addChallenge(challenge); }}>
+        onClick={() => { this.toggleChallenge(challenge); }}>
         {challenge}
       </Chip>
     );
@@ -46,7 +53,14 @@ class CreateProfile extends Component {
   submitProfile = () => {
     // if we make another form, things might get hairy in the form object we're accessing from the store?
     const { submitProfile, currentUser, userChallenges, form } = this.props;
-    const newUser = Object.assign({}, currentUser, { userChallenges }, form['object Object'].values);
+    // userImage key on this object to send image?
+    const newUser = Object.assign(
+      {},
+      currentUser,
+      { userChallenges },
+      { userName: form['object Object'].values.userName, aboutMe: form['object Object'].values.aboutMe }
+    );
+    // somehow send image in submitProfile action?
     submitProfile(newUser);
   }
 
@@ -55,7 +69,7 @@ class CreateProfile extends Component {
   render() {
     const userKeys = Object.keys(this.props.currentUser);
     if (userKeys.length > 2) {
-      return <Redirect to="/editProfile" />;
+      return <Redirect to="/dash" />;
     }
     return (<div>
       <form>
@@ -100,6 +114,7 @@ CreateProfile.propTypes = {
   allChallenges: PropTypes.array,
   form: PropTypes.object,
   addUserChallenge: PropTypes.func,
+  removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
   submitProfile: PropTypes.func,
   clearProfile: PropTypes.func

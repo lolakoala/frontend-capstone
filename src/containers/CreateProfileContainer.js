@@ -4,7 +4,8 @@ import {
   getAllChallenges,
   addUserChallenge,
   submitProfile,
-  clearProfile
+  clearProfile,
+  removeUserChallenge
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
@@ -20,6 +21,9 @@ const mapDispatchToProps = dispatch => ({
   },
   addUserChallenge: challenge => {
     dispatch(addUserChallenge(challenge));
+  },
+  removeUserChallenge: challenge => {
+    dispatch(removeUserChallenge(challenge));
   },
   submitProfile: newUser => {
     dispatch(submitProfile(newUser));

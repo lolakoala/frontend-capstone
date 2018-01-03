@@ -44,6 +44,13 @@ export const addUserChallenge = challenge => {
   };
 };
 
+export const removeUserChallenge = challenge => {
+  return {
+    type: 'REMOVE_USER_CHALLENGE',
+    challenge
+  };
+};
+
 const postUser = newUser => {
   // post request to server to post new user
 };
