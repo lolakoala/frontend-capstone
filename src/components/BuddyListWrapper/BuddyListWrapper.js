@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
+import BuddyList from '../BuddyList/BuddyList';
+
+// possible location.pathname
+// /buddies
+// /buddySearch
+// /preferredProfessionals
+// /profsSearch
 
 class BuddyListWrapper extends Component {
   constructor() {
@@ -11,10 +18,13 @@ class BuddyListWrapper extends Component {
   }
 
   componentWillMount() {
-    const { currentUser, location, getBuddies } = this.props;
+    const { currentUser, location, getBuddies, getPreferredProfs } = this.props;
 
     if (location.pathname === '/buddies') {
       getBuddies(currentUser);
+    }
+    if (location.pathname === '/preferredProfessionals') {
+      getPreferredProfs(currentUser);
     }
   }
 
@@ -39,7 +49,7 @@ class BuddyListWrapper extends Component {
   }
 
   render() {
-    const { location, buddyList } = this.props;
+    const { location, buddyList, currentUser } = this.props;
     const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
     const buddiesToRender = this.state.value ? this.filterBuddies() : buddyList;
 
@@ -50,7 +60,11 @@ class BuddyListWrapper extends Component {
           onChange={this.handleChange}
           hintText={`Type here to filter your ${list}.`}
         />
-        {/* list of buddies from buddiesToRender, must be able to favorite- will be it's own component */}
+        <BuddyList
+          buddies={buddiesToRender}
+          // action to toggle favorite
+          currentUser={currentUser}
+        />
       </div>
     );
   }
@@ -62,5 +76,7 @@ BuddyListWrapper.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
   currentUser: PropTypes.object,
-  buddyList: PropTypes.object
+  buddyList: PropTypes.object,
+  getPreferredProfs: PropTypes.func,
+  profsList: PropTypes.array
 };

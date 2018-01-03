@@ -140,3 +140,15 @@ export const getBuddies = user => {
     buddies
   };
 };
+
+const fetchProfs = user => {
+  // get request for fave profs
+};
+
+export const getPreferredProfs = user => {
+  const profs = fetchProfs(user);
+  return {
+    type: 'GET_PREFERRED_PROFS',
+    profs
+  };
+};
