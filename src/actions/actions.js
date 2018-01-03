@@ -152,3 +152,23 @@ export const getPreferredProfs = user => {
     profs
   };
 };
+
+// these actions are unfinished
+
+const postBuddy = (user, personObject) => {
+  // fetchBuddies(user) to check if buddy is already fave
+  // make post or patch request to add/remove fave buddy
+};
+
+const postProf = (user, personObject) => {
+  // fetchProfs(user) to check if prof is already fave
+  // make post or patch request to add/remove fave prof
+};
+
+export const toggleFavorite = (user, type, personObject) => {
+  if (type === 'buddy') {
+    postBuddy(user, personObject);
+  } else {
+    postProf(user, personObject);
+  }
+}; //end unfinished action

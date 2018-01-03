@@ -4,12 +4,6 @@ import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
 import ProfsList from '../ProfsList/ProfsList';
 
-// possible location.pathname
-// /buddies
-// /buddySearch
-// /preferredProfessionals
-// /profsSearch
-
 class ListWrapper extends Component {
   constructor() {
     super();
@@ -50,18 +44,18 @@ class ListWrapper extends Component {
   }
 
   render() {
-    const { location, buddyList, currentUser, profsList } = this.props;
+    const { location, buddyList, currentUser, profsList, toggleFavorite } = this.props;
     const list = location.pathname === '/buddies' ? 'buddies' : 'buddy search results';
     const buddiesToRender = this.state.value ? this.filterList(buddyList) : buddyList;
     const profsToRender = this.state.value ? this.filterList(profsList) : profsList;
     const buddyComponent = <BuddyList
       buddies={buddiesToRender}
-      // action to toggle favorite
+      toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
     const profsComponent = <ProfsList
       profs={profsToRender}
-      // action to toggle favorite
+      toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
 
@@ -86,5 +80,6 @@ ListWrapper.propTypes = {
   currentUser: PropTypes.object,
   buddyList: PropTypes.object,
   getPreferredProfs: PropTypes.func,
-  profsList: PropTypes.array
+  profsList: PropTypes.array,
+  toggleFavorite: PropTypes.func
 };

@@ -1,6 +1,10 @@
 import ListWrapper from '../components/ListWrapper/ListWrapper.js';
 import { connect } from 'react-redux';
-import { getBuddies, getPreferredProfs } from '../actions/actions';
+import {
+  getBuddies,
+  getPreferredProfs,
+  toggleFavorite
+} from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
@@ -14,6 +18,9 @@ const mapDispatchToProps = (dispatch) => ({
   },
   getPreferredProfs: user => {
     dispatch(getPreferredProfs(user));
+  },
+  toggleFavorite: (user, type, personObject) => {
+    dispatch(toggleFavorite(user, type, personObject));
   }
 });
 
