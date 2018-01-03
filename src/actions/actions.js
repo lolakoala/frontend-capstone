@@ -74,3 +74,57 @@ export const signOut = () => {
     type: 'SIGN_OUT'
   };
 };
+
+const fetchInsuranceList = () => {
+  // get request to server for insurance list
+  // mock data to play with below
+  return ['medicaid', 'cigna', 'aetna'];
+};
+
+export const getInsuranceList = () => {
+  const insuranceList = fetchInsuranceList();
+  return {
+    type: 'GET_INSURANCE_LIST',
+    insuranceList
+  };
+};
+
+const fetchSpecialtyList = () => {
+  // get request to server for specialty list
+  // mock data to play with below
+  return ['relationships', 'anxiety', 'depression'];
+};
+
+export const getSpecialtyList = () => {
+  const specialtyList = fetchSpecialtyList();
+  return {
+    type: 'GET_SPECIALTY_LIST',
+    specialtyList
+  };
+};
+
+const sendSearch = searchObject => {
+  // use object contents to make get request to server with query params
+};
+
+export const search = searchObject => {
+  const searchResults = sendSearch(searchObject);
+
+  if (searchObject.group === 'professionals') {
+    return {
+      type: 'SEARCH_PROFESSIONALS',
+      searchResults
+    };  
+  } else {
+    return {
+      type: 'SEARCH_BUDDIES',
+      searchResults
+    };
+  }
+};
+
+export const clearSearchResults = () => {
+  return {
+    type: 'CLEAR_SEARCH_RESULTS'
+  };
+};

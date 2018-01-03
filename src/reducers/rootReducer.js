@@ -1,29 +1,16 @@
 import { combineReducers } from 'redux';
-// import { reducer as formReducer } from 'redux-form';
-// import all reducers here
 import currentUser from './currentUser';
 import allChallenges from './allChallenges';
 import userChallenges from './userChallenges';
-
+import insuranceList from './insuranceList';
+import specialtyList from './specialtyList';
 
 const rootReducer = combineReducers({
-  // list all imported reducers here
   currentUser,
   allChallenges,
-  userChallenges
-  // form: formReducer.plugin({
-  //   CreateProfile: (state, action) => { // <------ 'CreateProfile' is name of form given to reduxForm()
-  //     switch (action.type) {
-  //     case 'SUBMIT_PROFILE':
-  //       return state;
-  //       // returning undefined clears form
-  //     case 'CLEAR_PROFILE':
-  //       return undefined;
-  //     default:
-  //       return state;
-  //     }
-  //   }
-  // })
+  userChallenges,
+  insuranceList,
+  specialtyList
 });
 
 export default rootReducer;
