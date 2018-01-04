@@ -2,15 +2,12 @@ import React, {Component} from 'react';
 import Routes from './Routes.jsx';
 import { BrowserRouter } from 'react-router-dom';
 import DevTools from '../containers/DevTools';
-import {
-// import any colors to use to change theme style
-} from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { fade } from 'material-ui/utils/colorManipulator';
+import css from './main.css'
 
 const muiTheme = getMuiTheme({
-  // change theme style here
   palette: {
     primary1Color: '#2F9C95',
     primary2Color: '#315659',
@@ -37,7 +34,6 @@ export default class Root extends Component {
           <MuiThemeProvider muiTheme={muiTheme}>
             <Routes />
           </MuiThemeProvider>
-          {/*Below are Redux devtools. Uncomment to use.*/}
           {/* <DevTools /> */}
         </div>
       </BrowserRouter>
