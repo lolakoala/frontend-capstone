@@ -1,6 +1,7 @@
 import React from 'react';
 // don't think it needs props yet?
 // import PropTypes from 'prop-types';
+import icon from '../../assets/snail-shell.svg';
 import {
   MobileTearSheet,
   List,
@@ -14,23 +15,23 @@ const Toolbox = () => {
       <Subheader>Mental Health Resources</Subheader>
       <ListItem
         primaryText="Brendan Lim"
-        leftAvatar={}
+        leftAvatar={<img src={icon} alt="snail shell icon" height="40" width="40" />}
       />
       <ListItem
         primaryText="Eric Hoffman"
-        leftAvatar={}
+        leftAvatar={<img src={icon} alt="snail shell icon" height="40" width="40" />}
       />
       <ListItem
         primaryText="Grace Ng"
-        leftAvatar={}
+        leftAvatar={<img src={icon} alt="snail shell icon" height="40" width="40" />}
       />
       <ListItem
         primaryText="Kerem Suer"
-        leftAvatar={}
+        leftAvatar={<img src={icon} alt="snail shell icon" height="40" width="40" />}
       />
       <ListItem
         primaryText="Raquel Parrado"
-        leftAvatar={}
+        leftAvatar={<img src={icon} alt="snail shell icon" height="40" width="40" />}
       />
     </List>
   </MobileTearSheet>);
