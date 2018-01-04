@@ -27,9 +27,6 @@ const mapDispatchToProps = dispatch => ({
   },
   submitProfile: newUser => {
     dispatch(submitProfile(newUser));
-  },
-  clearProfile: () => {
-    dispatch(clearProfile());
   }
 });
 

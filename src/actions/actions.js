@@ -82,12 +82,6 @@ export const submitProfile = newUser => {
   };
 };
 
-export const clearProfile = () => {
-  return {
-    type: 'CLEAR_PROFILE'
-  };
-};
-
 export const signOut = () => {
   return {
     type: 'SIGN_OUT'

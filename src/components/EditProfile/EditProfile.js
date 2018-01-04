@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
 
-class CreateProfile extends Component {
+class EditProfile extends Component {
   constructor() {
     super();
     this.state = {
@@ -43,8 +43,8 @@ class CreateProfile extends Component {
     );
   }
 
-  editProfile = () => {
-    const { editProfile, currentUser, userChallenges } = this.props;
+  submitProfile = () => {
+    const { submitProfile, currentUser, userChallenges } = this.props;
     // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
@@ -52,15 +52,13 @@ class CreateProfile extends Component {
       { userChallenges },
       this.state
     );
-    // somehow send image in editProfile action?
-    editProfile(newUser);
+    // somehow send image in submitProfile action?
+    submitProfile(newUser);
   }
 
   render() {
-    if (this.props.currentUser.userName) {
-      return <Redirect to="/dash" />;
-    }
     return (<div>
+      {/* if user has photo, display photo and button to change it (or adjust button below to say 'Change Photo') */}
       <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
       <TextField
         name="userName"
@@ -83,20 +81,21 @@ class CreateProfile extends Component {
         <p>Select challenges you identify with.</p>
         {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
       </div>
-      <RaisedButton label="Submit Profile" onClick={this.editProfile} />
+      <RaisedButton label="Submit Edits" onClick={this.submitProfile} />
     </div>);
   }
 }
 
-export default CreateProfile;
+export default EditProfile;
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
   currentUser: PropTypes.object,
   getAllChallenges: PropTypes.func,
   allChallenges: PropTypes.array,
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  editProfile: PropTypes.func,
+  submitProfile: PropTypes.func,
+  clearProfile: PropTypes.func,
   history: PropTypes.object
 };
