@@ -75,7 +75,13 @@ class EditProfile extends Component {
 
   render() {
     return (<div>
-      {/* if user has photo, display photo and button to change it (or adjust button below to say 'Change Photo') */}
+      {/* if user has photo, display photo */}
+      <img
+        // placeholder img url
+        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+        alt="Your avatar"
+        className="profile-pic"
+      />
       <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} />
       <TextField
         name="userName"
