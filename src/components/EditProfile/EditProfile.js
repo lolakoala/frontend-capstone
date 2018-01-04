@@ -41,10 +41,13 @@ class EditProfile extends Component {
   }
 
   renderChip = (challenge, index) => {
+    const userChallenge = this.props.userChallenges.find(chal => chal === challenge);
     return (
       <Chip
         key={`${challenge}${index}`}
-        onClick={() => { this.toggleChallenge(challenge); }}>
+        onClick={() => { this.toggleChallenge(challenge); }}
+        backgroundColor={userChallenge ? '#2F9C95' : ''}
+      >
         {challenge}
       </Chip>
     );

@@ -25,19 +25,20 @@ class CreateProfile extends Component {
     const { userChallenges } = this.props;
 
     if (userChallenges.includes(challenge)) {
-      // change chip back to original color
       this.props.removeUserChallenge(challenge);
     } else {
-      // change color of chip
       this.props.addUserChallenge(challenge);
     }
   }
 
   renderChip = (challenge, index) => {
+    const userChallenge = this.props.userChallenges.find(chal => chal === challenge);
     return (
       <Chip
         key={`${challenge}${index}`}
-        onClick={() => { this.toggleChallenge(challenge); }}>
+        onClick={() => { this.toggleChallenge(challenge); }}
+        backgroundColor={userChallenge ? '#2F9C95' : ''}
+      >
         {challenge}
       </Chip>
     );
