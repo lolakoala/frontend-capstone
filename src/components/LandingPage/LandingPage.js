@@ -17,14 +17,10 @@ class LandingPage extends Component {
 
   render() {
     const currentUser = this.props.currentUser;
-    console.log(currentUser)
-    // const userKeys = Object.keys(currentUser);
 
-    //if currentUser has one key, redirect to edit profile
     if (currentUser.email && !currentUser.userName) {
       return <Redirect to="/selectCity" />;
     }
-    //if currentUser has > 1 key, redirect to dash
     if (currentUser.userName) {
       return <Redirect to="/dash" />;
     }

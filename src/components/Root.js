@@ -7,9 +7,26 @@ import {
 } from 'material-ui/styles/colors';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { fade } from 'material-ui/utils/colorManipulator';
 
 const muiTheme = getMuiTheme({
   // change theme style here
+  palette: {
+    primary1Color: '#315659',
+    primary2Color: '#2F9C95',
+    primary3Color: '#BCAB79',
+    accent1Color: '#2F9C95',
+    accent2Color: '#BCAB79',
+    accent3Color: '#BCAB79',
+    textColor: '#253031',
+    alternateTextColor: '#E4EAF5',
+    canvasColor: '#E4EAF5',
+    borderColor: '#BCAB79',
+    disabledColor: fade('#253031', 0.3),
+    pickerHeaderColor: '#315659',
+    clockCircleColor: fade('#253031', 0.07),
+    shadowColor: '#253031'
+  }
 });
 
 export default class Root extends Component {
@@ -21,7 +38,7 @@ export default class Root extends Component {
             <Routes />
           </MuiThemeProvider>
           {/*Below are Redux devtools. Uncomment to use.*/}
-          <DevTools />
+          {/* <DevTools /> */}
         </div>
       </BrowserRouter>
     );
