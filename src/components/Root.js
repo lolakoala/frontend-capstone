@@ -12,10 +12,10 @@ import { fade } from 'material-ui/utils/colorManipulator';
 const muiTheme = getMuiTheme({
   // change theme style here
   palette: {
-    primary1Color: '#315659',
-    primary2Color: '#2F9C95',
+    primary1Color: '#2F9C95',
+    primary2Color: '#315659',
     primary3Color: '#BCAB79',
-    accent1Color: '#2F9C95',
+    accent1Color: '#315659',
     accent2Color: '#BCAB79',
     accent3Color: '#BCAB79',
     textColor: '#253031',
@@ -23,7 +23,7 @@ const muiTheme = getMuiTheme({
     canvasColor: '#E4EAF5',
     borderColor: '#BCAB79',
     disabledColor: fade('#253031', 0.3),
-    pickerHeaderColor: '#315659',
+    pickerHeaderColor: '#2F9C95',
     clockCircleColor: fade('#253031', 0.07),
     shadowColor: '#253031'
   }
