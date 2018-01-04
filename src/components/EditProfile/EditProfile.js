@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { Chip, RaisedButton, TextField } from 'material-ui';
+import {
+  Chip,
+  RaisedButton,
+  TextField,
+  DropDownMenu,
+  MenuItem
+} from 'material-ui';
 
 class EditProfile extends Component {
   constructor() {
     super();
     this.state = {
       userName: '',
-      aboutMe: ''
+      aboutMe: '',
+      city: ''
     };
   }
 
@@ -16,9 +22,19 @@ class EditProfile extends Component {
     this.props.getAllChallenges();
   }
 
+  componentDidMount() {
+    const { currentUser } = this.props;
+    this.setState({
+      userName: currentUser.userName,
+      aboutMe: currentUser.aboutMe,
+      city: currentUser.city
+    });
+  }
+
   // might not need this function if using react-upload
   uploadPhoto = () => {
     //dunno wtf will happen here
+    // replace current photo
   }
 
   toggleChallenge = challenge => {
@@ -43,6 +59,7 @@ class EditProfile extends Component {
     );
   }
 
+  // change to editProfile
   submitProfile = () => {
     const { submitProfile, currentUser, userChallenges } = this.props;
     // userImage key on this object to send image?
@@ -59,7 +76,7 @@ class EditProfile extends Component {
   render() {
     return (<div>
       {/* if user has photo, display photo and button to change it (or adjust button below to say 'Change Photo') */}
-      <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
+      <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} />
       <TextField
         name="userName"
         hintText="Username: Must be at least 5 characters."
@@ -67,6 +84,9 @@ class EditProfile extends Component {
         onChange={event => this.setState({ userName: event.target.value })}
         value={this.state.userName}
       />
+      <DropDownMenu value={this.state.city} onChange={event => this.setState({ city: event.target.value })}>
+        <MenuItem value="Denver" primaryText="Denver" />
+      </DropDownMenu>
       <TextField
         name="aboutMe"
         hintText="Tell us a bit about yourself: whatever you're open to sharing."

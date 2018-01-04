@@ -43,8 +43,8 @@ class CreateProfile extends Component {
     );
   }
 
-  editProfile = () => {
-    const { editProfile, currentUser, userChallenges } = this.props;
+  submitProfile = () => {
+    const { submitProfile, currentUser, userChallenges } = this.props;
     // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
@@ -52,8 +52,8 @@ class CreateProfile extends Component {
       { userChallenges },
       this.state
     );
-    // somehow send image in editProfile action?
-    editProfile(newUser);
+    // somehow send image in submitProfile action?
+    submitProfile(newUser);
   }
 
   render() {
@@ -83,7 +83,7 @@ class CreateProfile extends Component {
         <p>Select challenges you identify with.</p>
         {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
       </div>
-      <RaisedButton label="Submit Profile" onClick={this.editProfile} />
+      <RaisedButton label="Submit Profile" onClick={this.submitProfile} />
     </div>);
   }
 }
@@ -97,6 +97,6 @@ CreateProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  editProfile: PropTypes.func,
+  submitProfile: PropTypes.func,
   history: PropTypes.object
 };
