@@ -5,6 +5,13 @@ const getUser = email => {
     },
     userChallenges: []
   };
+  // const userObj = {
+  //   user: {
+  //     email,
+  //
+  //   }
+  // }
+
   //fetch user with matching email - get request w/ query params
   //if user exists, return user object as key value pair
   // .then fetch userChallenges
