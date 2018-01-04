@@ -1,17 +1,29 @@
 const getUser = email => {
+  const userObj = {
+    user: {
+      email
+    },
+    userChallenges: []
+  };
   //fetch user with matching email - get request w/ query params
-  //if user exists, return user object
+  //if user exists, return user object as key value pair
+  // .then fetch userChallenges
+  // add challenges to userObj as key value pair
   //if user doesn't exist, just return object with email
+
+
   // if (!user) {
-  return { email };
+  return userObj;
   // }
 };
 
 export const loginSuccess = email => {
   const user = getUser(email);
+  // user should end up being object with email, user, userChallenges
   return {
     type: 'LOGIN_SUCCESS',
-    user
+    user: user.user,
+    userChallenges: user.userChallenges
   };
 };
 

@@ -4,6 +4,8 @@ const userChallenges = (state = [], action) => {
     return [...state, action.challenge];
   case 'SIGN_OUT':
     return [];
+  case 'LOGIN_SUCCESS':
+    return action.userChallenges;
   case 'REMOVE_USER_CHALLENGE':
     const updatedArray = state.filter(userChallenge => userChallenge !== action.challenge);
     return updatedArray;
