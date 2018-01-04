@@ -1,4 +1,4 @@
-import CreateProfile from '../components/CreateProfile/CreateProfile.js';
+import EditProfile from '../components/EditProfile/EditProfile.js';
 import { connect } from 'react-redux';
 import {
   getAllChallenges,
@@ -28,4 +28,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(EditProfile);

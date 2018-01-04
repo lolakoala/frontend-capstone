@@ -8,6 +8,7 @@ import DashContainer from '../containers/DashContainer';
 import ListContainer from '../containers/ListContainer';
 import Toolbox from './Toolbox/Toolbox';
 import ViewProfileContainer from '../containers/ViewProfileContainer';
+import EditProfileContainer from '../containers/EditProfileContainer';
 
 const Routes = () => {
   return (
@@ -20,6 +21,7 @@ const Routes = () => {
       <Route path="/list" component={ ListContainer } />
       <Route exact path ="/toolbox" component={ Toolbox } />
       <Route exact path ="/profile" component={ ViewProfileContainer } />
+      <Route exact path ="/editProfile" component={ EditProfileContainer } />
     </div>
   );
 
