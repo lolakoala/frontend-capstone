@@ -66,8 +66,8 @@ class EditProfile extends Component {
   }
 
   // change to editProfile
-  submitProfile = () => {
-    const { submitProfile, currentUser, userChallenges } = this.props;
+  editProfile = () => {
+    const { editProfile, currentUser, userChallenges } = this.props;
     // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
@@ -75,8 +75,8 @@ class EditProfile extends Component {
       { userChallenges },
       this.state
     );
-    // somehow send image in submitProfile action?
-    submitProfile(newUser);
+    // somehow send image in editProfile action?
+    editProfile(newUser);
   }
 
   render() {
@@ -91,7 +91,6 @@ class EditProfile extends Component {
       <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} />
       <TextField
         name="userName"
-        // hintText="Username: Must be at least 5 characters."
         type="text"
         onChange={event => this.setState({ userName: event.target.value })}
         value={this.state.userName}
@@ -101,7 +100,6 @@ class EditProfile extends Component {
       </DropDownMenu>
       <TextField
         name="aboutMe"
-        // hintText="Tell us a bit about yourself: whatever you're open to sharing."
         type="text"
         multiLine={true}
         rows={5}
@@ -113,7 +111,7 @@ class EditProfile extends Component {
         <p>Select challenges you identify with.</p>
         {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
       </div>
-      <RaisedButton label="Submit Edits" onClick={this.submitProfile} />
+      <RaisedButton label="Submit Edits" onClick={this.editProfile} />
     </div>);
   }
 }
@@ -127,5 +125,5 @@ EditProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  submitProfile: PropTypes.func
+  editProfile: PropTypes.func
 };
