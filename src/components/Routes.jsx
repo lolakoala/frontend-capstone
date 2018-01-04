@@ -6,6 +6,7 @@ import CreateProfileContainer from '../containers/CreateProfileContainer';
 import PersistedContainer from '../containers/PersistedContainer';
 import DashContainer from '../containers/DashContainer';
 import ListContainer from '../containers/ListContainer';
+import Toolbox from './Toolbox/Toolbox';
 
 
 const Routes = () => {
@@ -17,6 +18,7 @@ const Routes = () => {
       <Route exact path="/createProfile" component={ CreateProfileContainer } />
       <Route exact path="/dash" component={ DashContainer } />
       <Route path="/list" component={ ListContainer } />
+      <Route exact path = "/toolbox" component={ Toolbox } />
     </div>
   );
 
