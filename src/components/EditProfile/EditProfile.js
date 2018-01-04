@@ -85,7 +85,7 @@ class EditProfile extends Component {
       <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} />
       <TextField
         name="userName"
-        hintText="Username: Must be at least 5 characters."
+        // hintText="Username: Must be at least 5 characters."
         type="text"
         onChange={event => this.setState({ userName: event.target.value })}
         value={this.state.userName}
@@ -95,7 +95,7 @@ class EditProfile extends Component {
       </DropDownMenu>
       <TextField
         name="aboutMe"
-        hintText="Tell us a bit about yourself: whatever you're open to sharing."
+        // hintText="Tell us a bit about yourself: whatever you're open to sharing."
         type="text"
         multiLine={true}
         rows={5}
@@ -121,7 +121,5 @@ EditProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  submitProfile: PropTypes.func,
-  clearProfile: PropTypes.func,
-  history: PropTypes.object
+  submitProfile: PropTypes.func
 };

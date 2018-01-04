@@ -97,6 +97,5 @@ CreateProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  submitProfile: PropTypes.func,
-  history: PropTypes.object
+  submitProfile: PropTypes.func
 };
