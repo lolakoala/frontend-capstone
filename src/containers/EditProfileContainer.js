@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import {
   getAllChallenges,
   addUserChallenge,
-  submitProfile,
+  editProfile,
   removeUserChallenge
 } from '../actions/actions';
 
@@ -23,8 +23,8 @@ const mapDispatchToProps = dispatch => ({
   removeUserChallenge: challenge => {
     dispatch(removeUserChallenge(challenge));
   },
-  submitProfile: newUser => {
-    dispatch(submitProfile(newUser));
+  editProfile: newUser => {
+    dispatch(editProfile(newUser));
   }
 });
 

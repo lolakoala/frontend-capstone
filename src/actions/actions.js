@@ -82,6 +82,18 @@ export const submitProfile = newUser => {
   };
 };
 
+const patchUser = newUser => {
+  // patch request to server to patch new user
+};
+
+export const editProfile = newUser => {
+  patchUser(newUser);
+  return {
+    type: 'EDIT_PROFILE',
+    newUser
+  };
+};
+
 export const signOut = () => {
   return {
     type: 'SIGN_OUT'
