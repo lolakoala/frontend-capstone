@@ -29,6 +29,8 @@ class Persisted extends Component {
     const signOutButton = <RaisedButton
       label="Sign Out"
       onClick={signOut}
+      linkButton={true}
+      href="/"
       style={{
         position: 'fixed',
         top: '70px',
