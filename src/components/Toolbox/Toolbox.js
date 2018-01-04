@@ -1,6 +1,5 @@
 import React from 'react';
-// don't think it needs props yet?
-// import PropTypes from 'prop-types';
+// if becomes stateful, needs proptypes
 import icon from '../../assets/snail-shell.svg';
 import css from './Toolbox.css';
 import {
