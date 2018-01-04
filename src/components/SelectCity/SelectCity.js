@@ -19,7 +19,6 @@ class SelectCity extends Component {
   }
 
   render() {
-    //if currentUser.city redirect to edit profile
     if (this.props.currentUser.city) {
       return <Redirect to="/createProfile" />;
     }

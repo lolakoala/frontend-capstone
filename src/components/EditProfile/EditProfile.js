@@ -9,27 +9,33 @@ import {
 } from 'material-ui';
 
 class EditProfile extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      userName: '',
-      aboutMe: '',
-      city: ''
+      userName: props.currentUser.userName,
+      aboutMe: props.currentUser.aboutMe,
+      city: props.currentUser.city
     };
   }
 
-  componentWillMount() {
-    this.props.getAllChallenges();
-  }
+  // componentDidMount() {
+  //   this.props.getAllChallenges();
+  //   // const { currentUser } = this.props;
+  //   // this.setState({
+  //   //   userName: currentUser.userName,
+  //   //   aboutMe: currentUser.aboutMe,
+  //   //   city: currentUser.city
+  //   // });
+  // }
 
-  componentDidMount() {
-    const { currentUser } = this.props;
-    this.setState({
-      userName: currentUser.userName,
-      aboutMe: currentUser.aboutMe,
-      city: currentUser.city
-    });
-  }
+  // componentDidMount() {
+  //   const { currentUser } = this.props;
+  //   this.setState({
+  //     userName: currentUser.userName,
+  //     aboutMe: currentUser.aboutMe,
+  //     city: currentUser.city
+  //   });
+  // }
 
   // might not need this function if using react-upload
   uploadPhoto = () => {

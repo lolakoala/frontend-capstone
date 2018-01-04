@@ -9,6 +9,10 @@ class Persisted extends Component {
     // use twilio API to text the mental health hotline
   };
 
+  goHome = () => {
+    this.props.history.push('/dash');
+  }
+
   render () {
     const { currentUser, signOut } = this.props;
     const { pathname } = this.props.location;
@@ -41,8 +45,7 @@ class Persisted extends Component {
     const dashLink = <RaisedButton
       label="Home"
       id="home-button"
-      linkButton={true}
-      href="/dash"
+      onClick={this.goHome}
       style={{
         position: 'fixed',
         top: '120px',
@@ -78,5 +81,6 @@ export default Persisted;
 Persisted.propTypes = {
   currentUser: PropTypes.object,
   location: PropTypes.object,
-  signOut: PropTypes.func
+  signOut: PropTypes.func,
+  history: PropTypes.object
 };

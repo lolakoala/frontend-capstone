@@ -8,7 +8,7 @@ import { List,
   RaisedButton
 } from 'material-ui';
 
-const ViewProfile = ({ currentUser, userChallenges }) => {
+const ViewProfile = ({ currentUser, userChallenges, history }) => {
 
   // const userChallenges = ['depression', 'anxiety'];
   // const currentUser = {
@@ -30,6 +30,10 @@ const ViewProfile = ({ currentUser, userChallenges }) => {
       key={`${challenge}${index}`}
     />;
   });
+
+  const editProfile = () => {
+    history.push('/editProfile');
+  };
 
 
   return (
@@ -58,8 +62,7 @@ const ViewProfile = ({ currentUser, userChallenges }) => {
         </List>
         <RaisedButton
           label="Edit Profile"
-          linkButton={true}
-          href="/editProfile"
+          onClick={editProfile}
         />
       </div>
     </div>
@@ -71,5 +74,6 @@ export default ViewProfile;
 
 ViewProfile.propTypes = {
   currentUser: PropTypes.object,
-  userChallenges: PropTypes.array
+  userChallenges: PropTypes.array,
+  history: PropTypes.object
 };
