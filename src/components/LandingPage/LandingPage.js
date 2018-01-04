@@ -27,8 +27,7 @@ class LandingPage extends Component {
 
     return (
       <div>
-        <h1>Mental Health App</h1>
-        <p>Explanation of the app.</p>
+        <p>Search for mental health professionals in your area, and connect with mental health buddies!</p>
         <RaisedButton label="Sign Up" onClick={this.login} />
         <RaisedButton label="Log In" onClick={this.login} />
       </div>

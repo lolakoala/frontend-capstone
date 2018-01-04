@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Avatar, RaisedButton } from 'material-ui';
 import { Link } from 'react-router-dom';
+import css from './Persisted.css';
+import logo from '../../assets/logo1.png';
 
 class Persisted extends Component {
   panic = () => {
@@ -27,11 +29,20 @@ class Persisted extends Component {
 
     return (
       <div>
+        <RaisedButton
+          label="PANIC"
+          onClick={this.panic}
+          id="panic-button"
+          style={{
+            position: 'fixed',
+            top: '20px',
+            right: '25%'
+          }}
+        />
         {userKeys.length > 2 ? userInfo : null}
         {/* placeholder logo */}
-        <img src="http://one-call.ca/wp-content/uploads/2013/08/logo.png" alt="logo" />
+        <img src={logo} alt="logo" />
         {!pathArray.includes(pathname) ? dashLink : null}
-        <RaisedButton label="PANIC" onClick={this.panic} />
         {pathname !== '/' ? signOutButton : null}
       </div>
     );
