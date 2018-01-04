@@ -15,14 +15,9 @@ class ListWrapper extends Component {
   }
 
   componentWillMount() {
-    const { currentUser, location, getBuddies, getPreferredProfs } = this.props;
-
-    if (location.pathname === '/listUserBuddies') {
-      getBuddies(currentUser);
-    }
-    if (location.pathname === '/listUserProfs') {
-      getPreferredProfs(currentUser);
-    }
+    const { currentUser, getBuddies, getPreferredProfs } = this.props;
+    getBuddies(currentUser);
+    getPreferredProfs(currentUser);
   }
 
   componentDidMount() {
@@ -81,15 +76,17 @@ class ListWrapper extends Component {
   }
 
   render() {
-    const { location, currentUser, toggleFavorite } = this.props;
+    const { location, currentUser, toggleFavorite, userBuddies, userProfs } = this.props;
     const listToRender = this.state.value ? this.filterList(this.state.list) : this.state.list;
     const buddyComponent = <BuddyList
       buddies={listToRender}
+      faves={userBuddies}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
     const profsComponent = <ProfsList
       profs={listToRender}
+      faves={userProfs}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;

@@ -17,5 +17,6 @@ export default ProfsList;
 ProfsList.propTypes = {
   profs: PropTypes.array,
   toggleFavorite: PropTypes.func,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  faves: PropTypes.array
 };
