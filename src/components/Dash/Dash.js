@@ -29,6 +29,7 @@ class Dash extends Component {
           <Link to="/listUserBuddies">My Buddies</Link>
           {/* In My Toolbox, should we add ability to add your own resources? */}
           <Link to="/toolbox">My Toolbox</Link>
+          <Link to="/profile">My Profile</Link>
         </Toolbar>
         <Tabs>
           <Tab label="Search Professionals">
