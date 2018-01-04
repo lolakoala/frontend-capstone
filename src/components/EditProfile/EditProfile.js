@@ -18,24 +18,9 @@ class EditProfile extends Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.props.getAllChallenges();
-  //   // const { currentUser } = this.props;
-  //   // this.setState({
-  //   //   userName: currentUser.userName,
-  //   //   aboutMe: currentUser.aboutMe,
-  //   //   city: currentUser.city
-  //   // });
-  // }
-
-  // componentDidMount() {
-  //   const { currentUser } = this.props;
-  //   this.setState({
-  //     userName: currentUser.userName,
-  //     aboutMe: currentUser.aboutMe,
-  //     city: currentUser.city
-  //   });
-  // }
+  componentWillMount() {
+    this.props.getAllChallenges();
+  }
 
   // might not need this function if using react-upload
   uploadPhoto = () => {
@@ -65,7 +50,6 @@ class EditProfile extends Component {
     );
   }
 
-  // change to editProfile
   editProfile = () => {
     const { editProfile, currentUser, userChallenges } = this.props;
     // userImage key on this object to send image?
