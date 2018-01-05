@@ -5,7 +5,7 @@ import DevTools from '../containers/DevTools';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { fade } from 'material-ui/utils/colorManipulator';
-import css from './main.css'
+import css from './main.css';
 
 const muiTheme = getMuiTheme({
   palette: {
