@@ -49,4 +49,6 @@ describe('Persisted', () => {
 
     expect(userName.length).toEqual(1);
   });
+
+  // add test for click of signout
 });
