@@ -4,6 +4,7 @@ import { Toolbar, Tabs, Tab } from 'material-ui';
 import { Link } from 'react-router-dom';
 import SearchProfessionals from '../SearchProfessionals/SearchProfessionals';
 import SearchBuddies from '../SearchBuddies/SearchBuddies';
+import css from './Dash.css'
 
 class Dash extends Component {
   componentWillMount() {
@@ -24,12 +25,12 @@ class Dash extends Component {
     return (
       <div>
         <Toolbar>
-          <Link to="/chat">Chat</Link>
-          <Link to="/listUserProfs">My Preferred Proffesionals</Link>
-          <Link to="/listUserBuddies">My Buddies</Link>
+          <Link to="/chat" className="toolbar-link">Chat</Link>
+          <Link to="/listUserProfs" className="toolbar-link">My Preferred Proffesionals</Link>
+          <Link to="/listUserBuddies" className="toolbar-link">My Buddies</Link>
           {/* In My Toolbox, should we add ability to add your own resources? */}
-          <Link to="/toolbox">My Toolbox</Link>
-          <Link to="/profile">My Profile</Link>
+          <Link to="/toolbox" className="toolbar-link">My Toolbox</Link>
+          <Link to="/profile" className="toolbar-link">My Profile</Link>
         </Toolbar>
         <Tabs>
           <Tab label="Search Professionals">
