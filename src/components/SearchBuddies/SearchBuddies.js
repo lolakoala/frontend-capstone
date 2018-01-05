@@ -30,7 +30,7 @@ class SearchBuddies extends Component {
     const { allChallenges } = this.props;
 
     return (
-      <div>
+      <div className="search-options">
         <DropDownMenu value={allChallenges[0]} onChange={this.handleChange}>
           {allChallenges.map((challenge, index) => {
             return <MenuItem

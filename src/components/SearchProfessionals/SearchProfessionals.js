@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import { Redirect } from 'react-router-dom';
+import css from './SearchProfessionals.css';
 
 class SearchProfessionals extends Component {
   constructor() {
@@ -63,7 +64,7 @@ class SearchProfessionals extends Component {
     const submitButton = <RaisedButton label="Submit" onClick={this.handleSubmit} />;
 
     return (
-      <div>
+      <div className="search-options">
         <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
           <MenuItem value="select query" primaryText="Select search query." />
           <MenuItem value="insurance" primaryText="Search by insurance." />
