@@ -6,6 +6,8 @@ const currentUser = (state = {}, action) => {
     return action.updatedUser;
   case 'SUBMIT_PROFILE':
     return action.newUser;
+  case 'EDIT_PROFILE':
+    return action.newUser;
   case 'SIGN_OUT':
     return {};
   default:

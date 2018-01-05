@@ -82,9 +82,15 @@ export const submitProfile = newUser => {
   };
 };
 
-export const clearProfile = () => {
+const patchUser = newUser => {
+  // patch request to server to patch new user
+};
+
+export const editProfile = newUser => {
+  patchUser(newUser);
   return {
-    type: 'CLEAR_PROFILE'
+    type: 'EDIT_PROFILE',
+    newUser
   };
 };
 

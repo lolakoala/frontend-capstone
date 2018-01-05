@@ -1,0 +1,26 @@
+.pic-button {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.pic-button img {
+  margin-bottom: 30px;
+}
+
+.change-pic {
+  margin-left: 30px;
+}
+
+.city-dd {
+  margin-left: -25px;
+  margin-bottom: 10px;
+}
+
+.profile-bottom p {
+  font-size: 30px;
+  font-weight: bold;
+  color: #253031
+}

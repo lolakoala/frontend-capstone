@@ -1,9 +1,9 @@
-import CreateProfile from '../components/CreateProfile/CreateProfile.js';
+import EditProfile from '../components/EditProfile/EditProfile.js';
 import { connect } from 'react-redux';
 import {
   getAllChallenges,
   addUserChallenge,
-  submitProfile,
+  editProfile,
   removeUserChallenge
 } from '../actions/actions';
 
@@ -23,9 +23,9 @@ const mapDispatchToProps = dispatch => ({
   removeUserChallenge: challenge => {
     dispatch(removeUserChallenge(challenge));
   },
-  submitProfile: newUser => {
-    dispatch(submitProfile(newUser));
+  editProfile: newUser => {
+    dispatch(editProfile(newUser));
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateProfile);
+export default connect(mapStateToProps, mapDispatchToProps)(EditProfile);
