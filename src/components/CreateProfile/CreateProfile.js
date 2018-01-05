@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
+import css from './CreateProfile.css';
 
 class CreateProfile extends Component {
   constructor() {
@@ -65,29 +66,38 @@ class CreateProfile extends Component {
       return <Redirect to="/dash" />;
     }
     return (<div>
-      <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
-      <TextField
-        name="userName"
-        hintText="Username: Must be at least 5 characters."
-        type="text"
-        onChange={event => this.setState({ userName: event.target.value })}
-        value={this.state.userName}
-      />
-      <TextField
-        name="aboutMe"
-        hintText="Tell us a bit about yourself: whatever you're open to sharing."
-        type="text"
-        multiLine={true}
-        rows={5}
-        rowsMax={10}
-        onChange={event => this.setState({ aboutMe: event.target.value })}
-        value={this.state.aboutMe}
-      />
-      <div>
-        <p>Select challenges you identify with.</p>
-        {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
+      <div className='pic-name-city'>
+        <div className='pic-button'>
+          {/* on upload, display photo */}
+          <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
+        </div>
+        <div className='name-city'>
+          <TextField
+            name="userName"
+            hintText="Username: Must be at least 5 characters."
+            type="text"
+            onChange={event => this.setState({ userName: event.target.value })}
+            value={this.state.userName}
+          />
+          <TextField
+            name="aboutMe"
+            hintText="Tell us a bit about yourself: whatever you're open to sharing."
+            type="text"
+            multiLine={true}
+            rows={1}
+            rowsMax={10}
+            onChange={event => this.setState({ aboutMe: event.target.value })}
+            value={this.state.aboutMe}
+          />
+        </div>
       </div>
-      <RaisedButton label="Submit Profile" onClick={this.submitProfile} />
+      <div className='profile-bottom'>
+        <div>
+          <p>Select challenges you identify with.</p>
+          {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
+        </div>
+        <RaisedButton label="Submit Profile" onClick={this.submitProfile} />
+      </div>
     </div>);
   }
 }
