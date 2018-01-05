@@ -1,0 +1,16 @@
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+  margin-left: 12.5%;
+  justify-content: center;
+}
+
+.welcome p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #253031;
+  text-align: center;
+  margin-bottom: 20px;
+}

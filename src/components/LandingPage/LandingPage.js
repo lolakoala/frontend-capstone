@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import RaisedButton from 'material-ui/RaisedButton';
 import { auth, provider } from '../../firebase.js';
+import css from './LandingPage.css';
 
 class LandingPage extends Component {
 
@@ -26,10 +27,38 @@ class LandingPage extends Component {
     }
 
     return (
-      <div>
-        <p>Search for mental health professionals in your area, and connect with mental health buddies!</p>
-        <RaisedButton label="Sign Up" onClick={this.login} />
-        <RaisedButton label="Log In" onClick={this.login} />
+      <div className='welcome'>
+        <p>Search for mental health professionals and connect with mental health buddies in your area!</p>
+        <RaisedButton
+          label="Sign Up"
+          onClick={this.login}
+          buttonStyle={{
+            height: '100px',
+            width: '250px'
+          }}
+          style={{
+            marginBottom: '50px'
+          }}
+          labelStyle={{
+            fontSize: '30px',
+            marginTop: '30px'
+          }}
+        />
+        <RaisedButton
+          label="Log In"
+          onClick={this.login}
+          buttonStyle={{
+            height: '100px',
+            width: '250px'
+          }}
+          style={{
+            marginBottom: '50px'
+          }}
+          labelStyle={{
+            fontSize: '30px',
+            marginTop: '30px'
+          }}
+        />
       </div>
     );
   }
