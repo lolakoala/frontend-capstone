@@ -1,0 +1,463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Persisted should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Persisted
+    currentUser={
+        Object {
+            "aboutMe": "Lola loves doggos.",
+            "city": "Denver",
+            "email": "lola@gmail.com",
+            "userName": "lolakoala",
+          }
+    }
+    history={Object {}}
+    location={
+        Object {
+            "pathname": "/toolbox",
+          }
+    }
+    signOut={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          id="panic-button"
+          label="PANIC"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          style={
+                    Object {
+                              "position": "fixed",
+                              "right": "25%",
+                              "top": "20px",
+                            }
+          }
+/>,
+        <div
+          id="current-user"
+>
+          <Avatar
+                    alt="Your user photo"
+                    size={40}
+                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+          />
+          <h3>
+                    lolakoala
+          </h3>
+</div>,
+        <img
+          alt="logo"
+          id="logo"
+          src="logo1.png"
+/>,
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          href="/"
+          label="Sign Out"
+          labelPosition="after"
+          linkButton={true}
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          style={
+                    Object {
+                              "position": "fixed",
+                              "right": "25%",
+                              "top": "70px",
+                            }
+          }
+/>,
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          id="home-button"
+          label="Home"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          style={
+                    Object {
+                              "position": "fixed",
+                              "right": "25%",
+                              "top": "120px",
+                            }
+          }
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "fullWidth": false,
+          "id": "panic-button",
+          "label": "PANIC",
+          "labelPosition": "after",
+          "onClick": [Function],
+          "primary": false,
+          "secondary": false,
+          "style": Object {
+            "position": "fixed",
+            "right": "25%",
+            "top": "20px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Avatar
+              alt="Your user photo"
+              size={40}
+              src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+/>,
+            <h3>
+              lolakoala
+</h3>,
+          ],
+          "id": "current-user",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "alt": "Your user photo",
+              "size": 40,
+              "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "lolakoala",
+            },
+            "ref": null,
+            "rendered": "lolakoala",
+            "type": "h3",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "alt": "logo",
+          "id": "logo",
+          "src": "logo1.png",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "img",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "fullWidth": false,
+          "href": "/",
+          "label": "Sign Out",
+          "labelPosition": "after",
+          "linkButton": true,
+          "onClick": [Function],
+          "primary": false,
+          "secondary": false,
+          "style": Object {
+            "position": "fixed",
+            "right": "25%",
+            "top": "70px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "fullWidth": false,
+          "id": "home-button",
+          "label": "Home",
+          "labelPosition": "after",
+          "onClick": [Function],
+          "primary": false,
+          "secondary": false,
+          "style": Object {
+            "position": "fixed",
+            "right": "25%",
+            "top": "120px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            id="panic-button"
+            label="PANIC"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+                        Object {
+                                    "position": "fixed",
+                                    "right": "25%",
+                                    "top": "20px",
+                                  }
+            }
+/>,
+          <div
+            id="current-user"
+>
+            <Avatar
+                        alt="Your user photo"
+                        size={40}
+                        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+            />
+            <h3>
+                        lolakoala
+            </h3>
+</div>,
+          <img
+            alt="logo"
+            id="logo"
+            src="logo1.png"
+/>,
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            href="/"
+            label="Sign Out"
+            labelPosition="after"
+            linkButton={true}
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+                        Object {
+                                    "position": "fixed",
+                                    "right": "25%",
+                                    "top": "70px",
+                                  }
+            }
+/>,
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            id="home-button"
+            label="Home"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+                        Object {
+                                    "position": "fixed",
+                                    "right": "25%",
+                                    "top": "120px",
+                                  }
+            }
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "fullWidth": false,
+            "id": "panic-button",
+            "label": "PANIC",
+            "labelPosition": "after",
+            "onClick": [Function],
+            "primary": false,
+            "secondary": false,
+            "style": Object {
+              "position": "fixed",
+              "right": "25%",
+              "top": "20px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Avatar
+                alt="Your user photo"
+                size={40}
+                src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+/>,
+              <h3>
+                lolakoala
+</h3>,
+            ],
+            "id": "current-user",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "alt": "Your user photo",
+                "size": 40,
+                "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "lolakoala",
+              },
+              "ref": null,
+              "rendered": "lolakoala",
+              "type": "h3",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "alt": "logo",
+            "id": "logo",
+            "src": "logo1.png",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "img",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "fullWidth": false,
+            "href": "/",
+            "label": "Sign Out",
+            "labelPosition": "after",
+            "linkButton": true,
+            "onClick": [Function],
+            "primary": false,
+            "secondary": false,
+            "style": Object {
+              "position": "fixed",
+              "right": "25%",
+              "top": "70px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "fullWidth": false,
+            "id": "home-button",
+            "label": "Home",
+            "labelPosition": "after",
+            "onClick": [Function],
+            "primary": false,
+            "secondary": false,
+            "style": Object {
+              "position": "fixed",
+              "right": "25%",
+              "top": "120px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
