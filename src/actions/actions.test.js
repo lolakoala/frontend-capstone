@@ -80,4 +80,13 @@ describe('actions', () => {
 
     expect(actions.toggleFavorite(currentUser1, 'buddy', currentUser1)).toEqual(expectedAction);
   });
+
+  it('should create an action for toggleFavorite', () => {
+    const expectedAction = {
+      type: 'ADD_PROF',
+      personObject: currentUser1
+    };
+
+    expect(actions.toggleFavorite(currentUser1, 'prof', currentUser1)).toEqual(expectedAction);
+  });
 });
