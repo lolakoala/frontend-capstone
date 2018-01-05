@@ -53,7 +53,7 @@ class SearchProfessionals extends Component {
       city: this.props.currentUser.city
     });
 
-    return <Redirect to="/profsList" />;
+    return <Redirect to="/listProfsSearch" />;
   }
 
   render() {
@@ -85,6 +85,5 @@ SearchProfessionals.propTypes = {
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
   search: PropTypes.func,
-  searchResults: PropTypes.array,
   currentUser: PropTypes.object
 };

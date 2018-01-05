@@ -1,4 +1,4 @@
-const profsList = (state = [], action) => {
+const profSearch = (state = [], action) => {
   switch (action.type) {
   case 'SEARCH_PROFESSIONALS':
     return action.searchResults;
@@ -9,4 +9,4 @@ const profsList = (state = [], action) => {
   }
 };
 
-export default profsList;
+export default profSearch;

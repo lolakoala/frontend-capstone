@@ -23,7 +23,7 @@ class SearchBuddies extends Component {
       topic: this.state.value,
       city: this.props.currentUser.city
     });
-    return <Redirect to="/buddyList" />;
+    return <Redirect to="/listBuddySearch" />;
   }
 
   render() {
@@ -51,7 +51,6 @@ export default SearchBuddies;
 SearchBuddies.propTypes = {
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,
-  searchResults: PropTypes.array,
   search: PropTypes.func,
   currentUser: PropTypes.object
 };

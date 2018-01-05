@@ -1,4 +1,4 @@
-const buddyList = (state = [], action) => {
+const buddySearch = (state = [], action) => {
   switch (action.type) {
   case 'SEARCH_BUDDIES':
     return action.searchResults;
@@ -9,4 +9,4 @@ const buddyList = (state = [], action) => {
   }
 };
 
-export default buddyList;
+export default buddySearch;

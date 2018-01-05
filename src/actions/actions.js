@@ -114,7 +114,7 @@ export const search = searchObject => {
     return {
       type: 'SEARCH_PROFESSIONALS',
       searchResults
-    };  
+    };
   } else {
     return {
       type: 'SEARCH_BUDDIES',
@@ -127,4 +127,54 @@ export const clearSearchResults = () => {
   return {
     type: 'CLEAR_SEARCH_RESULTS'
   };
+};
+
+const fetchBuddies = user => {
+  // get request to server for buddies
+};
+
+export const getBuddies = user => {
+  const buddies = fetchBuddies(user);
+  return {
+    type: 'GET_BUDDIES',
+    buddies
+  };
+};
+
+const fetchProfs = user => {
+  // get request for fave profs
+};
+
+export const getPreferredProfs = user => {
+  const profs = fetchProfs(user);
+  return {
+    type: 'GET_PREFERRED_PROFS',
+    profs
+  };
+};
+
+const postBuddy = (user, personObject) => {
+  // fetchBuddies(user) to check if buddy is already fave
+  // make post or patch request to add/remove fave buddy
+};
+
+const postProf = (user, personObject) => {
+  // fetchProfs(user) to check if prof is already fave
+  // make post or patch request to add/remove fave prof
+};
+
+export const toggleFavorite = (user, type, personObject) => {
+  if (type === 'buddy') {
+    postBuddy(user, personObject);
+    return {
+      type: 'ADD_BUDDY',
+      personObject
+    };
+  } else {
+    postProf(user, personObject);
+    return {
+      type: 'ADD_PROF',
+      personObject
+    };
+  }
 };
