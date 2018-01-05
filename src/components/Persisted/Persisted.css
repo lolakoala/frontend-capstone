@@ -1,0 +1,10 @@
+#logo {
+  margin-left: 50px;
+}
+
+#persisted-user {
+  display: flex;
+  font-size: 18px;
+  top: 20px;
+  right: 25%;
+}
