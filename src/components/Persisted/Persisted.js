@@ -14,6 +14,12 @@ class Persisted extends Component {
     const { pathname } = this.props.location;
     const userKeys = Object.keys(currentUser);
 
+    const renderUser = () => {
+      if (userKeys.length > 2 && (!pathname.includes('profile') || !pathname.includes('Profile'))) {
+        return userInfo;
+      }
+    };
+
     const userInfo = <div id="current-user">
       {/* placeholder avatar, should fetch from server?  */}
       <Avatar src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg" alt="Your user photo"/>
@@ -56,7 +62,7 @@ class Persisted extends Component {
             right: '25%'
           }}
         />
-        {userKeys.length > 2 ? userInfo : null}
+        {renderUser()}
         <img src={logo} alt="logo" id="logo"/>
         {pathname !== '/' ? signOutButton : null}
         {!pathArray.includes(pathname) ? dashLink : null}

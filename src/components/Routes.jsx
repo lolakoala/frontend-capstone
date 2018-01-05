@@ -7,7 +7,7 @@ import PersistedContainer from '../containers/PersistedContainer';
 import DashContainer from '../containers/DashContainer';
 import ListContainer from '../containers/ListContainer';
 import Toolbox from './Toolbox/Toolbox';
-
+import ViewProfileContainer from '../containers/ViewProfileContainer';
 
 const Routes = () => {
   return (
@@ -18,7 +18,8 @@ const Routes = () => {
       <Route exact path="/createProfile" component={ CreateProfileContainer } />
       <Route exact path="/dash" component={ DashContainer } />
       <Route path="/list" component={ ListContainer } />
-      <Route exact path = "/toolbox" component={ Toolbox } />
+      <Route exact path ="/toolbox" component={ Toolbox } />
+      <Route exact path ="/profile" component={ ViewProfileContainer } />
     </div>
   );
 
