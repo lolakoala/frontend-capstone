@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem } from 'material-ui';
+import css from './SelectCity.css';
 
 class SelectCity extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class SelectCity extends Component {
     }
 
     return (
-      <div>
+      <div className="select-city">
         <h2>Please select your city.</h2>
         <DropDownMenu value={this.state.value} onChange={this.addCity}>
           <MenuItem value="Denver" primaryText="Denver" />

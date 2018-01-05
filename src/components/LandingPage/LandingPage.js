@@ -39,6 +39,7 @@ class LandingPage extends Component {
           style={{
             marginBottom: '50px'
           }}
+          secondary={true}
           labelStyle={{
             fontSize: '30px',
             marginTop: '30px'
@@ -51,6 +52,7 @@ class LandingPage extends Component {
             height: '100px',
             width: '250px'
           }}
+          secondary={true}
           style={{
             marginBottom: '50px'
           }}
