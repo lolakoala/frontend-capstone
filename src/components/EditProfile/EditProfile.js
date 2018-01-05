@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import css from './EditProfile.css';
 import {
   Chip,
   RaisedButton,
@@ -12,9 +13,12 @@ class EditProfile extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      userName: props.currentUser.userName,
-      aboutMe: props.currentUser.aboutMe,
-      city: props.currentUser.city
+      userName: 'Lola',
+      aboutMe: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      city: 'Denver'
+      // userName: props.currentUser.userName,
+      // aboutMe: props.currentUser.aboutMe,
+      // city: props.currentUser.city
     };
   }
 
@@ -47,6 +51,9 @@ class EditProfile extends Component {
         key={`${challenge}${index}`}
         onClick={() => { this.toggleChallenge(challenge); }}
         backgroundColor={userChallenge ? '#2F9C95' : ''}
+        style={{
+          marginBottom: '10px'
+        }}
       >
         {challenge}
       </Chip>
@@ -68,37 +75,49 @@ class EditProfile extends Component {
 
   render() {
     return (<div>
-      {/* if user has photo, display photo */}
-      <img
-        // placeholder img url
-        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-        alt="Your avatar"
-        className="profile-pic"
-      />
-      <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} />
-      <TextField
-        name="userName"
-        type="text"
-        onChange={event => this.setState({ userName: event.target.value })}
-        value={this.state.userName}
-      />
-      <DropDownMenu value={this.state.city} onChange={event => this.setState({ city: event.target.value })}>
-        <MenuItem value="Denver" primaryText="Denver" />
-      </DropDownMenu>
-      <TextField
-        name="aboutMe"
-        type="text"
-        multiLine={true}
-        rows={5}
-        rowsMax={10}
-        onChange={event => this.setState({ aboutMe: event.target.value })}
-        value={this.state.aboutMe}
-      />
-      <div>
-        <p>Select challenges you identify with.</p>
-        {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
+      <div className="pic-name-city">
+        {/* if user has photo, display photo */}
+        <div className='pic-button'>
+          <img
+            // placeholder img url
+            src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+            alt="Your avatar"
+            className="profile-pic"
+          />
+          <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} className="change-pic"/>
+        </div>
+        <div className="name-city">
+          <TextField
+            name="userName"
+            type="text"
+            onChange={event => this.setState({ userName: event.target.value })}
+            value={this.state.userName}
+          />
+          <DropDownMenu
+            value={this.state.city}
+            onChange={event => this.setState({ city: event.target.value })}
+            className='city-dd'
+          >
+            <MenuItem value="Denver" primaryText="Denver" />
+          </DropDownMenu>
+          <TextField
+            name="aboutMe"
+            type="text"
+            multiLine={true}
+            rows={3}
+            rowsMax={5}
+            onChange={event => this.setState({ aboutMe: event.target.value })}
+            value={this.state.aboutMe}
+          />
+        </div>
       </div>
-      <RaisedButton label="Submit Edits" onClick={this.editProfile} />
+      <div className='profile-bottom'>
+        <div>
+          <p>Add or remove challenges.</p>
+          {this.props.allChallenges.map((challenge, index) => this.renderChip(challenge, index))}
+        </div>
+        <RaisedButton label="Submit Edits" onClick={this.editProfile} />
+      </div>
     </div>);
   }
 }

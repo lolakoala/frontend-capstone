@@ -38,6 +38,9 @@ class CreateProfile extends Component {
         key={`${challenge}${index}`}
         onClick={() => { this.toggleChallenge(challenge); }}
         backgroundColor={userChallenge ? '#2F9C95' : ''}
+        style={{
+          marginBottom: '10px'
+        }}
       >
         {challenge}
       </Chip>
