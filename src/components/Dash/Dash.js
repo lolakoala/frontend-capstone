@@ -24,14 +24,14 @@ class Dash extends Component {
     } = this.props;
     return (
       <div>
-        <Toolbar>
+        <Toolbar style={{ backgroundColor: '#d4c9a9'}}>
           <Link to="/chat" className="toolbar-link">Chat</Link>
           <Link to="/listUserProfs" className="toolbar-link">My Preferred Proffesionals</Link>
           <Link to="/listUserBuddies" className="toolbar-link">My Buddies</Link>
-          {/* In My Toolbox, should we add ability to add your own resources? */}
           <Link to="/toolbox" className="toolbar-link">My Toolbox</Link>
           <Link to="/profile" className="toolbar-link">My Profile</Link>
         </Toolbar>
+        <div className="dash-instruction">Use the tabs below to connect with professionals or buddies.</div>
         <Tabs>
           <Tab label="Search Professionals">
             <SearchProfessionals
