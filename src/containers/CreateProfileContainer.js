@@ -17,11 +17,11 @@ const mapDispatchToProps = dispatch => ({
   getAllChallenges: () => {
     dispatch(getAllChallenges());
   },
-  addUserChallenge: challenge => {
-    dispatch(addUserChallenge(challenge));
+  addUserChallenge: (challenge, type) => {
+    dispatch(addUserChallenge(challenge, type));
   },
-  removeUserChallenge: challenge => {
-    dispatch(removeUserChallenge(challenge));
+  removeUserChallenge: (challenge, type) => {
+    dispatch(removeUserChallenge(challenge, type));
   },
   submitProfile: newUser => {
     dispatch(submitProfile(newUser));

@@ -26,9 +26,9 @@ class CreateProfile extends Component {
     const { userChallenges } = this.props;
 
     if (userChallenges.includes(challenge)) {
-      this.props.removeUserChallenge(challenge);
+      this.props.removeUserChallenge(challenge, 'create');
     } else {
-      this.props.addUserChallenge(challenge);
+      this.props.addUserChallenge(challenge, 'create');
     }
   }
 

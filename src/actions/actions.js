@@ -65,6 +65,13 @@ export const getAllChallenges = () => {
     .catch(error => { throw error; });
 };
 
+// starting server interaction
+// export const addUserChallenge = (challenge, type) => {
+//   if (type === 'edit') {
+//     return dispatch => fetch(`${backend}`)
+//   }
+// }
+
 export const addUserChallenge = challenge => {
   // if run from editProfile, need to post/patch userChallenges
   return {
@@ -82,7 +89,22 @@ export const removeUserChallenge = challenge => {
 };
 
 const postUser = newUser => {
-  // post request to server to post new user
+  const newUserObj = {
+    user_name: newUser.userName,
+    user_about: newUser.aboutMe,
+    user_location: newUser.city,
+    user_email: newUser.email,
+    user_challenges: newUser.userChallenges
+  };
+
+  fetch(`${backend}/api/v1/users`, {
+    method: 'POST',
+    body: JSON.stringify(newUserObj),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
 export const submitProfile = newUser => {
