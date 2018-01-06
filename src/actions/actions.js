@@ -1,5 +1,4 @@
 import backend from './backend';
-import userFetcher from '../helpers/userFetcher';
 
 const login = user => {
   return {
@@ -51,21 +50,23 @@ export const addCity = (city, user) => {
   };
 };
 
-const fetchAllChallenges = () => {
-  //get request to server for list of challenges
-  //below is just a bit of mock data to play with
-  return ['depression', 'anxiety'];
-};
-
-export const getAllChallenges = () => {
-  const challenges = fetchAllChallenges();
+const challengesAcquired = challenges => {
   return {
     type: 'GET_ALL_CHALLENGES',
     challenges
   };
 };
 
+export const getAllChallenges = () => {
+  return dispatch => fetch(`${backend}/api/v1/challenges`)
+    .then(res => res.json())
+    .then(res => res.challenges.map(challenge => challenge.challenge_name))
+    .then(res => { console.log(res); dispatch(challengesAcquired(res)); })
+    .catch(error => { throw error; });
+};
+
 export const addUserChallenge = challenge => {
+  // if run from editProfile, need to post/patch userChallenges
   return {
     type: 'ADD_USER_CHALLENGE',
     challenge
@@ -73,6 +74,7 @@ export const addUserChallenge = challenge => {
 };
 
 export const removeUserChallenge = challenge => {
+  // if run from editProfile, need to post/patch/delete userChallenges
   return {
     type: 'REMOVE_USER_CHALLENGE',
     challenge
@@ -109,18 +111,19 @@ export const signOut = () => {
   };
 };
 
-const fetchInsuranceList = () => {
-  // get request to server for insurance list
-  // mock data to play with below
-  return ['medicaid', 'cigna', 'aetna'];
-};
-
-export const getInsuranceList = () => {
-  const insuranceList = fetchInsuranceList();
+const insuranceListAcquired = (insuranceList) => {
   return {
     type: 'GET_INSURANCE_LIST',
     insuranceList
   };
+};
+
+export const getInsuranceList = () => {
+  return dispatch => fetch(`${backend}/api/v1/insuranceProviders`)
+    .then(res => res.json())
+    .then(res => res.insuranceProviders.map(ins => ins.insurance_provider_name))
+    .then(res => dispatch(insuranceListAcquired(res)))
+    .catch(error => { throw error; });
 };
 
 const fetchSpecialtyList = () => {
@@ -198,6 +201,7 @@ const postProf = (user, personObject) => {
 };
 
 export const toggleFavorite = (user, type, personObject) => {
+  // this needs to also handling removing a fave
   if (type === 'buddy') {
     postBuddy(user, personObject);
     return {
