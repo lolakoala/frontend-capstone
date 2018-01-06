@@ -1,14 +1,14 @@
 import LandingPage from '../components/LandingPage/LandingPage.js';
 import { connect } from 'react-redux';
-import { loginSuccess } from '../actions/actions';
+import { loginAttempt } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  loginSuccess: (email) => {
-    dispatch(loginSuccess(email));
+  loginAttempt: (email) => {
+    dispatch(loginAttempt(email));
   }
 });
 

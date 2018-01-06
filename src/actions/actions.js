@@ -1,40 +1,47 @@
 import backend from './backend';
+import userFetcher from '../helpers/userFetcher';
 
-const getUser = email => {
-  const userObj = {
-    user: {
-      email
-    },
-    userChallenges: []
-  };
-  // const userObj = {
-  //   user: {
-  //     email,
-  //
-  //   }
-  // }
-
-  //fetch user with matching email - get request w/ query params
-  //if user exists, return user object as key value pair
-  // .then fetch userChallenges
-  // add challenges to userObj as key value pair
-  //if user doesn't exist, just return object with email
-
-
-  // if (!user) {
-  return userObj;
-  // }
-};
-
-export const loginSuccess = email => {
-  const user = getUser(email);
-  // user should end up being object with email, user, userChallenges
+const login = user => {
   return {
     type: 'LOGIN_SUCCESS',
     user: user.user,
     userChallenges: user.userChallenges
   };
 };
+
+export const loginAttempt = email => {
+  return dispatch => {
+    fetch(`${backend}/api/v1/users?user_email=${email}`)
+      .then(res => res.json())
+      .then(res => {
+        const resUser = res.users[0];
+        const user = {
+          user: {
+            email,
+            id: resUser.id,
+            userName: resUser.user_name,
+            aboutMe: resUser.user_about,
+            // user img
+            city: resUser.location
+          },
+          // set challenges when they come back
+          userChallenges: []
+        };
+        return user;
+      })
+      .then(user => dispatch(login(user)))
+      .catch(() => {
+        dispatch(login({
+          user: {
+            email
+          },
+          userChallenges: []
+        }));
+      }
+      );
+  };
+};
+
 
 export const addCity = (city, user) => {
   const updatedUser = Object.assign({}, user, { city });

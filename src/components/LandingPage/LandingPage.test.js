@@ -8,7 +8,7 @@ configure({ adapter: new Adapter() });
 describe('LandingPage', () => {
   const mockFn = jest.fn();
   const wrapper = shallow(<LandingPage
-    loginSuccess={mockFn}
+    loginAttempt={mockFn}
     currentUser={{}}
   />);
 

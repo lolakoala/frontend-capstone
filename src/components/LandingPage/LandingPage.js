@@ -12,7 +12,7 @@ class LandingPage extends Component {
       .then((result) => {
         // might need result.user.uid for some kind of authentication?
         const userEmail = result.user.email;
-        this.props.loginSuccess(userEmail);
+        this.props.loginAttempt(userEmail);
       });
   }
 
@@ -69,6 +69,6 @@ class LandingPage extends Component {
 export default LandingPage;
 
 LandingPage.propTypes = {
-  loginSuccess: PropTypes.func,
+  loginAttempt: PropTypes.func,
   currentUser: PropTypes.object
 };
