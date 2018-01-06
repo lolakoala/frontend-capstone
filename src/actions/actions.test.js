@@ -11,9 +11,15 @@ describe('actions', () => {
     email: 'lola@gmail.com'
   };
 
-  // it('should create an action for login', () => {
-  //   const
-  // })
+  it('should create an action for login', () => {
+    const expectedAction = {
+      type: 'LOGIN_SUCCESS',
+      user: currentUser1,
+      userChallenges: currentUser1.userChallenges
+    };
+
+    expect(actions.login({ user: currentUser1, userChallenges: currentUser1.userChallenges })).toEqual(expectedAction);
+  });
 
   it('should create an action for addCity', () => {
     const expectedAction = {
