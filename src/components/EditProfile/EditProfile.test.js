@@ -18,4 +18,17 @@ describe('EditProfile', () => {
     userChallenges={['anxiety']}
     editProfile={mockFn}
   />);
+
+  // should call function on mount
+  // it should display image
+  // it should have 2 buttons
+  // it should have 2 textfields
+  // it should have a drop down menu
+  // it should have one instruction
+  // it should have as many chips as challenges
+  // on click of a challenge, call function
+  // should change state on input
+  // should change state on ddm onChange
+  // should call function on submit
+
 });
