@@ -60,7 +60,17 @@ ShallowWrapper {
           underlineShow={true}
           value=""
 />,
-        <ProfsList
+        <BuddyList
+          buddies={
+                    Array [
+                              Object {
+                                "aboutMe": "Lola loves doggos.",
+                                "city": "Denver",
+                                "email": "lola@gmail.com",
+                                "userName": "lolakoala",
+                              },
+                            ]
+          }
           currentUser={
                     Object {
                               "aboutMe": "Lola loves doggos.",
@@ -69,8 +79,7 @@ ShallowWrapper {
                               "userName": "lolakoala",
                             }
           }
-          faves={Array []}
-          profs={
+          faves={
                     Array [
                               Object {
                                 "aboutMe": "Lola loves doggos.",
@@ -111,14 +120,21 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
+          "buddies": Array [
+            Object {
+              "aboutMe": "Lola loves doggos.",
+              "city": "Denver",
+              "email": "lola@gmail.com",
+              "userName": "lolakoala",
+            },
+          ],
           "currentUser": Object {
             "aboutMe": "Lola loves doggos.",
             "city": "Denver",
             "email": "lola@gmail.com",
             "userName": "lolakoala",
           },
-          "faves": Array [],
-          "profs": Array [
+          "faves": Array [
             Object {
               "aboutMe": "Lola loves doggos.",
               "city": "Denver",
@@ -154,7 +170,17 @@ ShallowWrapper {
             underlineShow={true}
             value=""
 />,
-          <ProfsList
+          <BuddyList
+            buddies={
+                        Array [
+                                    Object {
+                                      "aboutMe": "Lola loves doggos.",
+                                      "city": "Denver",
+                                      "email": "lola@gmail.com",
+                                      "userName": "lolakoala",
+                                    },
+                                  ]
+            }
             currentUser={
                         Object {
                                     "aboutMe": "Lola loves doggos.",
@@ -163,8 +189,7 @@ ShallowWrapper {
                                     "userName": "lolakoala",
                                   }
             }
-            faves={Array []}
-            profs={
+            faves={
                         Array [
                                     Object {
                                       "aboutMe": "Lola loves doggos.",
@@ -205,14 +230,21 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
+            "buddies": Array [
+              Object {
+                "aboutMe": "Lola loves doggos.",
+                "city": "Denver",
+                "email": "lola@gmail.com",
+                "userName": "lolakoala",
+              },
+            ],
             "currentUser": Object {
               "aboutMe": "Lola loves doggos.",
               "city": "Denver",
               "email": "lola@gmail.com",
               "userName": "lolakoala",
             },
-            "faves": Array [],
-            "profs": Array [
+            "faves": Array [
               Object {
                 "aboutMe": "Lola loves doggos.",
                 "city": "Denver",
