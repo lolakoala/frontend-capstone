@@ -1,0 +1,1081 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateProfile should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CreateProfile
+    addUserChallenge={[Function]}
+    allChallenges={
+        Array [
+            "depression",
+            "anxiety",
+          ]
+    }
+    currentUser={
+        Object {
+            "city": "Denver",
+            "email": "lola@lola.com",
+          }
+    }
+    getAllChallenges={[Function]}
+    removeUserChallenge={[Function]}
+    submitProfile={[Function]}
+    userChallenges={
+        Array [
+            "anxiety",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="pic-name-city"
+>
+          <div
+                    className="pic-button"
+          >
+                    <RaisedButton
+                              disabled={false}
+                              fullWidth={false}
+                              label="Upload Photo"
+                              labelPosition="after"
+                              onClick={[Function]}
+                              primary={false}
+                              secondary={false}
+                    />
+          </div>
+          <div
+                    className="name-city"
+          >
+                    <TextField
+                              disabled={false}
+                              floatingLabelFixed={false}
+                              fullWidth={false}
+                              hintText="Username: Must be at least 5 characters."
+                              multiLine={false}
+                              name="userName"
+                              onChange={[Function]}
+                              rows={1}
+                              type="text"
+                              underlineShow={true}
+                              value=""
+                    />
+                    <TextField
+                              disabled={false}
+                              floatingLabelFixed={false}
+                              fullWidth={false}
+                              hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                              multiLine={true}
+                              name="aboutMe"
+                              onChange={[Function]}
+                              rows={1}
+                              rowsMax={10}
+                              type="text"
+                              underlineShow={true}
+                              value=""
+                    />
+          </div>
+</div>,
+        <div
+          className="profile-bottom"
+>
+          <div>
+                    <p>
+                              Select challenges you identify with.
+                    </p>
+                    <Chip
+                              backgroundColor=""
+                              containerElement="div"
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyboardFocus={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                        Object {
+                                                  "marginBottom": "10px",
+                                                }
+                              }
+                    >
+                              depression
+                    </Chip>
+                    <Chip
+                              backgroundColor="#2F9C95"
+                              containerElement="div"
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onFocus={[Function]}
+                              onKeyDown={[Function]}
+                              onKeyboardFocus={[Function]}
+                              onMouseDown={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onMouseUp={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                              style={
+                                        Object {
+                                                  "marginBottom": "10px",
+                                                }
+                              }
+                    >
+                              anxiety
+                    </Chip>
+          </div>
+          <RaisedButton
+                    disabled={false}
+                    fullWidth={false}
+                    label="Submit Profile"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              className="pic-button"
+>
+              <RaisedButton
+                            disabled={false}
+                            fullWidth={false}
+                            label="Upload Photo"
+                            labelPosition="after"
+                            onClick={[Function]}
+                            primary={false}
+                            secondary={false}
+              />
+</div>,
+            <div
+              className="name-city"
+>
+              <TextField
+                            disabled={false}
+                            floatingLabelFixed={false}
+                            fullWidth={false}
+                            hintText="Username: Must be at least 5 characters."
+                            multiLine={false}
+                            name="userName"
+                            onChange={[Function]}
+                            rows={1}
+                            type="text"
+                            underlineShow={true}
+                            value=""
+              />
+              <TextField
+                            disabled={false}
+                            floatingLabelFixed={false}
+                            fullWidth={false}
+                            hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                            multiLine={true}
+                            name="aboutMe"
+                            onChange={[Function]}
+                            rows={1}
+                            rowsMax={10}
+                            type="text"
+                            underlineShow={true}
+                            value=""
+              />
+</div>,
+          ],
+          "className": "pic-name-city",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <RaisedButton
+                disabled={false}
+                fullWidth={false}
+                label="Upload Photo"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={false}
+/>,
+              "className": "pic-button",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Upload Photo",
+                "labelPosition": "after",
+                "onClick": [Function],
+                "primary": false,
+                "secondary": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <TextField
+                  disabled={false}
+                  floatingLabelFixed={false}
+                  fullWidth={false}
+                  hintText="Username: Must be at least 5 characters."
+                  multiLine={false}
+                  name="userName"
+                  onChange={[Function]}
+                  rows={1}
+                  type="text"
+                  underlineShow={true}
+                  value=""
+/>,
+                <TextField
+                  disabled={false}
+                  floatingLabelFixed={false}
+                  fullWidth={false}
+                  hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                  multiLine={true}
+                  name="aboutMe"
+                  onChange={[Function]}
+                  rows={1}
+                  rowsMax={10}
+                  type="text"
+                  underlineShow={true}
+                  value=""
+/>,
+              ],
+              "className": "name-city",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "disabled": false,
+                  "floatingLabelFixed": false,
+                  "fullWidth": false,
+                  "hintText": "Username: Must be at least 5 characters.",
+                  "multiLine": false,
+                  "name": "userName",
+                  "onChange": [Function],
+                  "rows": 1,
+                  "type": "text",
+                  "underlineShow": true,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "disabled": false,
+                  "floatingLabelFixed": false,
+                  "fullWidth": false,
+                  "hintText": "Tell us a bit about yourself: whatever you're open to sharing.",
+                  "multiLine": true,
+                  "name": "aboutMe",
+                  "onChange": [Function],
+                  "rows": 1,
+                  "rowsMax": 10,
+                  "type": "text",
+                  "underlineShow": true,
+                  "value": "",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div>
+              <p>
+                            Select challenges you identify with.
+              </p>
+              <Chip
+                            backgroundColor=""
+                            containerElement="div"
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyboardFocus={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchStart={[Function]}
+                            style={
+                                          Object {
+                                                        "marginBottom": "10px",
+                                                      }
+                            }
+              >
+                            depression
+              </Chip>
+              <Chip
+                            backgroundColor="#2F9C95"
+                            containerElement="div"
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onFocus={[Function]}
+                            onKeyDown={[Function]}
+                            onKeyboardFocus={[Function]}
+                            onMouseDown={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            onMouseUp={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchStart={[Function]}
+                            style={
+                                          Object {
+                                                        "marginBottom": "10px",
+                                                      }
+                            }
+              >
+                            anxiety
+              </Chip>
+</div>,
+            <RaisedButton
+              disabled={false}
+              fullWidth={false}
+              label="Submit Profile"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+/>,
+          ],
+          "className": "profile-bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <p>
+                  Select challenges you identify with.
+</p>,
+                Array [
+                  <Chip
+                    backgroundColor=""
+                    containerElement="div"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyboardFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    style={
+                                        Object {
+                                                            "marginBottom": "10px",
+                                                          }
+                    }
+>
+                    depression
+</Chip>,
+                  <Chip
+                    backgroundColor="#2F9C95"
+                    containerElement="div"
+                    onBlur={[Function]}
+                    onClick={[Function]}
+                    onFocus={[Function]}
+                    onKeyDown={[Function]}
+                    onKeyboardFocus={[Function]}
+                    onMouseDown={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onMouseUp={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    style={
+                                        Object {
+                                                            "marginBottom": "10px",
+                                                          }
+                    }
+>
+                    anxiety
+</Chip>,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Select challenges you identify with.",
+                },
+                "ref": null,
+                "rendered": "Select challenges you identify with.",
+                "type": "p",
+              },
+              Object {
+                "instance": null,
+                "key": "depression0",
+                "nodeType": "class",
+                "props": Object {
+                  "backgroundColor": "",
+                  "children": "depression",
+                  "containerElement": "div",
+                  "onBlur": [Function],
+                  "onClick": [Function],
+                  "onFocus": [Function],
+                  "onKeyDown": [Function],
+                  "onKeyboardFocus": [Function],
+                  "onMouseDown": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
+                  "onMouseUp": [Function],
+                  "onTouchEnd": [Function],
+                  "onTouchStart": [Function],
+                  "style": Object {
+                    "marginBottom": "10px",
+                  },
+                },
+                "ref": null,
+                "rendered": "depression",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "anxiety1",
+                "nodeType": "class",
+                "props": Object {
+                  "backgroundColor": "#2F9C95",
+                  "children": "anxiety",
+                  "containerElement": "div",
+                  "onBlur": [Function],
+                  "onClick": [Function],
+                  "onFocus": [Function],
+                  "onKeyDown": [Function],
+                  "onKeyboardFocus": [Function],
+                  "onMouseDown": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
+                  "onMouseUp": [Function],
+                  "onTouchEnd": [Function],
+                  "onTouchStart": [Function],
+                  "style": Object {
+                    "marginBottom": "10px",
+                  },
+                },
+                "ref": null,
+                "rendered": "anxiety",
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Submit Profile",
+              "labelPosition": "after",
+              "onClick": [Function],
+              "primary": false,
+              "secondary": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="pic-name-city"
+>
+            <div
+                        className="pic-button"
+            >
+                        <RaisedButton
+                                    disabled={false}
+                                    fullWidth={false}
+                                    label="Upload Photo"
+                                    labelPosition="after"
+                                    onClick={[Function]}
+                                    primary={false}
+                                    secondary={false}
+                        />
+            </div>
+            <div
+                        className="name-city"
+            >
+                        <TextField
+                                    disabled={false}
+                                    floatingLabelFixed={false}
+                                    fullWidth={false}
+                                    hintText="Username: Must be at least 5 characters."
+                                    multiLine={false}
+                                    name="userName"
+                                    onChange={[Function]}
+                                    rows={1}
+                                    type="text"
+                                    underlineShow={true}
+                                    value=""
+                        />
+                        <TextField
+                                    disabled={false}
+                                    floatingLabelFixed={false}
+                                    fullWidth={false}
+                                    hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                                    multiLine={true}
+                                    name="aboutMe"
+                                    onChange={[Function]}
+                                    rows={1}
+                                    rowsMax={10}
+                                    type="text"
+                                    underlineShow={true}
+                                    value=""
+                        />
+            </div>
+</div>,
+          <div
+            className="profile-bottom"
+>
+            <div>
+                        <p>
+                                    Select challenges you identify with.
+                        </p>
+                        <Chip
+                                    backgroundColor=""
+                                    containerElement="div"
+                                    onBlur={[Function]}
+                                    onClick={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyboardFocus={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    onMouseUp={[Function]}
+                                    onTouchEnd={[Function]}
+                                    onTouchStart={[Function]}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "10px",
+                                                          }
+                                    }
+                        >
+                                    depression
+                        </Chip>
+                        <Chip
+                                    backgroundColor="#2F9C95"
+                                    containerElement="div"
+                                    onBlur={[Function]}
+                                    onClick={[Function]}
+                                    onFocus={[Function]}
+                                    onKeyDown={[Function]}
+                                    onKeyboardFocus={[Function]}
+                                    onMouseDown={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    onMouseUp={[Function]}
+                                    onTouchEnd={[Function]}
+                                    onTouchStart={[Function]}
+                                    style={
+                                                Object {
+                                                            "marginBottom": "10px",
+                                                          }
+                                    }
+                        >
+                                    anxiety
+                        </Chip>
+            </div>
+            <RaisedButton
+                        disabled={false}
+                        fullWidth={false}
+                        label="Submit Profile"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                className="pic-button"
+>
+                <RaisedButton
+                                disabled={false}
+                                fullWidth={false}
+                                label="Upload Photo"
+                                labelPosition="after"
+                                onClick={[Function]}
+                                primary={false}
+                                secondary={false}
+                />
+</div>,
+              <div
+                className="name-city"
+>
+                <TextField
+                                disabled={false}
+                                floatingLabelFixed={false}
+                                fullWidth={false}
+                                hintText="Username: Must be at least 5 characters."
+                                multiLine={false}
+                                name="userName"
+                                onChange={[Function]}
+                                rows={1}
+                                type="text"
+                                underlineShow={true}
+                                value=""
+                />
+                <TextField
+                                disabled={false}
+                                floatingLabelFixed={false}
+                                fullWidth={false}
+                                hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                                multiLine={true}
+                                name="aboutMe"
+                                onChange={[Function]}
+                                rows={1}
+                                rowsMax={10}
+                                type="text"
+                                underlineShow={true}
+                                value=""
+                />
+</div>,
+            ],
+            "className": "pic-name-city",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <RaisedButton
+                  disabled={false}
+                  fullWidth={false}
+                  label="Upload Photo"
+                  labelPosition="after"
+                  onClick={[Function]}
+                  primary={false}
+                  secondary={false}
+/>,
+                "className": "pic-button",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "disabled": false,
+                  "fullWidth": false,
+                  "label": "Upload Photo",
+                  "labelPosition": "after",
+                  "onClick": [Function],
+                  "primary": false,
+                  "secondary": false,
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <TextField
+                    disabled={false}
+                    floatingLabelFixed={false}
+                    fullWidth={false}
+                    hintText="Username: Must be at least 5 characters."
+                    multiLine={false}
+                    name="userName"
+                    onChange={[Function]}
+                    rows={1}
+                    type="text"
+                    underlineShow={true}
+                    value=""
+/>,
+                  <TextField
+                    disabled={false}
+                    floatingLabelFixed={false}
+                    fullWidth={false}
+                    hintText="Tell us a bit about yourself: whatever you're open to sharing."
+                    multiLine={true}
+                    name="aboutMe"
+                    onChange={[Function]}
+                    rows={1}
+                    rowsMax={10}
+                    type="text"
+                    underlineShow={true}
+                    value=""
+/>,
+                ],
+                "className": "name-city",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "disabled": false,
+                    "floatingLabelFixed": false,
+                    "fullWidth": false,
+                    "hintText": "Username: Must be at least 5 characters.",
+                    "multiLine": false,
+                    "name": "userName",
+                    "onChange": [Function],
+                    "rows": 1,
+                    "type": "text",
+                    "underlineShow": true,
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "disabled": false,
+                    "floatingLabelFixed": false,
+                    "fullWidth": false,
+                    "hintText": "Tell us a bit about yourself: whatever you're open to sharing.",
+                    "multiLine": true,
+                    "name": "aboutMe",
+                    "onChange": [Function],
+                    "rows": 1,
+                    "rowsMax": 10,
+                    "type": "text",
+                    "underlineShow": true,
+                    "value": "",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div>
+                <p>
+                                Select challenges you identify with.
+                </p>
+                <Chip
+                                backgroundColor=""
+                                containerElement="div"
+                                onBlur={[Function]}
+                                onClick={[Function]}
+                                onFocus={[Function]}
+                                onKeyDown={[Function]}
+                                onKeyboardFocus={[Function]}
+                                onMouseDown={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
+                                onMouseUp={[Function]}
+                                onTouchEnd={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                                Object {
+                                                                "marginBottom": "10px",
+                                                              }
+                                }
+                >
+                                depression
+                </Chip>
+                <Chip
+                                backgroundColor="#2F9C95"
+                                containerElement="div"
+                                onBlur={[Function]}
+                                onClick={[Function]}
+                                onFocus={[Function]}
+                                onKeyDown={[Function]}
+                                onKeyboardFocus={[Function]}
+                                onMouseDown={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
+                                onMouseUp={[Function]}
+                                onTouchEnd={[Function]}
+                                onTouchStart={[Function]}
+                                style={
+                                                Object {
+                                                                "marginBottom": "10px",
+                                                              }
+                                }
+                >
+                                anxiety
+                </Chip>
+</div>,
+              <RaisedButton
+                disabled={false}
+                fullWidth={false}
+                label="Submit Profile"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={false}
+/>,
+            ],
+            "className": "profile-bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <p>
+                    Select challenges you identify with.
+</p>,
+                  Array [
+                    <Chip
+                      backgroundColor=""
+                      containerElement="div"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyboardFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "10px",
+                                                                }
+                      }
+>
+                      depression
+</Chip>,
+                    <Chip
+                      backgroundColor="#2F9C95"
+                      containerElement="div"
+                      onBlur={[Function]}
+                      onClick={[Function]}
+                      onFocus={[Function]}
+                      onKeyDown={[Function]}
+                      onKeyboardFocus={[Function]}
+                      onMouseDown={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onMouseUp={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      style={
+                                            Object {
+                                                                  "marginBottom": "10px",
+                                                                }
+                      }
+>
+                      anxiety
+</Chip>,
+                  ],
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Select challenges you identify with.",
+                  },
+                  "ref": null,
+                  "rendered": "Select challenges you identify with.",
+                  "type": "p",
+                },
+                Object {
+                  "instance": null,
+                  "key": "depression0",
+                  "nodeType": "class",
+                  "props": Object {
+                    "backgroundColor": "",
+                    "children": "depression",
+                    "containerElement": "div",
+                    "onBlur": [Function],
+                    "onClick": [Function],
+                    "onFocus": [Function],
+                    "onKeyDown": [Function],
+                    "onKeyboardFocus": [Function],
+                    "onMouseDown": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
+                    "onMouseUp": [Function],
+                    "onTouchEnd": [Function],
+                    "onTouchStart": [Function],
+                    "style": Object {
+                      "marginBottom": "10px",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "depression",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "anxiety1",
+                  "nodeType": "class",
+                  "props": Object {
+                    "backgroundColor": "#2F9C95",
+                    "children": "anxiety",
+                    "containerElement": "div",
+                    "onBlur": [Function],
+                    "onClick": [Function],
+                    "onFocus": [Function],
+                    "onKeyDown": [Function],
+                    "onKeyboardFocus": [Function],
+                    "onMouseDown": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
+                    "onMouseUp": [Function],
+                    "onTouchEnd": [Function],
+                    "onTouchStart": [Function],
+                    "style": Object {
+                      "marginBottom": "10px",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "anxiety",
+                  "type": [Function],
+                },
+              ],
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Submit Profile",
+                "labelPosition": "after",
+                "onClick": [Function],
+                "primary": false,
+                "secondary": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
