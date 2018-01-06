@@ -111,7 +111,7 @@ export const signOut = () => {
   };
 };
 
-const insuranceListAcquired = (insuranceList) => {
+const insuranceListAcquired = insuranceList => {
   return {
     type: 'GET_INSURANCE_LIST',
     insuranceList
@@ -126,18 +126,19 @@ export const getInsuranceList = () => {
     .catch(error => { throw error; });
 };
 
-const fetchSpecialtyList = () => {
-  // get request to server for specialty list
-  // mock data to play with below
-  return ['relationships', 'anxiety', 'depression'];
-};
-
-export const getSpecialtyList = () => {
-  const specialtyList = fetchSpecialtyList();
+const specialtyListAcquired = specialtyList => {
   return {
     type: 'GET_SPECIALTY_LIST',
     specialtyList
   };
+};
+
+export const getSpecialtyList = () => {
+  return dispatch => fetch(`${backend}/api/v1/specialties`)
+    .then(res => res.json())
+    .then(res => res.specialties.map(spec => spec.specialty_name))
+    .then(res => dispatch(specialtyListAcquired(res)))
+    .catch(error => { throw error; });
 };
 
 const sendSearch = searchObject => {
