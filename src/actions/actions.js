@@ -61,7 +61,7 @@ export const getAllChallenges = () => {
   return dispatch => fetch(`${backend}/api/v1/challenges`)
     .then(res => res.json())
     .then(res => res.challenges.map(challenge => challenge.challenge_name))
-    .then(res => { console.log(res); dispatch(challengesAcquired(res)); })
+    .then(res => dispatch(challengesAcquired(res)))
     .catch(error => { throw error; });
 };
 
@@ -88,30 +88,52 @@ export const removeUserChallenge = challenge => {
   };
 };
 
-const postUser = newUser => {
-  const newUserObj = {
-    user_name: newUser.userName,
-    user_about: newUser.aboutMe,
-    user_location: newUser.city,
-    user_email: newUser.email,
-    user_challenges: newUser.userChallenges
-  };
+// const addUserId = (user, id) => {
+//   console.log('in add id function');
+//   const newUser = Object.assign({}, user, { id });
+//   return dispatch => dispatch({
+//     type: 'ADD_USER_ID',
+//     newUser
+//   });
+// };
+//
+// const adjustUser = newUser => {
+//   const newUserObj = {
+//     user_name: newUser.userName,
+//     user_about: newUser.aboutMe,
+//     user_location: newUser.city,
+//     user_email: newUser.email,
+//     user_challenges: newUser.userChallenges
+//   };
+//   postUser(newUserObj);
+// };
+//
+// // const addId = (user, id) => {
+// //   return dispatch => dispatch(addUserId(user, id));
+// // };
+//
+// const postUser = (newUser) => {
+//   return fetch(`${backend}/api/v1/users`, {
+//     method: 'POST',
+//     body: JSON.stringify(newUser),
+//     headers: {
+//       'Accept': 'application/json',
+//       'Content-Type': 'application/json'
+//     }
+//   })
+//     .then(res => res.json())
+//     .then(res => addUserId(newUser, res.id))
+//     .catch(error => { throw error; });
+// };
 
-  fetch(`${backend}/api/v1/users`, {
-    method: 'POST',
-    body: JSON.stringify(newUserObj),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-    .catch(error => { throw error; });
-};
 
-export const submitProfile = newUser => {
-  postUser(newUser);
+export const submitProfile = (newUser, id) => {
+  console.log(id)
+  // adjustUser(newUser);
+  const user = Object.assign({}, newUser, id);
   return {
     type: 'SUBMIT_PROFILE',
-    newUser
+    user
   };
 };
 
