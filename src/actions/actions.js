@@ -1,6 +1,6 @@
 import backend from './backend';
 
-const login = user => {
+export const login = user => {
   return {
     type: 'LOGIN_SUCCESS',
     user: user.user,
@@ -88,48 +88,7 @@ export const removeUserChallenge = challenge => {
   };
 };
 
-// const addUserId = (user, id) => {
-//   console.log('in add id function');
-//   const newUser = Object.assign({}, user, { id });
-//   return dispatch => dispatch({
-//     type: 'ADD_USER_ID',
-//     newUser
-//   });
-// };
-//
-// const adjustUser = newUser => {
-//   const newUserObj = {
-//     user_name: newUser.userName,
-//     user_about: newUser.aboutMe,
-//     user_location: newUser.city,
-//     user_email: newUser.email,
-//     user_challenges: newUser.userChallenges
-//   };
-//   postUser(newUserObj);
-// };
-//
-// // const addId = (user, id) => {
-// //   return dispatch => dispatch(addUserId(user, id));
-// // };
-//
-// const postUser = (newUser) => {
-//   return fetch(`${backend}/api/v1/users`, {
-//     method: 'POST',
-//     body: JSON.stringify(newUser),
-//     headers: {
-//       'Accept': 'application/json',
-//       'Content-Type': 'application/json'
-//     }
-//   })
-//     .then(res => res.json())
-//     .then(res => addUserId(newUser, res.id))
-//     .catch(error => { throw error; });
-// };
-
-
 export const submitProfile = (newUser, id) => {
-  console.log(id)
-  // adjustUser(newUser);
   const user = Object.assign({}, newUser, id);
   return {
     type: 'SUBMIT_PROFILE',
@@ -214,6 +173,11 @@ export const clearSearchResults = () => {
 const fetchBuddies = user => {
   // get request to server for buddies
 };
+
+// this api endpoint not working yet
+// export const getBuddies = user => {
+//   return user.fetch(`${backend}/api/v1/favoriteUsers/${user.id}`)
+// }
 
 export const getBuddies = user => {
   const buddies = fetchBuddies(user);

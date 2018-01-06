@@ -11,6 +11,10 @@ describe('actions', () => {
     email: 'lola@gmail.com'
   };
 
+  // it('should create an action for login', () => {
+  //   const
+  // })
+
   it('should create an action for addCity', () => {
     const expectedAction = {
       type: 'ADD_CITY',

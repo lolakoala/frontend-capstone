@@ -76,12 +76,9 @@ class CreateProfile extends Component {
       }
     })
       .then(res => res.json())
-      // .then(res => console.log(res))
       .then(res => submitProfile(newUser, res))
-      // .then(res => addUserId(newUser, res.id))
       .catch(error => { throw error; });
     // somehow send image in submitProfile action?
-    // submitProfile(newUser);
   }
 
   render() {
