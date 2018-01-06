@@ -20,4 +20,30 @@ describe('SelectCity', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
+  it('should have instructions', () => {
+    const instruction = wrapper.find('h2');
+
+    expect(instruction.length).toEqual(1);
+  });
+
+  it('should have drop down menu', () => {
+    const ddm = wrapper.find('DropDownMenu');
+
+    expect(ddm.length).toEqual(1);
+  });
+
+  // state returns undefined
+  it.skip('should change state on change of drop down', () => {
+    const ddm = wrapper.find('DropDownMenu');
+
+    ddm.simulate('change', { target: { value: 'Denver' } });
+    expect(wrapper.state().value).toEqual('Denver');
+  });
+
+  it('should run function on change of drop down', () => {
+    const ddm = wrapper.find('DropDownMenu');
+
+    ddm.simulate('change', { target: { value: 'Denver' } });
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
 });
