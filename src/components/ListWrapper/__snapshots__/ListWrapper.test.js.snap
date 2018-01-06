@@ -1,0 +1,241 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ListWrapper should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ListWrapper
+    buddySearch={Array []}
+    currentUser={
+        Object {
+            "aboutMe": "Lola loves doggos.",
+            "city": "Denver",
+            "email": "lola@gmail.com",
+            "userName": "lolakoala",
+          }
+    }
+    getBuddies={[Function]}
+    getPreferredProfs={[Function]}
+    location={
+        Object {
+            "pathname": "/listUserBuddies",
+          }
+    }
+    profSearch={Array []}
+    toggleFavorite={[Function]}
+    userBuddies={
+        Array [
+            Object {
+              "aboutMe": "Lola loves doggos.",
+              "city": "Denver",
+              "email": "lola@gmail.com",
+              "userName": "lolakoala",
+            },
+          ]
+    }
+    userProfs={Array []}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <TextField
+          disabled={false}
+          floatingLabelFixed={false}
+          fullWidth={false}
+          hintText="Type here to filter your buddies."
+          multiLine={false}
+          onChange={[Function]}
+          rows={1}
+          type="text"
+          underlineShow={true}
+          value=""
+/>,
+        <ProfsList
+          currentUser={
+                    Object {
+                              "aboutMe": "Lola loves doggos.",
+                              "city": "Denver",
+                              "email": "lola@gmail.com",
+                              "userName": "lolakoala",
+                            }
+          }
+          faves={Array []}
+          profs={
+                    Array [
+                              Object {
+                                "aboutMe": "Lola loves doggos.",
+                                "city": "Denver",
+                                "email": "lola@gmail.com",
+                                "userName": "lolakoala",
+                              },
+                            ]
+          }
+          toggleFavorite={[Function]}
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "floatingLabelFixed": false,
+          "fullWidth": false,
+          "hintText": "Type here to filter your buddies.",
+          "multiLine": false,
+          "onChange": [Function],
+          "rows": 1,
+          "type": "text",
+          "underlineShow": true,
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "currentUser": Object {
+            "aboutMe": "Lola loves doggos.",
+            "city": "Denver",
+            "email": "lola@gmail.com",
+            "userName": "lolakoala",
+          },
+          "faves": Array [],
+          "profs": Array [
+            Object {
+              "aboutMe": "Lola loves doggos.",
+              "city": "Denver",
+              "email": "lola@gmail.com",
+              "userName": "lolakoala",
+            },
+          ],
+          "toggleFavorite": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <TextField
+            disabled={false}
+            floatingLabelFixed={false}
+            fullWidth={false}
+            hintText="Type here to filter your buddies."
+            multiLine={false}
+            onChange={[Function]}
+            rows={1}
+            type="text"
+            underlineShow={true}
+            value=""
+/>,
+          <ProfsList
+            currentUser={
+                        Object {
+                                    "aboutMe": "Lola loves doggos.",
+                                    "city": "Denver",
+                                    "email": "lola@gmail.com",
+                                    "userName": "lolakoala",
+                                  }
+            }
+            faves={Array []}
+            profs={
+                        Array [
+                                    Object {
+                                      "aboutMe": "Lola loves doggos.",
+                                      "city": "Denver",
+                                      "email": "lola@gmail.com",
+                                      "userName": "lolakoala",
+                                    },
+                                  ]
+            }
+            toggleFavorite={[Function]}
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "floatingLabelFixed": false,
+            "fullWidth": false,
+            "hintText": "Type here to filter your buddies.",
+            "multiLine": false,
+            "onChange": [Function],
+            "rows": 1,
+            "type": "text",
+            "underlineShow": true,
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "currentUser": Object {
+              "aboutMe": "Lola loves doggos.",
+              "city": "Denver",
+              "email": "lola@gmail.com",
+              "userName": "lolakoala",
+            },
+            "faves": Array [],
+            "profs": Array [
+              Object {
+                "aboutMe": "Lola loves doggos.",
+                "city": "Denver",
+                "email": "lola@gmail.com",
+                "userName": "lolakoala",
+              },
+            ],
+            "toggleFavorite": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
