@@ -19,4 +19,40 @@ describe('Dash', () => {
     getAllChallenges={mockFn}
     currentUser={currentUser1}
   />);
+
+  it('should exist', () => {
+    expect(wrapper).toBeDefined();
+  });
+
+  it('should match snap', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
+  it('should have a toolbar', () => {
+    const toolBar = wrapper.find('Toolbar');
+
+    expect(toolBar.length).toEqual(1);
+  });
+
+  it('should have 5 links', () => {
+    const links = wrapper.find('Link');
+
+    expect(links.length).toEqual(5);
+  });
+
+  it('should have tabs', () => {
+    const tabs = wrapper.find('Tabs');
+
+    expect(tabs.length).toEqual(1);
+  });
+
+  it('should have 2 inner tabs', () => {
+    const tabs = wrapper.find('Tab');
+
+    expect(tabs.length).toEqual(2);
+  });
+
+  it('should call function on mount', () => {
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
 });

@@ -50,5 +50,10 @@ describe('Persisted', () => {
     expect(userName.length).toEqual(1);
   });
 
-  // add test for click of signout
+  it('should call function on click of signout', () => {
+    const signOut = wrapper.find('RaisedButton').at(1);
+
+    signOut.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
 });
