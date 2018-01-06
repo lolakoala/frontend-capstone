@@ -1,0 +1,850 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ViewProfile should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ViewProfile
+    currentUser={
+        Object {
+            "aboutMe": "Lola loves doggos.",
+            "city": "Denver",
+            "email": "lola@gmail.com",
+            "userName": "lolakoala",
+          }
+    }
+    history={Object {}}
+    userChallenges={
+        Array [
+            "anxiety",
+          ]
+    }
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="pic-name-city"
+>
+          <img
+                    alt="Your avatar"
+                    className="profile-pic"
+                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+          />
+          <div
+                    className="name-city"
+          >
+                    <h3>
+                              lolakoala
+                    </h3>
+                    <h4>
+                              Denver
+                    </h4>
+                    <p>
+                              Lola loves doggos.
+                    </p>
+          </div>
+</div>,
+        <div
+          className="profile-bottom"
+>
+          <List>
+                    <Subheader
+                              inset={false}
+                              style={
+                                        Object {
+                                                  "color": "#253031",
+                                                  "fontSize": "30px",
+                                                  "fontWeight": "bold",
+                                                }
+                              }
+                    >
+                              Your Challenges
+                    </Subheader>
+                    <ListItem
+                              autoGenerateNestedIndicator={true}
+                              containerElement="span"
+                              disableKeyboardFocus={false}
+                              disabled={true}
+                              initiallyOpen={false}
+                              insetChildren={false}
+                              leftAvatar={
+                                        <img
+                                                  alt="snail shell icon"
+                                                  height="40"
+                                                  src="snail-shell.svg"
+                                                  width="40"
+                                        />
+                              }
+                              nestedItems={Array []}
+                              nestedLevel={0}
+                              onKeyboardFocus={[Function]}
+                              onMouseEnter={[Function]}
+                              onMouseLeave={[Function]}
+                              onNestedListToggle={[Function]}
+                              onTouchEnd={[Function]}
+                              onTouchStart={[Function]}
+                              open={null}
+                              primaryText="anxiety"
+                              primaryTogglesNestedList={false}
+                              secondaryTextLines={1}
+                              style={
+                                        Object {
+                                                  "color": "#2F9C95",
+                                                  "fontSize": "18px",
+                                                  "fontWeight": "bold",
+                                                }
+                              }
+                    />
+          </List>
+          <RaisedButton
+                    disabled={false}
+                    fullWidth={false}
+                    label="Edit Profile"
+                    labelPosition="after"
+                    onClick={[Function]}
+                    primary={false}
+                    secondary={false}
+          />
+</div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="Your avatar"
+              className="profile-pic"
+              src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+/>,
+            <div
+              className="name-city"
+>
+              <h3>
+                            lolakoala
+              </h3>
+              <h4>
+                            Denver
+              </h4>
+              <p>
+                            Lola loves doggos.
+              </p>
+</div>,
+          ],
+          "className": "pic-name-city",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "Your avatar",
+              "className": "profile-pic",
+              "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  lolakoala
+</h3>,
+                <h4>
+                  Denver
+</h4>,
+                <p>
+                  Lola loves doggos.
+</p>,
+              ],
+              "className": "name-city",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "lolakoala",
+                },
+                "ref": null,
+                "rendered": "lolakoala",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Denver",
+                },
+                "ref": null,
+                "rendered": "Denver",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lola loves doggos.",
+                },
+                "ref": null,
+                "rendered": "Lola loves doggos.",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <List>
+              <Subheader
+                            inset={false}
+                            style={
+                                          Object {
+                                                        "color": "#253031",
+                                                        "fontSize": "30px",
+                                                        "fontWeight": "bold",
+                                                      }
+                            }
+              >
+                            Your Challenges
+              </Subheader>
+              <ListItem
+                            autoGenerateNestedIndicator={true}
+                            containerElement="span"
+                            disableKeyboardFocus={false}
+                            disabled={true}
+                            initiallyOpen={false}
+                            insetChildren={false}
+                            leftAvatar={
+                                          <img
+                                                        alt="snail shell icon"
+                                                        height="40"
+                                                        src="snail-shell.svg"
+                                                        width="40"
+                                          />
+                            }
+                            nestedItems={Array []}
+                            nestedLevel={0}
+                            onKeyboardFocus={[Function]}
+                            onMouseEnter={[Function]}
+                            onMouseLeave={[Function]}
+                            onNestedListToggle={[Function]}
+                            onTouchEnd={[Function]}
+                            onTouchStart={[Function]}
+                            open={null}
+                            primaryText="anxiety"
+                            primaryTogglesNestedList={false}
+                            secondaryTextLines={1}
+                            style={
+                                          Object {
+                                                        "color": "#2F9C95",
+                                                        "fontSize": "18px",
+                                                        "fontWeight": "bold",
+                                                      }
+                            }
+              />
+</List>,
+            <RaisedButton
+              disabled={false}
+              fullWidth={false}
+              label="Edit Profile"
+              labelPosition="after"
+              onClick={[Function]}
+              primary={false}
+              secondary={false}
+/>,
+          ],
+          "className": "profile-bottom",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <Subheader
+                  inset={false}
+                  style={
+                                    Object {
+                                                      "color": "#253031",
+                                                      "fontSize": "30px",
+                                                      "fontWeight": "bold",
+                                                    }
+                  }
+>
+                  Your Challenges
+</Subheader>,
+                Array [
+                  <ListItem
+                    autoGenerateNestedIndicator={true}
+                    containerElement="span"
+                    disableKeyboardFocus={false}
+                    disabled={true}
+                    initiallyOpen={false}
+                    insetChildren={false}
+                    leftAvatar={
+                                        <img
+                                                            alt="snail shell icon"
+                                                            height="40"
+                                                            src="snail-shell.svg"
+                                                            width="40"
+                                        />
+                    }
+                    nestedItems={Array []}
+                    nestedLevel={0}
+                    onKeyboardFocus={[Function]}
+                    onMouseEnter={[Function]}
+                    onMouseLeave={[Function]}
+                    onNestedListToggle={[Function]}
+                    onTouchEnd={[Function]}
+                    onTouchStart={[Function]}
+                    open={null}
+                    primaryText="anxiety"
+                    primaryTogglesNestedList={false}
+                    secondaryTextLines={1}
+                    style={
+                                        Object {
+                                                            "color": "#2F9C95",
+                                                            "fontSize": "18px",
+                                                            "fontWeight": "bold",
+                                                          }
+                    }
+/>,
+                ],
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Your Challenges",
+                  "inset": false,
+                  "style": Object {
+                    "color": "#253031",
+                    "fontSize": "30px",
+                    "fontWeight": "bold",
+                  },
+                },
+                "ref": null,
+                "rendered": "Your Challenges",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "anxiety0",
+                "nodeType": "class",
+                "props": Object {
+                  "autoGenerateNestedIndicator": true,
+                  "containerElement": "span",
+                  "disableKeyboardFocus": false,
+                  "disabled": true,
+                  "initiallyOpen": false,
+                  "insetChildren": false,
+                  "leftAvatar": <img
+                    alt="snail shell icon"
+                    height="40"
+                    src="snail-shell.svg"
+                    width="40"
+/>,
+                  "nestedItems": Array [],
+                  "nestedLevel": 0,
+                  "onKeyboardFocus": [Function],
+                  "onMouseEnter": [Function],
+                  "onMouseLeave": [Function],
+                  "onNestedListToggle": [Function],
+                  "onTouchEnd": [Function],
+                  "onTouchStart": [Function],
+                  "open": null,
+                  "primaryText": "anxiety",
+                  "primaryTogglesNestedList": false,
+                  "secondaryTextLines": 1,
+                  "style": Object {
+                    "color": "#2F9C95",
+                    "fontSize": "18px",
+                    "fontWeight": "bold",
+                  },
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "disabled": false,
+              "fullWidth": false,
+              "label": "Edit Profile",
+              "labelPosition": "after",
+              "onClick": [Function],
+              "primary": false,
+              "secondary": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="pic-name-city"
+>
+            <img
+                        alt="Your avatar"
+                        className="profile-pic"
+                        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+            />
+            <div
+                        className="name-city"
+            >
+                        <h3>
+                                    lolakoala
+                        </h3>
+                        <h4>
+                                    Denver
+                        </h4>
+                        <p>
+                                    Lola loves doggos.
+                        </p>
+            </div>
+</div>,
+          <div
+            className="profile-bottom"
+>
+            <List>
+                        <Subheader
+                                    inset={false}
+                                    style={
+                                                Object {
+                                                            "color": "#253031",
+                                                            "fontSize": "30px",
+                                                            "fontWeight": "bold",
+                                                          }
+                                    }
+                        >
+                                    Your Challenges
+                        </Subheader>
+                        <ListItem
+                                    autoGenerateNestedIndicator={true}
+                                    containerElement="span"
+                                    disableKeyboardFocus={false}
+                                    disabled={true}
+                                    initiallyOpen={false}
+                                    insetChildren={false}
+                                    leftAvatar={
+                                                <img
+                                                            alt="snail shell icon"
+                                                            height="40"
+                                                            src="snail-shell.svg"
+                                                            width="40"
+                                                />
+                                    }
+                                    nestedItems={Array []}
+                                    nestedLevel={0}
+                                    onKeyboardFocus={[Function]}
+                                    onMouseEnter={[Function]}
+                                    onMouseLeave={[Function]}
+                                    onNestedListToggle={[Function]}
+                                    onTouchEnd={[Function]}
+                                    onTouchStart={[Function]}
+                                    open={null}
+                                    primaryText="anxiety"
+                                    primaryTogglesNestedList={false}
+                                    secondaryTextLines={1}
+                                    style={
+                                                Object {
+                                                            "color": "#2F9C95",
+                                                            "fontSize": "18px",
+                                                            "fontWeight": "bold",
+                                                          }
+                                    }
+                        />
+            </List>
+            <RaisedButton
+                        disabled={false}
+                        fullWidth={false}
+                        label="Edit Profile"
+                        labelPosition="after"
+                        onClick={[Function]}
+                        primary={false}
+                        secondary={false}
+            />
+</div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="Your avatar"
+                className="profile-pic"
+                src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+/>,
+              <div
+                className="name-city"
+>
+                <h3>
+                                lolakoala
+                </h3>
+                <h4>
+                                Denver
+                </h4>
+                <p>
+                                Lola loves doggos.
+                </p>
+</div>,
+            ],
+            "className": "pic-name-city",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Your avatar",
+                "className": "profile-pic",
+                "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h3>
+                    lolakoala
+</h3>,
+                  <h4>
+                    Denver
+</h4>,
+                  <p>
+                    Lola loves doggos.
+</p>,
+                ],
+                "className": "name-city",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "lolakoala",
+                  },
+                  "ref": null,
+                  "rendered": "lolakoala",
+                  "type": "h3",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Denver",
+                  },
+                  "ref": null,
+                  "rendered": "Denver",
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Lola loves doggos.",
+                  },
+                  "ref": null,
+                  "rendered": "Lola loves doggos.",
+                  "type": "p",
+                },
+              ],
+              "type": "div",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <List>
+                <Subheader
+                                inset={false}
+                                style={
+                                                Object {
+                                                                "color": "#253031",
+                                                                "fontSize": "30px",
+                                                                "fontWeight": "bold",
+                                                              }
+                                }
+                >
+                                Your Challenges
+                </Subheader>
+                <ListItem
+                                autoGenerateNestedIndicator={true}
+                                containerElement="span"
+                                disableKeyboardFocus={false}
+                                disabled={true}
+                                initiallyOpen={false}
+                                insetChildren={false}
+                                leftAvatar={
+                                                <img
+                                                                alt="snail shell icon"
+                                                                height="40"
+                                                                src="snail-shell.svg"
+                                                                width="40"
+                                                />
+                                }
+                                nestedItems={Array []}
+                                nestedLevel={0}
+                                onKeyboardFocus={[Function]}
+                                onMouseEnter={[Function]}
+                                onMouseLeave={[Function]}
+                                onNestedListToggle={[Function]}
+                                onTouchEnd={[Function]}
+                                onTouchStart={[Function]}
+                                open={null}
+                                primaryText="anxiety"
+                                primaryTogglesNestedList={false}
+                                secondaryTextLines={1}
+                                style={
+                                                Object {
+                                                                "color": "#2F9C95",
+                                                                "fontSize": "18px",
+                                                                "fontWeight": "bold",
+                                                              }
+                                }
+                />
+</List>,
+              <RaisedButton
+                disabled={false}
+                fullWidth={false}
+                label="Edit Profile"
+                labelPosition="after"
+                onClick={[Function]}
+                primary={false}
+                secondary={false}
+/>,
+            ],
+            "className": "profile-bottom",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <Subheader
+                    inset={false}
+                    style={
+                                        Object {
+                                                            "color": "#253031",
+                                                            "fontSize": "30px",
+                                                            "fontWeight": "bold",
+                                                          }
+                    }
+>
+                    Your Challenges
+</Subheader>,
+                  Array [
+                    <ListItem
+                      autoGenerateNestedIndicator={true}
+                      containerElement="span"
+                      disableKeyboardFocus={false}
+                      disabled={true}
+                      initiallyOpen={false}
+                      insetChildren={false}
+                      leftAvatar={
+                                            <img
+                                                                  alt="snail shell icon"
+                                                                  height="40"
+                                                                  src="snail-shell.svg"
+                                                                  width="40"
+                                            />
+                      }
+                      nestedItems={Array []}
+                      nestedLevel={0}
+                      onKeyboardFocus={[Function]}
+                      onMouseEnter={[Function]}
+                      onMouseLeave={[Function]}
+                      onNestedListToggle={[Function]}
+                      onTouchEnd={[Function]}
+                      onTouchStart={[Function]}
+                      open={null}
+                      primaryText="anxiety"
+                      primaryTogglesNestedList={false}
+                      secondaryTextLines={1}
+                      style={
+                                            Object {
+                                                                  "color": "#2F9C95",
+                                                                  "fontSize": "18px",
+                                                                  "fontWeight": "bold",
+                                                                }
+                      }
+/>,
+                  ],
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Your Challenges",
+                    "inset": false,
+                    "style": Object {
+                      "color": "#253031",
+                      "fontSize": "30px",
+                      "fontWeight": "bold",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": "Your Challenges",
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "anxiety0",
+                  "nodeType": "class",
+                  "props": Object {
+                    "autoGenerateNestedIndicator": true,
+                    "containerElement": "span",
+                    "disableKeyboardFocus": false,
+                    "disabled": true,
+                    "initiallyOpen": false,
+                    "insetChildren": false,
+                    "leftAvatar": <img
+                      alt="snail shell icon"
+                      height="40"
+                      src="snail-shell.svg"
+                      width="40"
+/>,
+                    "nestedItems": Array [],
+                    "nestedLevel": 0,
+                    "onKeyboardFocus": [Function],
+                    "onMouseEnter": [Function],
+                    "onMouseLeave": [Function],
+                    "onNestedListToggle": [Function],
+                    "onTouchEnd": [Function],
+                    "onTouchStart": [Function],
+                    "open": null,
+                    "primaryText": "anxiety",
+                    "primaryTogglesNestedList": false,
+                    "secondaryTextLines": 1,
+                    "style": Object {
+                      "color": "#2F9C95",
+                      "fontSize": "18px",
+                      "fontWeight": "bold",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "fullWidth": false,
+                "label": "Edit Profile",
+                "labelPosition": "after",
+                "onClick": [Function],
+                "primary": false,
+                "secondary": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

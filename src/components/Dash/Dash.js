@@ -4,7 +4,7 @@ import { Toolbar, Tabs, Tab } from 'material-ui';
 import { Link } from 'react-router-dom';
 import SearchProfessionals from '../SearchProfessionals/SearchProfessionals';
 import SearchBuddies from '../SearchBuddies/SearchBuddies';
-import css from './Dash.css'
+import css from './Dash.css';
 
 class Dash extends Component {
   componentWillMount() {

@@ -64,7 +64,9 @@ class ListWrapper extends Component {
   filterList = array => {
     return array.filter(person => {
       const searchablePerson = Object.assign({}, person, { city: '' });
-      const personValues = Object.values(searchablePerson);
+      const personValues = Object.keys(searchablePerson).map(key => {
+        return searchablePerson[key];
+      });
       let isMatch = false;
       personValues.forEach(value => {
         if (value.includes(this.state.value)) {
@@ -98,7 +100,7 @@ class ListWrapper extends Component {
           onChange={this.handleChange}
           hintText={`Type here to filter your ${this.state.listName}.`}
         />
-        {location.pathname.includes('bud') ? buddyComponent : profsComponent}
+        {location.pathname.toLowerCase().includes('bud') ? buddyComponent : profsComponent}
       </div>
     );
   }
@@ -110,7 +112,7 @@ ListWrapper.propTypes = {
   location: PropTypes.object,
   getBuddies: PropTypes.func,
   currentUser: PropTypes.object,
-  buddySearch: PropTypes.object,
+  buddySearch: PropTypes.array,
   getPreferredProfs: PropTypes.func,
   profSearch: PropTypes.array,
   toggleFavorite: PropTypes.func,

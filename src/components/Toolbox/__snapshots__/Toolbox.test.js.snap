@@ -1,0 +1,1165 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toolbox should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Toolbox />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Subheader
+          inset={false}
+          style={
+                    Object {
+                              "color": "#253031",
+                              "fontSize": "30px",
+                              "fontWeight": "bold",
+                            }
+          }
+>
+          Mental Health Resources
+</Subheader>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="https://thisismybrave.org/"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              ThisIsMyBrave: Ending Mental Health Stigma
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="http://www.psychiatrictimes.com/cultural-psychiatry/my-perspective-best-mental-health-articles-2017"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              Best Mental Health Articles of 2017
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="https://www.ted.com/topics/mental+health"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              Mental Health TED Talks
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="https://www.nytimes.com/topic/subject/mental-health-and-disorders"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              Mental Health New York Times Articles
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="https://www.huffingtonpost.com/topic/mental-health"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              Mental Health HuffPost Articles
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+        <ListItem
+          autoGenerateNestedIndicator={true}
+          containerElement="span"
+          disableKeyboardFocus={false}
+          disabled={false}
+          initiallyOpen={false}
+          insetChildren={false}
+          leftAvatar={
+                    <img
+                              alt="snail shell icon"
+                              height="40"
+                              src="snail-shell.svg"
+                              width="40"
+                    />
+          }
+          nestedItems={Array []}
+          nestedLevel={0}
+          onKeyboardFocus={[Function]}
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          onNestedListToggle={[Function]}
+          onTouchEnd={[Function]}
+          onTouchStart={[Function]}
+          open={null}
+          primaryText={
+                    <a
+                              className="toolbox-link"
+                              href="https://www.talkspace.com/blog/2016/01/the-best-mental-health-bloggers-you-need-to-follow/"
+                              rel="noopener noreferrer"
+                              target="_blank"
+                    >
+                              Mental Health Bloggers
+                    </a>
+          }
+          primaryTogglesNestedList={false}
+          secondaryTextLines={1}
+          style={
+                    Object {
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                            }
+          }
+/>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": "Mental Health Resources",
+          "inset": false,
+          "style": Object {
+            "color": "#253031",
+            "fontSize": "30px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": "Mental Health Resources",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="https://thisismybrave.org/"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            ThisIsMyBrave: Ending Mental Health Stigma
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="http://www.psychiatrictimes.com/cultural-psychiatry/my-perspective-best-mental-health-articles-2017"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            Best Mental Health Articles of 2017
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="https://www.ted.com/topics/mental+health"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            Mental Health TED Talks
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="https://www.nytimes.com/topic/subject/mental-health-and-disorders"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            Mental Health New York Times Articles
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="https://www.huffingtonpost.com/topic/mental-health"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            Mental Health HuffPost Articles
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "autoGenerateNestedIndicator": true,
+          "containerElement": "span",
+          "disableKeyboardFocus": false,
+          "disabled": false,
+          "initiallyOpen": false,
+          "insetChildren": false,
+          "leftAvatar": <img
+            alt="snail shell icon"
+            height="40"
+            src="snail-shell.svg"
+            width="40"
+/>,
+          "nestedItems": Array [],
+          "nestedLevel": 0,
+          "onKeyboardFocus": [Function],
+          "onMouseEnter": [Function],
+          "onMouseLeave": [Function],
+          "onNestedListToggle": [Function],
+          "onTouchEnd": [Function],
+          "onTouchStart": [Function],
+          "open": null,
+          "primaryText": <a
+            className="toolbox-link"
+            href="https://www.talkspace.com/blog/2016/01/the-best-mental-health-bloggers-you-need-to-follow/"
+            rel="noopener noreferrer"
+            target="_blank"
+>
+            Mental Health Bloggers
+</a>,
+          "primaryTogglesNestedList": false,
+          "secondaryTextLines": 1,
+          "style": Object {
+            "fontSize": "18px",
+            "fontWeight": "bold",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Subheader
+            inset={false}
+            style={
+                        Object {
+                                    "color": "#253031",
+                                    "fontSize": "30px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+>
+            Mental Health Resources
+</Subheader>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="https://thisismybrave.org/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    ThisIsMyBrave: Ending Mental Health Stigma
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="http://www.psychiatrictimes.com/cultural-psychiatry/my-perspective-best-mental-health-articles-2017"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    Best Mental Health Articles of 2017
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="https://www.ted.com/topics/mental+health"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    Mental Health TED Talks
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="https://www.nytimes.com/topic/subject/mental-health-and-disorders"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    Mental Health New York Times Articles
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="https://www.huffingtonpost.com/topic/mental-health"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    Mental Health HuffPost Articles
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+          <ListItem
+            autoGenerateNestedIndicator={true}
+            containerElement="span"
+            disableKeyboardFocus={false}
+            disabled={false}
+            initiallyOpen={false}
+            insetChildren={false}
+            leftAvatar={
+                        <img
+                                    alt="snail shell icon"
+                                    height="40"
+                                    src="snail-shell.svg"
+                                    width="40"
+                        />
+            }
+            nestedItems={Array []}
+            nestedLevel={0}
+            onKeyboardFocus={[Function]}
+            onMouseEnter={[Function]}
+            onMouseLeave={[Function]}
+            onNestedListToggle={[Function]}
+            onTouchEnd={[Function]}
+            onTouchStart={[Function]}
+            open={null}
+            primaryText={
+                        <a
+                                    className="toolbox-link"
+                                    href="https://www.talkspace.com/blog/2016/01/the-best-mental-health-bloggers-you-need-to-follow/"
+                                    rel="noopener noreferrer"
+                                    target="_blank"
+                        >
+                                    Mental Health Bloggers
+                        </a>
+            }
+            primaryTogglesNestedList={false}
+            secondaryTextLines={1}
+            style={
+                        Object {
+                                    "fontSize": "18px",
+                                    "fontWeight": "bold",
+                                  }
+            }
+/>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": "Mental Health Resources",
+            "inset": false,
+            "style": Object {
+              "color": "#253031",
+              "fontSize": "30px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": "Mental Health Resources",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="https://thisismybrave.org/"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              ThisIsMyBrave: Ending Mental Health Stigma
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="http://www.psychiatrictimes.com/cultural-psychiatry/my-perspective-best-mental-health-articles-2017"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              Best Mental Health Articles of 2017
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="https://www.ted.com/topics/mental+health"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              Mental Health TED Talks
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="https://www.nytimes.com/topic/subject/mental-health-and-disorders"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              Mental Health New York Times Articles
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="https://www.huffingtonpost.com/topic/mental-health"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              Mental Health HuffPost Articles
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "autoGenerateNestedIndicator": true,
+            "containerElement": "span",
+            "disableKeyboardFocus": false,
+            "disabled": false,
+            "initiallyOpen": false,
+            "insetChildren": false,
+            "leftAvatar": <img
+              alt="snail shell icon"
+              height="40"
+              src="snail-shell.svg"
+              width="40"
+/>,
+            "nestedItems": Array [],
+            "nestedLevel": 0,
+            "onKeyboardFocus": [Function],
+            "onMouseEnter": [Function],
+            "onMouseLeave": [Function],
+            "onNestedListToggle": [Function],
+            "onTouchEnd": [Function],
+            "onTouchStart": [Function],
+            "open": null,
+            "primaryText": <a
+              className="toolbox-link"
+              href="https://www.talkspace.com/blog/2016/01/the-best-mental-health-bloggers-you-need-to-follow/"
+              rel="noopener noreferrer"
+              target="_blank"
+>
+              Mental Health Bloggers
+</a>,
+            "primaryTogglesNestedList": false,
+            "secondaryTextLines": 1,
+            "style": Object {
+              "fontSize": "18px",
+              "fontWeight": "bold",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

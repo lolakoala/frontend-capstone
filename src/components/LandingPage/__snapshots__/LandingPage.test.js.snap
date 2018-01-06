@@ -1,0 +1,300 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LandingPage should match snap 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LandingPage
+    currentUser={Object {}}
+    loginSuccess={[Function]}
+/>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <p>
+          Search for mental health professionals and connect with mental health buddies in your area!
+</p>,
+        <RaisedButton
+          buttonStyle={
+                    Object {
+                              "height": "100px",
+                              "width": "250px",
+                            }
+          }
+          disabled={false}
+          fullWidth={false}
+          label="Sign Up"
+          labelPosition="after"
+          labelStyle={
+                    Object {
+                              "fontSize": "30px",
+                              "marginTop": "30px",
+                            }
+          }
+          onClick={[Function]}
+          primary={false}
+          secondary={true}
+          style={
+                    Object {
+                              "marginBottom": "50px",
+                            }
+          }
+/>,
+        <RaisedButton
+          buttonStyle={
+                    Object {
+                              "height": "100px",
+                              "width": "250px",
+                            }
+          }
+          disabled={false}
+          fullWidth={false}
+          label="Log In"
+          labelPosition="after"
+          labelStyle={
+                    Object {
+                              "fontSize": "30px",
+                              "marginTop": "30px",
+                            }
+          }
+          onClick={[Function]}
+          primary={false}
+          secondary={true}
+          style={
+                    Object {
+                              "marginBottom": "50px",
+                            }
+          }
+/>,
+      ],
+      "className": "welcome",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Search for mental health professionals and connect with mental health buddies in your area!",
+        },
+        "ref": null,
+        "rendered": "Search for mental health professionals and connect with mental health buddies in your area!",
+        "type": "p",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "buttonStyle": Object {
+            "height": "100px",
+            "width": "250px",
+          },
+          "disabled": false,
+          "fullWidth": false,
+          "label": "Sign Up",
+          "labelPosition": "after",
+          "labelStyle": Object {
+            "fontSize": "30px",
+            "marginTop": "30px",
+          },
+          "onClick": [Function],
+          "primary": false,
+          "secondary": true,
+          "style": Object {
+            "marginBottom": "50px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "buttonStyle": Object {
+            "height": "100px",
+            "width": "250px",
+          },
+          "disabled": false,
+          "fullWidth": false,
+          "label": "Log In",
+          "labelPosition": "after",
+          "labelStyle": Object {
+            "fontSize": "30px",
+            "marginTop": "30px",
+          },
+          "onClick": [Function],
+          "primary": false,
+          "secondary": true,
+          "style": Object {
+            "marginBottom": "50px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <p>
+            Search for mental health professionals and connect with mental health buddies in your area!
+</p>,
+          <RaisedButton
+            buttonStyle={
+                        Object {
+                                    "height": "100px",
+                                    "width": "250px",
+                                  }
+            }
+            disabled={false}
+            fullWidth={false}
+            label="Sign Up"
+            labelPosition="after"
+            labelStyle={
+                        Object {
+                                    "fontSize": "30px",
+                                    "marginTop": "30px",
+                                  }
+            }
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+            style={
+                        Object {
+                                    "marginBottom": "50px",
+                                  }
+            }
+/>,
+          <RaisedButton
+            buttonStyle={
+                        Object {
+                                    "height": "100px",
+                                    "width": "250px",
+                                  }
+            }
+            disabled={false}
+            fullWidth={false}
+            label="Log In"
+            labelPosition="after"
+            labelStyle={
+                        Object {
+                                    "fontSize": "30px",
+                                    "marginTop": "30px",
+                                  }
+            }
+            onClick={[Function]}
+            primary={false}
+            secondary={true}
+            style={
+                        Object {
+                                    "marginBottom": "50px",
+                                  }
+            }
+/>,
+        ],
+        "className": "welcome",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Search for mental health professionals and connect with mental health buddies in your area!",
+          },
+          "ref": null,
+          "rendered": "Search for mental health professionals and connect with mental health buddies in your area!",
+          "type": "p",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "buttonStyle": Object {
+              "height": "100px",
+              "width": "250px",
+            },
+            "disabled": false,
+            "fullWidth": false,
+            "label": "Sign Up",
+            "labelPosition": "after",
+            "labelStyle": Object {
+              "fontSize": "30px",
+              "marginTop": "30px",
+            },
+            "onClick": [Function],
+            "primary": false,
+            "secondary": true,
+            "style": Object {
+              "marginBottom": "50px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "buttonStyle": Object {
+              "height": "100px",
+              "width": "250px",
+            },
+            "disabled": false,
+            "fullWidth": false,
+            "label": "Log In",
+            "labelPosition": "after",
+            "labelStyle": Object {
+              "fontSize": "30px",
+              "marginTop": "30px",
+            },
+            "onClick": [Function],
+            "primary": false,
+            "secondary": true,
+            "style": Object {
+              "marginBottom": "50px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
