@@ -66,6 +66,8 @@ class Persisted extends Component {
             top: '20px',
             right: '25%'
           }}
+          backgroundColor={'#be5971'}
+          labelColor={'white'}
         />
         {renderUser()}
         <img src={logo} alt="logo" id="logo"/>
