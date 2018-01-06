@@ -1,3 +1,5 @@
+import backend from './backend';
+
 const getUser = email => {
   const userObj = {
     user: {
