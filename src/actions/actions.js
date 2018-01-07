@@ -197,9 +197,17 @@ const postBuddy = (user, personObject) => {
     .catch(error => { throw error; });
 };
 
+// needs to be tested manually
 const postProf = (user, personObject) => {
-  // fetchProfs(user) to check if prof is already fave
-  // make post or patch request to add/remove fave prof
+  fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ favoriteProfessionalID: personObject.id }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
 const deleteBuddy = () => {
@@ -211,7 +219,6 @@ const deleteProf = () => {
 };
 
 export const toggleFavorite = (user, type, personObject, isFave) => {
-  // this needs to also handling removing a fave
   if (type === 'buddy' && !isFave) {
     postBuddy(user, personObject);
     return {

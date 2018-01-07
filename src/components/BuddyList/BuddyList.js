@@ -13,7 +13,7 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
   };
 
   const buddyStuff = buddies.map((buddy, index) => {
-    const isFave = faves.map(fave => fave.userName).find(name => name === buddy.userName);
+    const isFave = faves.find(fave => fave.userName === buddy.userName);
     return <div key={`${buddy.userName}${index}`}>
       {/* img tag w/ avatar- must send avatar in all user objects */}
       <p onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}>{buddy.userName}</p>
