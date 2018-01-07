@@ -184,9 +184,17 @@ export const getPreferredProfs = profs => {
   };
 };
 
+// needs to be tested manually
 const postBuddy = (user, personObject) => {
-  // fetchBuddies(user) to check if buddy is already fave
-  // make post or patch request to add/remove fave buddy
+  fetch(`${backend}/api/v1/favoriteUsers/${user.id}`, {
+    method: 'POST',
+    body: JSON.stringify({ favoriteUserID: personObject.id }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
 const postProf = (user, personObject) => {
