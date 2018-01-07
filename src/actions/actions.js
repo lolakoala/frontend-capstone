@@ -170,29 +170,14 @@ export const clearSearchResults = () => {
   };
 };
 
-const fetchBuddies = user => {
-  // get request to server for buddies
-};
-
-// this api endpoint not working yet
-// export const getBuddies = user => {
-//   return user.fetch(`${backend}/api/v1/favoriteUsers/${user.id}`)
-// }
-
-export const getBuddies = user => {
-  const buddies = fetchBuddies(user);
+export const getBuddies = buddies => {
   return {
     type: 'GET_BUDDIES',
     buddies
   };
 };
 
-const fetchProfs = user => {
-  // get request for fave profs
-};
-
-export const getPreferredProfs = user => {
-  const profs = fetchProfs(user);
+export const getPreferredProfs = profs => {
   return {
     type: 'GET_PREFERRED_PROFS',
     profs

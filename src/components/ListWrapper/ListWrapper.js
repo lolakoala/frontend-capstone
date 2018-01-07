@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
 import ProfsList from '../ProfsList/ProfsList';
+import backend from './backend';
 
 class ListWrapper extends Component {
   constructor() {
@@ -15,9 +16,20 @@ class ListWrapper extends Component {
   }
 
   componentWillMount() {
+    console.log('in will mount');
     const { currentUser, getBuddies, getPreferredProfs } = this.props;
-    getBuddies(currentUser);
-    getPreferredProfs(currentUser);
+    fetch(`${backend}/api/v1/favoriteUsers/${currentUser.id}`)
+      .then(res => res.json())
+      .then(res => getBuddies(res.favoriteUsers.map(user => {
+        return {
+          userName: user.user_name,
+          // img
+          aboutMe: user.user_about,
+          city: user.user_location,
+          id: user.id
+        };
+      })))
+      .catch(error => { throw error; });
   }
 
   componentDidMount() {
@@ -32,19 +44,19 @@ class ListWrapper extends Component {
     let listName;
 
     switch (location.pathname) {
-    case '/listUserBuddies':
+    case '/list/userBuddies':
       list = userBuddies;
       listName = 'buddies';
       break;
-    case '/listUserProfs':
+    case '/list/userProfs':
       list = userProfs;
       listName = 'preferred professionals';
       break;
-    case '/listProfSearch':
+    case '/list/profSearch':
       list = profSearch;
       listName = 'professionals search results';
       break;
-    case '/listBuddySearch':
+    case '/list/buddySearch':
       list = buddySearch;
       listName = 'buddy search results';
       break;

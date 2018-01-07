@@ -23,7 +23,7 @@ class SearchBuddies extends Component {
       topic: this.state.value,
       city: this.props.currentUser.city
     });
-    return <Redirect to="/listBuddySearch" />;
+    return <Redirect to="/list/buddySearch" />;
   }
 
   render() {
