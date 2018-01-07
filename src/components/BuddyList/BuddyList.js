@@ -16,9 +16,10 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser }) => {
     // how to we know buddy being rendered is a fave of user?
     return <div key={`${buddy.userName}${index}`}>
       {/* img tag w/ avatar- must send avatar in all user objects */}
-      <p>{buddy.Username}</p>
+      <p>{buddy.userName}</p>
       {/* if favorite, render button to unfavorite */}
       {/* else, render button to favorite */}
+      {/* change to icon button */}
       <RaisedButton label="Show More" onClick={showMore}/>
       {/* hidden p tag with aboutMe */}
       {/* hidden Chips from material-ui with userChallenges */}

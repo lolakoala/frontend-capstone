@@ -45,7 +45,7 @@ class ListWrapper extends Component {
       .catch(error => { throw error; });
   }
 
-  componentDidMount() {
+  checkPath() {
     const {
       location,
       buddySearch,
@@ -80,6 +80,10 @@ class ListWrapper extends Component {
     return this.setState({ list, listName });
   }
 
+  componentWillReceiveProps = () => {
+    this.checkPath();
+  }
+
   handleChange = (event) => {
     this.setState({
       value: event.target.value
@@ -104,6 +108,7 @@ class ListWrapper extends Component {
 
   render() {
     const { location, currentUser, toggleFavorite, userBuddies, userProfs } = this.props;
+    // console.log(location.pathname.toLowerCase().includes('bud'));
     const listToRender = this.state.value ? this.filterList(this.state.list) : this.state.list;
     const buddyComponent = <BuddyList
       buddies={listToRender}
