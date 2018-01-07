@@ -65,14 +65,14 @@ ShallowWrapper {
           <Link
                     className="toolbar-link"
                     replace={false}
-                    to="/listUserProfs"
+                    to="/list/userProfs"
           >
                     My Preferred Proffesionals
           </Link>
           <Link
                     className="toolbar-link"
                     replace={false}
-                    to="/listUserBuddies"
+                    to="/list/userBuddies"
           >
                     My Buddies
           </Link>
@@ -169,14 +169,14 @@ ShallowWrapper {
             <Link
               className="toolbar-link"
               replace={false}
-              to="/listUserProfs"
+              to="/list/userProfs"
 >
               My Preferred Proffesionals
 </Link>,
             <Link
               className="toolbar-link"
               replace={false}
-              to="/listUserBuddies"
+              to="/list/userBuddies"
 >
               My Buddies
 </Link>,
@@ -221,7 +221,7 @@ ShallowWrapper {
               "children": "My Preferred Proffesionals",
               "className": "toolbar-link",
               "replace": false,
-              "to": "/listUserProfs",
+              "to": "/list/userProfs",
             },
             "ref": null,
             "rendered": "My Preferred Proffesionals",
@@ -235,7 +235,7 @@ ShallowWrapper {
               "children": "My Buddies",
               "className": "toolbar-link",
               "replace": false,
-              "to": "/listUserBuddies",
+              "to": "/list/userBuddies",
             },
             "ref": null,
             "rendered": "My Buddies",
@@ -479,14 +479,14 @@ ShallowWrapper {
             <Link
                         className="toolbar-link"
                         replace={false}
-                        to="/listUserProfs"
+                        to="/list/userProfs"
             >
                         My Preferred Proffesionals
             </Link>
             <Link
                         className="toolbar-link"
                         replace={false}
-                        to="/listUserBuddies"
+                        to="/list/userBuddies"
             >
                         My Buddies
             </Link>
@@ -583,14 +583,14 @@ ShallowWrapper {
               <Link
                 className="toolbar-link"
                 replace={false}
-                to="/listUserProfs"
+                to="/list/userProfs"
 >
                 My Preferred Proffesionals
 </Link>,
               <Link
                 className="toolbar-link"
                 replace={false}
-                to="/listUserBuddies"
+                to="/list/userBuddies"
 >
                 My Buddies
 </Link>,
@@ -635,7 +635,7 @@ ShallowWrapper {
                 "children": "My Preferred Proffesionals",
                 "className": "toolbar-link",
                 "replace": false,
-                "to": "/listUserProfs",
+                "to": "/list/userProfs",
               },
               "ref": null,
               "rendered": "My Preferred Proffesionals",
@@ -649,7 +649,7 @@ ShallowWrapper {
                 "children": "My Buddies",
                 "className": "toolbar-link",
                 "replace": false,
-                "to": "/listUserBuddies",
+                "to": "/list/userBuddies",
               },
               "ref": null,
               "rendered": "My Buddies",

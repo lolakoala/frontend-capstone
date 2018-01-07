@@ -18,7 +18,7 @@ ShallowWrapper {
     getPreferredProfs={[Function]}
     location={
         Object {
-            "pathname": "/listUserBuddies",
+            "pathname": "/list/userBuddies",
           }
     }
     profSearch={Array []}

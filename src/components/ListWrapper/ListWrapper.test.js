@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 describe('ListWrapper', () => {
   const mockFn = jest.fn();
   const wrapper = shallow(<ListWrapper
-    location={{ pathname: '/listUserBuddies'}}
+    location={{ pathname: '/list/userBuddies'}}
     getBuddies={mockFn}
     currentUser={currentUser1}
     buddySearch={[]}
@@ -36,10 +36,6 @@ describe('ListWrapper', () => {
     });
   });
 
-  it('should call 2 functions on mount', () => {
-    expect(mockFn).toHaveBeenCalledTimes(2);
-  });
-
   it('should have textfield', () => {
     const search = wrapper.find('TextField');
 
@@ -61,7 +57,7 @@ describe('ListWrapper', () => {
 
   it('should render profList is pathname does not include bud', () => {
     const wrapper2 = shallow(<ListWrapper
-      location={{ pathname: '/listUserProfs'}}
+      location={{ pathname: '/list/userProfs'}}
       getBuddies={mockFn}
       currentUser={currentUser1}
       buddySearch={[]}

@@ -16,8 +16,8 @@ class ListWrapper extends Component {
   }
 
   componentWillMount() {
-    console.log('in will mount');
     const { currentUser, getBuddies, getPreferredProfs } = this.props;
+
     fetch(`${backend}/api/v1/favoriteUsers/${currentUser.id}`)
       .then(res => res.json())
       .then(res => getBuddies(res.favoriteUsers.map(user => {
@@ -27,6 +27,19 @@ class ListWrapper extends Component {
           aboutMe: user.user_about,
           city: user.user_location,
           id: user.id
+        };
+      })))
+      .catch(error => { throw error; });
+
+    fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
+      .then(res => res.json())
+      .then(res => getPreferredProfs(res.favoriteProfessionals.map(prof => {
+        return {
+          name: prof.professional_name,
+          // img ?
+          city: prof.professional_location,
+          email: prof.professional_email,
+          phone: prof.professional_phone
         };
       })))
       .catch(error => { throw error; });
