@@ -144,14 +144,9 @@ export const getSpecialtyList = () => {
     .catch(error => { throw error; });
 };
 
-const sendSearch = searchObject => {
-  // use object contents to make get request to server with query params
-};
+export const search = (searchResults, type) => {
 
-export const search = searchObject => {
-  const searchResults = sendSearch(searchObject);
-
-  if (searchObject.group === 'professionals') {
+  if (type === 'professionals') {
     return {
       type: 'SEARCH_PROFESSIONALS',
       searchResults

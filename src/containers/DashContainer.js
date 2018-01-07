@@ -22,8 +22,8 @@ const mapDispatchToProps = (dispatch) => ({
   getSpecialtyList: () => {
     dispatch(getSpecialtyList());
   },
-  search: searchObject => {
-    dispatch(search(searchObject));
+  search: (array, type) => {
+    dispatch(search(array, type));
   },
   clearSearchResults: () => {
     dispatch(clearSearchResults());
