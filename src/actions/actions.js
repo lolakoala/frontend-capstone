@@ -222,8 +222,16 @@ const deleteBuddy = (user, buddy) => {
     .catch(error => { throw error; });
 };
 
-const deleteProf = () => {
-
+// needs to be manually tested
+const deleteProf = (user, prof) => {
+  fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}/${prof.id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
 export const toggleFavorite = (user, type, personObject, isFave) => {
@@ -248,7 +256,6 @@ export const toggleFavorite = (user, type, personObject, isFave) => {
   } else {
     deleteProf(user, personObject);
     return {
-      // needs REDUCER
       type: 'DELETE_PROF',
       personObject
     };

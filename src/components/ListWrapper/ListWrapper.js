@@ -35,6 +35,7 @@ class ListWrapper extends Component {
       .then(res => res.json())
       .then(res => getPreferredProfs(res.favoriteProfessionals.map(prof => {
         return {
+          id: prof.id,
           name: prof.professional_name,
           // img ?
           city: prof.professional_location,
