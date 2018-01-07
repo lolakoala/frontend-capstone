@@ -210,8 +210,16 @@ const postProf = (user, personObject) => {
     .catch(error => { throw error; });
 };
 
-const deleteBuddy = () => {
-
+// needs to be manually tested
+const deleteBuddy = (user, buddy) => {
+  fetch(`${backend}/api/v1/favoriteUsers/${user.id}/${buddy.id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
 const deleteProf = () => {
@@ -228,7 +236,6 @@ export const toggleFavorite = (user, type, personObject, isFave) => {
   } else if (type === 'buddy' && isFave) {
     deleteBuddy(user, personObject);
     return {
-      // NEEDS REDUCER
       type: 'DELETE_BUDDY',
       personObject
     };
