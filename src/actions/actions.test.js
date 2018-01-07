@@ -51,10 +51,10 @@ describe('actions', () => {
   it('should create an action for submitProfile', () => {
     const expectedAction = {
       type: 'SUBMIT_PROFILE',
-      newUser: currentUser1
+      user: Object.assign({}, currentUser1, { id:1 })
     };
 
-    expect(actions.submitProfile(currentUser1)).toEqual(expectedAction);
+    expect(actions.submitProfile(currentUser1, { id:1 })).toEqual(expectedAction);
   });
 
   it('should create an action for editProfile', () => {
