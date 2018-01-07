@@ -28,14 +28,6 @@ describe('ListWrapper', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should set state on mount', () => {
-    expect(wrapper.state()).toEqual({
-      value: '',
-      list: [currentUser1],
-      listName: 'buddies'
-    });
-  });
-
   it('should have textfield', () => {
     const search = wrapper.find('TextField');
 

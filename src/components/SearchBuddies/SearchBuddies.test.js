@@ -48,11 +48,4 @@ describe('SearchBuddies', () => {
     ddm.simulate('change', { target: { value: allChallenges[1] } });
     expect(wrapper.state().value).toEqual(allChallenges[1]);
   });
-
-  it('should call function when button clicked', () => {
-    const button = wrapper.find('RaisedButton');
-
-    button.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(2);
-  });
 });
