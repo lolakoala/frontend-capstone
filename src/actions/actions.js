@@ -194,18 +194,40 @@ const postProf = (user, personObject) => {
   // make post or patch request to add/remove fave prof
 };
 
-export const toggleFavorite = (user, type, personObject) => {
+const deleteBuddy = () => {
+
+};
+
+const deleteProf = () => {
+
+};
+
+export const toggleFavorite = (user, type, personObject, isFave) => {
   // this needs to also handling removing a fave
-  if (type === 'buddy') {
+  if (type === 'buddy' && !isFave) {
     postBuddy(user, personObject);
     return {
       type: 'ADD_BUDDY',
       personObject
     };
-  } else {
+  } else if (type === 'buddy' && isFave) {
+    deleteBuddy(user, personObject);
+    return {
+      // NEEDS REDUCER
+      type: 'DELETE_BUDDY',
+      personObject
+    };
+  } else if (!isFave) {
     postProf(user, personObject);
     return {
       type: 'ADD_PROF',
+      personObject
+    };
+  } else {
+    deleteProf(user, personObject);
+    return {
+      // needs REDUCER
+      type: 'DELETE_PROF',
       personObject
     };
   }

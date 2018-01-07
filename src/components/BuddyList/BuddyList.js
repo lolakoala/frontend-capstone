@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { RaisedButton } from 'material-ui';
 
-const BuddyList = ({ buddies, toggleFavorite, currentUser }) => {
+const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
   const showMore = () => {
     // if not shown
     // show aboutMe and userChallenges
@@ -13,12 +13,12 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser }) => {
   };
 
   const buddyStuff = buddies.map((buddy, index) => {
-    // how to we know buddy being rendered is a fave of user?
+    const isFave = faves.map(fave => fave.userName).find(name => name === buddy.userName);
     return <div key={`${buddy.userName}${index}`}>
       {/* img tag w/ avatar- must send avatar in all user objects */}
-      <p>{buddy.userName}</p>
-      {/* if favorite, render button to unfavorite */}
-      {/* else, render button to favorite */}
+      <p onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}>{buddy.userName}</p>
+      {/* if favorite, render icon button to unfavorite */}
+      {/* else, render icon button to favorite */}
       {/* change to icon button */}
       <RaisedButton label="Show More" onClick={showMore}/>
       {/* hidden p tag with aboutMe */}
