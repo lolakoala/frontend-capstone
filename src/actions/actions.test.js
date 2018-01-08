@@ -30,6 +30,15 @@ describe('actions', () => {
     expect(actions.addCity('Denver', mockUser)).toEqual(expectedAction);
   });
 
+  it('should create an action for getting all challenges', () => {
+    const expectedAction = {
+      type: 'GET_ALL_CHALLENGES',
+      challenges: [1, 2, 3]
+    };
+
+    expect(actions.challengesAcquired([1, 2, 3])).toEqual(expectedAction);
+  });
+
   it('should create an action for addUserChallenge', () => {
     const expectedAction = {
       type: 'ADD_USER_CHALLENGE',
@@ -88,7 +97,70 @@ describe('actions', () => {
       personObject: currentUser1
     };
 
-    expect(actions.toggleFavorite(currentUser1, 'buddy', currentUser1)).toEqual(expectedAction);
+    expect(actions.toggleFavorite(currentUser1, 'buddy', currentUser1, false)).toEqual(expectedAction);
+  });
+
+  it('should create an action for getting insurance', () => {
+    const expectedAction = {
+      type: 'GET_INSURANCE_LIST',
+      insuranceList: [1, 2, 3]
+    };
+
+    expect(actions.insuranceListAcquired([1, 2, 3])).toEqual(expectedAction);
+  });
+
+  it('should create an action for getting specialty', () => {
+    const expectedAction = {
+      type: 'GET_SPECIALTY_LIST',
+      specialtyList: [1, 2, 3]
+    };
+
+    expect(actions.specialtyListAcquired([1, 2, 3])).toEqual(expectedAction);
+  });
+
+  it('should create an action for search professionals', () => {
+    const expectedAction = {
+      type: 'SEARCH_PROFESSIONALS',
+      searchResults: [1, 2, 3]
+    };
+
+    expect(actions.search([1, 2, 3], 'professionals')).toEqual(expectedAction);
+  });
+
+  it('should create an action for search buddies', () => {
+    const expectedAction = {
+      type: 'SEARCH_BUDDIES',
+      searchResults: [1, 2, 3]
+    };
+
+    expect(actions.search([1, 2, 3], 'buddies')).toEqual(expectedAction);
+  });
+
+  it('should make an action for get buddies', () => {
+    const expectedAction = {
+      type: 'GET_BUDDIES',
+      buddies: [1, 2, 3]
+    };
+
+    expect(actions.getBuddies([1, 2, 3])).toEqual(expectedAction);
+  });
+
+  it('should create an action for getting fave profs', () => {
+    const expectedAction = {
+      type: 'GET_PREFERRED_PROFS',
+      profs: [1, 2, 3]
+    };
+
+    expect(actions.getPreferredProfs([1, 2, 3])).toEqual(expectedAction);
+  });
+
+  it('should create an action for delete buddy', () => {
+    const expectedAction = {
+      type: 'DELETE_BUDDY',
+      personObject: { name: 'lo' }
+    };
+
+    expect(actions.toggleFavorite(currentUser1, 'buddy', { name: 'lo' }, true)).toEqual(expectedAction);
   });
 
   it('should create an action for toggleFavorite', () => {
@@ -97,6 +169,15 @@ describe('actions', () => {
       personObject: currentUser1
     };
 
-    expect(actions.toggleFavorite(currentUser1, 'prof', currentUser1)).toEqual(expectedAction);
+    expect(actions.toggleFavorite(currentUser1, 'prof', currentUser1, false)).toEqual(expectedAction);
+  });
+
+  it('should create an action for delete prof', () => {
+    const expectedAction = {
+      type: 'DELETE_PROF',
+      personObject: { name: 'lo '}
+    };
+
+    expect(actions.toggleFavorite(currentUser1, 'prof', { name: 'lo '}, true)).toEqual(expectedAction);
   });
 });

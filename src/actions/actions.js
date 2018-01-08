@@ -49,7 +49,7 @@ export const addCity = (city, user) => {
   };
 };
 
-const challengesAcquired = challenges => {
+export const challengesAcquired = challenges => {
   return {
     type: 'GET_ALL_CHALLENGES',
     challenges
@@ -120,7 +120,7 @@ export const signOut = () => {
   };
 };
 
-const insuranceListAcquired = insuranceList => {
+export const insuranceListAcquired = insuranceList => {
   return {
     type: 'GET_INSURANCE_LIST',
     insuranceList
@@ -135,7 +135,7 @@ export const getInsuranceList = () => {
     .catch(error => { throw error; });
 };
 
-const specialtyListAcquired = specialtyList => {
+export const specialtyListAcquired = specialtyList => {
   return {
     type: 'GET_SPECIALTY_LIST',
     specialtyList
