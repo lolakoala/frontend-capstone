@@ -46,6 +46,26 @@ class SearchProfessionals extends Component {
     );
   };
 
+  // handleSubmit = () => {
+  //   const challenge = this.state.value;
+  //
+  //   fetch(`${backend}/api/v1/users?user_challenge=${challenge}`)
+  //     .then(res => res.json())
+  //     .then(res => res.users.map(user => {
+  //       return {
+  //         id: user.id,
+  //         userName: user.user_name,
+  //         // img
+  //         aboutMe: user.user_about,
+  //         city: user.user_location,
+  //         email: user.user_email
+  //       };
+  //     }))
+  //     .then(res => this.props.search(res, 'buddies'))
+  //     .catch(error => { throw error; });
+  //   return <Redirect to="/list/buddySearch" />;
+  // }
+
   handleSubmit = () => {
     this.props.search({
       group: 'professionals',
