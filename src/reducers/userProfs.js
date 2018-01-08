@@ -6,6 +6,8 @@ const userProfs = (state = [], action) => {
     return [...state, action.personObject];
   case 'DELETE_PROF':
     return state.filter(prof => prof.id !== action.personObject.id);
+  case 'SIGN_OUT':
+    return [];
   default:
     return state;
   }

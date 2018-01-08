@@ -6,6 +6,8 @@ const userBuddies = (state = [], action) => {
     return [...state, action.personObject];
   case 'DELETE_BUDDY':
     return state.filter(buddy => buddy.userName !== action.personObject.userName);
+  case 'SIGN_OUT':
+    return [];
   default:
     return state;
   }
