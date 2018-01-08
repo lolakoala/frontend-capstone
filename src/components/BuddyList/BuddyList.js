@@ -1,11 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RaisedButton, FloatingActionButton } from 'material-ui';
-import icon from '../../assets/snail-shell.svg';
+import shell from '../../assets/snail-shell.svg';
+import addHeart from '../../assets/add-heart.png';
+import minusHeart from '../../assets/minus-heart.png';
+import minus from '../../assets/minus.png';
+import css from './BuddyList.css';
 
 const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
-  const showMore = () => {
+  const toggleView = () => {
     // if not shown
+    // make fetch for user challenges
     // show aboutMe and userChallenges
     // change button text to Show Less
     // else
@@ -13,29 +17,31 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
     // change button text to Show More
   };
 
-  const faveButton = <FloatingActionButton
-    mini={true}
-  >
-    <img src={icon} alt='snail shell' />
-  </FloatingActionButton>;
-
   const buddyStuff = buddies.map((buddy, index) => {
     const isFave = faves.find(fave => fave.userName === buddy.userName);
     return <div key={`${buddy.userName}${index}`}>
       {/* img tag w/ avatar- must send avatar in all user objects */}
-      <p onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}>{buddy.userName}</p>
-      {faveButton}
-      {/* if favorite, render icon button to unfavorite */}
-      {/* else, render icon button to favorite */}
-      {/* change to icon button */}
-      <RaisedButton label="Show More" onClick={showMore}/>
-      {/* hidden p tag with aboutMe */}
-      {/* hidden Chips from material-ui with userChallenges */}
+      <div className='username-faveicon'>
+        <img src={shell} alt="shell icon" className='buddylist-shell'/>
+        <p>{buddy.userName}</p>
+        <img
+          className='add-buddy'
+          src={isFave ? addHeart : minusHeart}
+          alt='favorite indicator'
+          onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}
+        />
+      </div>
+      <div className='buddy-about'>
+        <p>{buddy.aboutMe}</p>
+        <img src={minus} alt="show less" onClick={toggleView} />
+        {/* Not going to list their challenges yet because should happen on click of show more */}
+      </div>
     </div>;
   });
 
   return (
-    <div>
+    <div className='buddylist'>
+      <p>Click the heart icon to add or remove a user from your buddies.</p>
       {buddyStuff}
     </div>
   );
