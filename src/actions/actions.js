@@ -24,7 +24,7 @@ export const loginAttempt = email => {
             city: resUser.location
           },
           // set challenges when they come back
-          userChallenges: []
+          userChallenges: resUser.user_challenges
         };
         return user;
       })
@@ -72,6 +72,8 @@ export const getAllChallenges = () => {
 //   }
 // }
 
+
+// I dont think I need these server calls if challenges get updated on any put to user
 export const addUserChallenge = challenge => {
   // if run from editProfile, need to post/patch userChallenges
   return {
@@ -97,7 +99,23 @@ export const submitProfile = (newUser, id) => {
 };
 
 const patchUser = newUser => {
-  // patch request to server to patch new user
+  const newUserObj = {
+    user_name: newUser.userName,
+    user_about: newUser.aboutMe,
+    user_location: newUser.city,
+    user_challenges: newUser.userChallenges
+  };
+
+  fetch(`${backend}/api/v1/users/${newUser.id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(newUserObj),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => console.log(res.status))
+    .catch(error => { throw error; });
 };
 
 export const editProfile = newUser => {
