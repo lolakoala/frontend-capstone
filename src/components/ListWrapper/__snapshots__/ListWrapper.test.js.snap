@@ -18,7 +18,7 @@ ShallowWrapper {
     getPreferredProfs={[Function]}
     location={
         Object {
-            "pathname": "/listUserBuddies",
+            "pathname": "/list/userBuddies",
           }
     }
     profSearch={Array []}
@@ -52,7 +52,7 @@ ShallowWrapper {
           disabled={false}
           floatingLabelFixed={false}
           fullWidth={false}
-          hintText="Type here to filter your buddies."
+          hintText="Type here to filter your ."
           multiLine={false}
           onChange={[Function]}
           rows={1}
@@ -61,16 +61,7 @@ ShallowWrapper {
           value=""
 />,
         <BuddyList
-          buddies={
-                    Array [
-                              Object {
-                                "aboutMe": "Lola loves doggos.",
-                                "city": "Denver",
-                                "email": "lola@gmail.com",
-                                "userName": "lolakoala",
-                              },
-                            ]
-          }
+          buddies={Array []}
           currentUser={
                     Object {
                               "aboutMe": "Lola loves doggos.",
@@ -103,7 +94,7 @@ ShallowWrapper {
           "disabled": false,
           "floatingLabelFixed": false,
           "fullWidth": false,
-          "hintText": "Type here to filter your buddies.",
+          "hintText": "Type here to filter your .",
           "multiLine": false,
           "onChange": [Function],
           "rows": 1,
@@ -120,14 +111,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "function",
         "props": Object {
-          "buddies": Array [
-            Object {
-              "aboutMe": "Lola loves doggos.",
-              "city": "Denver",
-              "email": "lola@gmail.com",
-              "userName": "lolakoala",
-            },
-          ],
+          "buddies": Array [],
           "currentUser": Object {
             "aboutMe": "Lola loves doggos.",
             "city": "Denver",
@@ -162,7 +146,7 @@ ShallowWrapper {
             disabled={false}
             floatingLabelFixed={false}
             fullWidth={false}
-            hintText="Type here to filter your buddies."
+            hintText="Type here to filter your ."
             multiLine={false}
             onChange={[Function]}
             rows={1}
@@ -171,16 +155,7 @@ ShallowWrapper {
             value=""
 />,
           <BuddyList
-            buddies={
-                        Array [
-                                    Object {
-                                      "aboutMe": "Lola loves doggos.",
-                                      "city": "Denver",
-                                      "email": "lola@gmail.com",
-                                      "userName": "lolakoala",
-                                    },
-                                  ]
-            }
+            buddies={Array []}
             currentUser={
                         Object {
                                     "aboutMe": "Lola loves doggos.",
@@ -213,7 +188,7 @@ ShallowWrapper {
             "disabled": false,
             "floatingLabelFixed": false,
             "fullWidth": false,
-            "hintText": "Type here to filter your buddies.",
+            "hintText": "Type here to filter your .",
             "multiLine": false,
             "onChange": [Function],
             "rows": 1,
@@ -230,14 +205,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "buddies": Array [
-              Object {
-                "aboutMe": "Lola loves doggos.",
-                "city": "Denver",
-                "email": "lola@gmail.com",
-                "userName": "lolakoala",
-              },
-            ],
+            "buddies": Array [],
             "currentUser": Object {
               "aboutMe": "Lola loves doggos.",
               "city": "Denver",

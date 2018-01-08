@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
 import css from './CreateProfile.css';
+import backend from './backend';
 
 class CreateProfile extends Component {
   constructor() {
@@ -26,9 +27,9 @@ class CreateProfile extends Component {
     const { userChallenges } = this.props;
 
     if (userChallenges.includes(challenge)) {
-      this.props.removeUserChallenge(challenge);
+      this.props.removeUserChallenge(challenge, 'create');
     } else {
-      this.props.addUserChallenge(challenge);
+      this.props.addUserChallenge(challenge, 'create');
     }
   }
 
@@ -57,8 +58,27 @@ class CreateProfile extends Component {
       { userChallenges },
       this.state
     );
+
+    const newUserObj = {
+      user_name: newUser.userName,
+      user_about: newUser.aboutMe,
+      user_location: newUser.city,
+      user_email: newUser.email,
+      user_challenges: newUser.userChallenges
+    };
+
+    fetch(`${backend}/api/v1/users`, {
+      method: 'POST',
+      body: JSON.stringify(newUserObj),
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(res => res.json())
+      .then(res => submitProfile(newUser, res))
+      .catch(error => { throw error; });
     // somehow send image in submitProfile action?
-    submitProfile(newUser);
   }
 
   render() {

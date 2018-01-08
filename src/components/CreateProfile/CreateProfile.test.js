@@ -79,12 +79,4 @@ describe('CreateProfile', () => {
     expect(wrapper.state().userName).toEqual('lk');
     expect(wrapper.state().aboutMe).toEqual('about me');
   });
-
-  it('should fun function on submit', () => {
-    const submit = wrapper.find('RaisedButton').last();
-
-    submit.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(3);
-  });
-
 });

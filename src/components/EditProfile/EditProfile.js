@@ -33,11 +33,9 @@ class EditProfile extends Component {
     const { userChallenges } = this.props;
 
     if (userChallenges.includes(challenge)) {
-      // change chip back to original color
-      this.props.removeUserChallenge(challenge);
+      this.props.removeUserChallenge(challenge, 'edit');
     } else {
-      // change color of chip
-      this.props.addUserChallenge(challenge);
+      this.props.addUserChallenge(challenge, 'edit');
     }
   }
 

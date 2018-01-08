@@ -11,6 +11,16 @@ describe('actions', () => {
     email: 'lola@gmail.com'
   };
 
+  it('should create an action for login', () => {
+    const expectedAction = {
+      type: 'LOGIN_SUCCESS',
+      user: currentUser1,
+      userChallenges: currentUser1.userChallenges
+    };
+
+    expect(actions.login({ user: currentUser1, userChallenges: currentUser1.userChallenges })).toEqual(expectedAction);
+  });
+
   it('should create an action for addCity', () => {
     const expectedAction = {
       type: 'ADD_CITY',
@@ -41,10 +51,10 @@ describe('actions', () => {
   it('should create an action for submitProfile', () => {
     const expectedAction = {
       type: 'SUBMIT_PROFILE',
-      newUser: currentUser1
+      user: Object.assign({}, currentUser1, { id:1 })
     };
 
-    expect(actions.submitProfile(currentUser1)).toEqual(expectedAction);
+    expect(actions.submitProfile(currentUser1, { id:1 })).toEqual(expectedAction);
   });
 
   it('should create an action for editProfile', () => {

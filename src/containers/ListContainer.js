@@ -21,8 +21,8 @@ const mapDispatchToProps = (dispatch) => ({
   getPreferredProfs: user => {
     dispatch(getPreferredProfs(user));
   },
-  toggleFavorite: (user, type, personObject) => {
-    dispatch(toggleFavorite(user, type, personObject));
+  toggleFavorite: (user, type, personObject, isFave) => {
+    dispatch(toggleFavorite(user, type, personObject, isFave));
   }
 });
 

@@ -4,6 +4,8 @@ const userProfs = (state = [], action) => {
     return action.profs;
   case 'ADD_PROF':
     return [...state, action.personObject];
+  case 'DELETE_PROF':
+    return state.filter(prof => prof.id !== action.personObject.id);
   default:
     return state;
   }

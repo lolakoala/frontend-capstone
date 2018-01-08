@@ -1,38 +1,45 @@
-const getUser = email => {
-  const userObj = {
-    user: {
-      email
-    },
-    userChallenges: []
-  };
-  // const userObj = {
-  //   user: {
-  //     email,
-  //
-  //   }
-  // }
+import backend from './backend';
 
-  //fetch user with matching email - get request w/ query params
-  //if user exists, return user object as key value pair
-  // .then fetch userChallenges
-  // add challenges to userObj as key value pair
-  //if user doesn't exist, just return object with email
-
-
-  // if (!user) {
-  return userObj;
-  // }
-};
-
-export const loginSuccess = email => {
-  const user = getUser(email);
-  // user should end up being object with email, user, userChallenges
+export const login = user => {
   return {
     type: 'LOGIN_SUCCESS',
     user: user.user,
     userChallenges: user.userChallenges
   };
 };
+
+export const loginAttempt = email => {
+  return dispatch => {
+    fetch(`${backend}/api/v1/users?user_email=${email}`)
+      .then(res => res.json())
+      .then(res => {
+        const resUser = res.users[0];
+        const user = {
+          user: {
+            email,
+            id: resUser.id,
+            userName: resUser.user_name,
+            aboutMe: resUser.user_about,
+            // user img
+            city: resUser.location
+          },
+          userChallenges: resUser.user_challenges
+        };
+        return user;
+      })
+      .then(user => dispatch(login(user)))
+      .catch(() => {
+        dispatch(login({
+          user: {
+            email
+          },
+          userChallenges: []
+        }));
+      }
+      );
+  };
+};
+
 
 export const addCity = (city, user) => {
   const updatedUser = Object.assign({}, user, { city });
@@ -42,21 +49,32 @@ export const addCity = (city, user) => {
   };
 };
 
-const fetchAllChallenges = () => {
-  //get request to server for list of challenges
-  //below is just a bit of mock data to play with
-  return ['depression', 'anxiety'];
-};
-
-export const getAllChallenges = () => {
-  const challenges = fetchAllChallenges();
+const challengesAcquired = challenges => {
   return {
     type: 'GET_ALL_CHALLENGES',
     challenges
   };
 };
 
+export const getAllChallenges = () => {
+  return dispatch => fetch(`${backend}/api/v1/challenges`)
+    .then(res => res.json())
+    .then(res => res.challenges.map(challenge => challenge.challenge_name))
+    .then(res => dispatch(challengesAcquired(res)))
+    .catch(error => { throw error; });
+};
+
+// starting server interaction
+// export const addUserChallenge = (challenge, type) => {
+//   if (type === 'edit') {
+//     return dispatch => fetch(`${backend}`)
+//   }
+// }
+
+
+// I dont think I need these server calls if challenges get updated on any put to user
 export const addUserChallenge = challenge => {
+  // if run from editProfile, need to post/patch userChallenges
   return {
     type: 'ADD_USER_CHALLENGE',
     challenge
@@ -64,26 +82,40 @@ export const addUserChallenge = challenge => {
 };
 
 export const removeUserChallenge = challenge => {
+  // if run from editProfile, need to post/patch/delete userChallenges
   return {
     type: 'REMOVE_USER_CHALLENGE',
     challenge
   };
 };
 
-const postUser = newUser => {
-  // post request to server to post new user
-};
-
-export const submitProfile = newUser => {
-  postUser(newUser);
+export const submitProfile = (newUser, id) => {
+  const user = Object.assign({}, newUser, id);
   return {
     type: 'SUBMIT_PROFILE',
-    newUser
+    user
   };
 };
 
 const patchUser = newUser => {
-  // patch request to server to patch new user
+  const newUserObj = {
+    user_name: newUser.userName,
+    user_about: newUser.aboutMe,
+    user_location: newUser.city,
+    user_challenges: newUser.userChallenges
+  };
+
+  // returns CORS error
+  fetch(`${backend}/api/v1/users/${newUser.id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(newUserObj),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .then(res => console.log(res.status))
+    .catch(error => { throw error; });
 };
 
 export const editProfile = newUser => {
@@ -100,42 +132,39 @@ export const signOut = () => {
   };
 };
 
-const fetchInsuranceList = () => {
-  // get request to server for insurance list
-  // mock data to play with below
-  return ['medicaid', 'cigna', 'aetna'];
-};
-
-export const getInsuranceList = () => {
-  const insuranceList = fetchInsuranceList();
+const insuranceListAcquired = insuranceList => {
   return {
     type: 'GET_INSURANCE_LIST',
     insuranceList
   };
 };
 
-const fetchSpecialtyList = () => {
-  // get request to server for specialty list
-  // mock data to play with below
-  return ['relationships', 'anxiety', 'depression'];
+export const getInsuranceList = () => {
+  return dispatch => fetch(`${backend}/api/v1/insuranceProviders`)
+    .then(res => res.json())
+    .then(res => res.insuranceProviders.map(ins => ins.insurance_provider_name))
+    .then(res => dispatch(insuranceListAcquired(res)))
+    .catch(error => { throw error; });
 };
 
-export const getSpecialtyList = () => {
-  const specialtyList = fetchSpecialtyList();
+const specialtyListAcquired = specialtyList => {
   return {
     type: 'GET_SPECIALTY_LIST',
     specialtyList
   };
 };
 
-const sendSearch = searchObject => {
-  // use object contents to make get request to server with query params
+export const getSpecialtyList = () => {
+  return dispatch => fetch(`${backend}/api/v1/specialties`)
+    .then(res => res.json())
+    .then(res => res.specialties.map(spec => spec.specialty_name))
+    .then(res => dispatch(specialtyListAcquired(res)))
+    .catch(error => { throw error; });
 };
 
-export const search = searchObject => {
-  const searchResults = sendSearch(searchObject);
+export const search = (searchResults, type) => {
 
-  if (searchObject.group === 'professionals') {
+  if (type === 'professionals') {
     return {
       type: 'SEARCH_PROFESSIONALS',
       searchResults
@@ -154,51 +183,93 @@ export const clearSearchResults = () => {
   };
 };
 
-const fetchBuddies = user => {
-  // get request to server for buddies
-};
-
-export const getBuddies = user => {
-  const buddies = fetchBuddies(user);
+export const getBuddies = buddies => {
   return {
     type: 'GET_BUDDIES',
     buddies
   };
 };
 
-const fetchProfs = user => {
-  // get request for fave profs
-};
-
-export const getPreferredProfs = user => {
-  const profs = fetchProfs(user);
+export const getPreferredProfs = profs => {
   return {
     type: 'GET_PREFERRED_PROFS',
     profs
   };
 };
 
+// needs to be tested manually
 const postBuddy = (user, personObject) => {
-  // fetchBuddies(user) to check if buddy is already fave
-  // make post or patch request to add/remove fave buddy
+  fetch(`${backend}/api/v1/favoriteUsers/${user.id}`, {
+    method: 'POST',
+    body: JSON.stringify({ favoriteUserID: personObject.id }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
+// needs to be tested manually
 const postProf = (user, personObject) => {
-  // fetchProfs(user) to check if prof is already fave
-  // make post or patch request to add/remove fave prof
+  fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}`, {
+    method: 'DELETE',
+    body: JSON.stringify({ favoriteProfessionalID: personObject.id }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
 };
 
-export const toggleFavorite = (user, type, personObject) => {
-  if (type === 'buddy') {
+// needs to be manually tested
+const deleteBuddy = (user, buddy) => {
+  fetch(`${backend}/api/v1/favoriteUsers/${user.id}/${buddy.id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
+};
+
+// needs to be manually tested
+const deleteProf = (user, prof) => {
+  fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}/${prof.id}`, {
+    method: 'DELETE',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    }
+  })
+    .catch(error => { throw error; });
+};
+
+export const toggleFavorite = (user, type, personObject, isFave) => {
+  if (type === 'buddy' && !isFave) {
     postBuddy(user, personObject);
     return {
       type: 'ADD_BUDDY',
       personObject
     };
-  } else {
+  } else if (type === 'buddy' && isFave) {
+    deleteBuddy(user, personObject);
+    return {
+      type: 'DELETE_BUDDY',
+      personObject
+    };
+  } else if (!isFave) {
     postProf(user, personObject);
     return {
       type: 'ADD_PROF',
+      personObject
+    };
+  } else {
+    deleteProf(user, personObject);
+    return {
+      type: 'DELETE_PROF',
       personObject
     };
   }

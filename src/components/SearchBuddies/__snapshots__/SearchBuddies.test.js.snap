@@ -50,7 +50,7 @@ ShallowWrapper {
           multiple={false}
           onChange={[Function]}
           openImmediately={false}
-          value="depression"
+          value=""
 >
           <MenuItem
                     anchorOrigin={
@@ -170,7 +170,7 @@ ShallowWrapper {
           "multiple": false,
           "onChange": [Function],
           "openImmediately": false,
-          "value": "depression",
+          "value": "",
         },
         "ref": null,
         "rendered": Array [
@@ -269,7 +269,7 @@ ShallowWrapper {
             multiple={false}
             onChange={[Function]}
             openImmediately={false}
-            value="depression"
+            value=""
 >
             <MenuItem
                         anchorOrigin={
@@ -389,7 +389,7 @@ ShallowWrapper {
             "multiple": false,
             "onChange": [Function],
             "openImmediately": false,
-            "value": "depression",
+            "value": "",
           },
           "ref": null,
           "rendered": Array [

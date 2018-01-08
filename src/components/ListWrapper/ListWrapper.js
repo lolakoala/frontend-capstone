@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
 import ProfsList from '../ProfsList/ProfsList';
+import backend from './backend';
 
 class ListWrapper extends Component {
   constructor() {
@@ -16,35 +17,74 @@ class ListWrapper extends Component {
 
   componentWillMount() {
     const { currentUser, getBuddies, getPreferredProfs } = this.props;
-    getBuddies(currentUser);
-    getPreferredProfs(currentUser);
+
+    fetch(`${backend}/api/v1/favoriteUsers/${currentUser.id}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return { favoriteUsers: [] };
+        }
+      })
+      .then(res => res.favoriteUsers.map(user => {
+        return {
+          userName: user.user_name,
+          // img
+          aboutMe: user.user_about,
+          city: user.user_location,
+          id: user.id
+        };
+      }))
+      .then(res => getBuddies(res))
+      .catch(error => { throw error; });
+
+    fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return { favoriteProfessionals: [] };
+        }
+      })
+      .then(res => res.favoriteProfessionals.map(prof => {
+        return {
+          id: prof.id,
+          name: prof.professional_name,
+          // img ?
+          city: prof.professional_location,
+          email: prof.professional_email,
+          phone: prof.professional_phone
+        };
+      }))
+      .then(res => getPreferredProfs(res))
+      .catch(error => { throw error; });
   }
 
-  componentDidMount() {
+  checkPath(nextProps) {
     const {
       location,
       buddySearch,
       profSearch,
       userBuddies,
       userProfs
-    } = this.props;
+    } = nextProps;
     let list;
     let listName;
 
     switch (location.pathname) {
-    case '/listUserBuddies':
+    case '/list/userBuddies':
       list = userBuddies;
       listName = 'buddies';
       break;
-    case '/listUserProfs':
+    case '/list/userProfs':
       list = userProfs;
       listName = 'preferred professionals';
       break;
-    case '/listProfSearch':
+    case '/list/profSearch':
       list = profSearch;
       listName = 'professionals search results';
       break;
-    case '/listBuddySearch':
+    case '/list/buddySearch':
       list = buddySearch;
       listName = 'buddy search results';
       break;
@@ -53,6 +93,10 @@ class ListWrapper extends Component {
     }
 
     return this.setState({ list, listName });
+  }
+
+  componentWillReceiveProps = nextProps => {
+    this.checkPath(nextProps);
   }
 
   handleChange = (event) => {
