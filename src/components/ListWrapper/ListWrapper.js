@@ -53,7 +53,9 @@ class ListWrapper extends Component {
           // img ?
           city: prof.professional_location,
           email: prof.professional_email,
-          phone: prof.professional_phone
+          phone: prof.professional_phone,
+          insurance: prof.professional_insurance_providers,
+          specialties: prof.professional_specialties
         };
       }))
       .then(res => getPreferredProfs(res))
