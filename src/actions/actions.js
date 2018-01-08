@@ -64,17 +64,7 @@ export const getAllChallenges = () => {
     .catch(error => { throw error; });
 };
 
-// starting server interaction
-// export const addUserChallenge = (challenge, type) => {
-//   if (type === 'edit') {
-//     return dispatch => fetch(`${backend}`)
-//   }
-// }
-
-
-// I dont think I need these server calls if challenges get updated on any put to user
 export const addUserChallenge = challenge => {
-  // if run from editProfile, need to post/patch userChallenges
   return {
     type: 'ADD_USER_CHALLENGE',
     challenge
@@ -82,7 +72,6 @@ export const addUserChallenge = challenge => {
 };
 
 export const removeUserChallenge = challenge => {
-  // if run from editProfile, need to post/patch/delete userChallenges
   return {
     type: 'REMOVE_USER_CHALLENGE',
     challenge
@@ -105,7 +94,6 @@ const patchUser = newUser => {
     user_challenges: newUser.userChallenges
   };
 
-  // returns CORS error
   fetch(`${backend}/api/v1/users/${newUser.id}`, {
     method: 'PATCH',
     body: JSON.stringify(newUserObj),
@@ -197,6 +185,9 @@ export const getPreferredProfs = profs => {
   };
 };
 
+// the four server calls below depend on stuff happening in BuddyList and ProfsList
+// so cannot yet test, need to finish those components to test
+
 // needs to be tested manually
 const postBuddy = (user, personObject) => {
   fetch(`${backend}/api/v1/favoriteUsers/${user.id}`, {
@@ -207,6 +198,7 @@ const postBuddy = (user, personObject) => {
       'Content-Type': 'application/json'
     }
   })
+    .then(res => res.status)
     .catch(error => { throw error; });
 };
 
@@ -220,6 +212,7 @@ const postProf = (user, personObject) => {
       'Content-Type': 'application/json'
     }
   })
+    .then(res => res.status)
     .catch(error => { throw error; });
 };
 
@@ -232,6 +225,7 @@ const deleteBuddy = (user, buddy) => {
       'Content-Type': 'application/json'
     }
   })
+    .then(res => res.status)
     .catch(error => { throw error; });
 };
 
@@ -244,6 +238,7 @@ const deleteProf = (user, prof) => {
       'Content-Type': 'application/json'
     }
   })
+    .then(res => res.status)
     .catch(error => { throw error; });
 };
 
