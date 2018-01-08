@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-// stuff
+import { List,
+  ListItem,
+  Subheader
+  // RaisedButton
 } from 'material-ui';
 import shell from '../../assets/snail-shell.svg';
 import addHeart from '../../assets/add-heart.png';
@@ -27,6 +29,20 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
     // change button text to Show More
   };
 
+  const mapList = list => list.map((item, index) => {
+    return <ListItem
+      primaryText={item}
+      leftAvatar={<img src={shell} alt="snail shell icon" height="40" width="40" />}
+      style={{
+        fontSize: '18px',
+        fontWeight: 'bold',
+        color:'#2F9C95'
+      }}
+      disabled={true}
+      key={`${item}${index}`}
+    />;
+  });
+
   const profStuff = profs.map((prof, index) => {
     const isFave = faves.find(fave => fave.name === prof.name);
     return <div key={`${prof.name}${index}`}>
@@ -43,7 +59,22 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
         />
       </div>
       <div className='buddy-about'>
-        {/* need list for specialies and insurances */}
+        <List>
+          <Subheader style={{
+            fontSize: '30px',
+            fontWeight: 'bold',
+            color: '#253031'
+          }}>Accepted Insurance Providers</Subheader>
+          {mapList(prof.insurance)}
+        </List>
+        <List>
+          <Subheader style={{
+            fontSize: '30px',
+            fontWeight: 'bold',
+            color: '#253031'
+          }}>Specialties</Subheader>
+          {mapList(prof.specialties)}
+        </List>
         <img src={minus} alt="show less" onClick={toggleView} />
       </div>
     </div>;
