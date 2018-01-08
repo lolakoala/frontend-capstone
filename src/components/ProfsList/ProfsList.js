@@ -32,21 +32,15 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
     />;
   });
 
-  const doc = [{
-    name: 'Dr. Lola Brenner',
-    email: 'lolabrennerdev@gmail.com',
-    phone: '2512029642',
-  }];
-
   const profStuff = profs.map((prof, index) => {
     const isFave = faves.find(fave => fave.name === prof.name);
     return <div key={`${prof.name}${index}`}>
       {/* img tag w/ avatar */}
       <div className='profname-faveicon'>
-        <img src={shell} alt="shell icon" className='buddylist-shell'/>
+        <img src={shell} alt="shell icon" className='proflist-shell'/>
         <p>{prof.name}</p>
         <img
-          className='add-buddy'
+          className='add-prof'
           src={isFave ? addHeart : minusHeart}
           alt='favorite indicator'
           onClick={() => toggleFavorite(currentUser, 'prof', prof, isFave)}
@@ -56,13 +50,13 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
         <a href={`mailto:${prof.email}`}>Email this professional.</a>
         <p>{`Phone: ${prof.phone}`}</p>
       </div>
-      <div className='buddy-about'>
+      <div className='prof-about'>
         <List>
           <Subheader style={{
             fontSize: '30px',
             fontWeight: 'bold',
             color: '#253031'
-          }}>Accepted Insurance Providers</Subheader>
+          }}>Insurance Accepted</Subheader>
           {mapList(prof.insurance)}
         </List>
         <List>
