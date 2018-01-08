@@ -18,8 +18,6 @@ class ListWrapper extends Component {
   componentWillMount() {
     const { currentUser, getBuddies, getPreferredProfs } = this.props;
 
-    // these fetches are not working, need restructuring to handle 404, json() needs to be in its own .then
-
     fetch(`${backend}/api/v1/favoriteUsers/${currentUser.id}`)
       .then(res => {
         if (res.ok) {
@@ -40,22 +38,26 @@ class ListWrapper extends Component {
       .then(res => getBuddies(res))
       .catch(error => { throw error; });
 
-    // fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
-    //   .then(res => {
-    //     if (res.ok) {
-    //       return getPreferredProfs(res.json().favoriteProfessionals.map(prof => {
-    //         return {
-    //           id: prof.id,
-    //           name: prof.professional_name,
-    //           // img ?
-    //           city: prof.professional_location,
-    //           email: prof.professional_email,
-    //           phone: prof.professional_phone
-    //         };
-    //       }));
-    //     }
-    //   })
-    //   .catch(error => { throw error; });
+    fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return { favoriteProfessionals: [] };
+        }
+      })
+      .then(res => res.favoriteProfessionals.map(prof => {
+        return {
+          id: prof.id,
+          name: prof.professional_name,
+          // img ?
+          city: prof.professional_location,
+          email: prof.professional_email,
+          phone: prof.professional_phone
+        };
+      }))
+      .then(res => getPreferredProfs(res))
+      .catch(error => { throw error; });
   }
 
   checkPath(nextProps) {
@@ -121,7 +123,6 @@ class ListWrapper extends Component {
 
   render() {
     const { location, currentUser, toggleFavorite, userBuddies, userProfs } = this.props;
-    // console.log(location.pathname.toLowerCase().includes('bud'));
     const listToRender = this.state.value ? this.filterList(this.state.list) : this.state.list;
     const buddyComponent = <BuddyList
       buddies={listToRender}
