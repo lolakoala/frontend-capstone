@@ -1,22 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { List,
-  ListItem,
-  Subheader
-  // RaisedButton
-} from 'material-ui';
+import { List, ListItem, Subheader } from 'material-ui';
 import shell from '../../assets/snail-shell.svg';
 import addHeart from '../../assets/add-heart.png';
 import minusHeart from '../../assets/minus-heart.png';
 import minus from '../../assets/minus.png';
 import css from './ProfsList.css';
-
-// {
-
-//   phone: prof.professional_phone,
-//   insurance: prof.professional_insurance_providers,
-//   specialties: prof.professional_specialties
-// }
 
 const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
   const toggleView = () => {
@@ -43,6 +32,12 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
     />;
   });
 
+  const doc = [{
+    name: 'Dr. Lola Brenner',
+    email: 'lolabrennerdev@gmail.com',
+    phone: '2512029642',
+  }];
+
   const profStuff = profs.map((prof, index) => {
     const isFave = faves.find(fave => fave.name === prof.name);
     return <div key={`${prof.name}${index}`}>
@@ -50,13 +45,16 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
       <div className='profname-faveicon'>
         <img src={shell} alt="shell icon" className='buddylist-shell'/>
         <p>{prof.name}</p>
-        <a href={`mailto:${prof.email}`}>Email this professional.</a>
         <img
           className='add-buddy'
           src={isFave ? addHeart : minusHeart}
           alt='favorite indicator'
           onClick={() => toggleFavorite(currentUser, 'prof', prof, isFave)}
         />
+      </div>
+      <div className='email-phone'>
+        <a href={`mailto:${prof.email}`}>Email this professional.</a>
+        <p>{`Phone: ${prof.phone}`}</p>
       </div>
       <div className='buddy-about'>
         <List>
