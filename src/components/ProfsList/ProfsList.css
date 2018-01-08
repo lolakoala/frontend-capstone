@@ -1,0 +1,74 @@
+.profslist p {
+  color: #253031;
+  font-weight: bold;
+}
+
+.profname-faveicon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.profname-faveicon img {
+  height: 50px;
+  width: 50px;
+}
+
+.proflist-shell {
+  margin-right: 20px;
+}
+
+.add-prof {
+  position: absolute;
+  right: 0;
+}
+
+.add-prof:hover {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+}
+
+.profname-faveicon p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #253031;
+}
+
+.email-phone {
+  font-size: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.email-phone a {
+  text-decoration: none;
+  color: #253031;
+  font-weight: bold;
+}
+
+.email-phone a:hover {
+  color: #2F9C95;
+}
+
+.prof-about {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.prof-about img {
+  height: 40px;
+  width: 40px;
+}
+
+.prof-about img:hover {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}

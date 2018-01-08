@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import { Redirect } from 'react-router-dom';
 import css from './SearchProfessionals.css';
+import backend from './backend';
 
 class SearchProfessionals extends Component {
   constructor() {
@@ -47,12 +48,24 @@ class SearchProfessionals extends Component {
   };
 
   handleSubmit = () => {
-    this.props.search({
-      group: 'professionals',
-      query: this.state.searchQuery,
-      topic: this.state.searchTopic,
-      city: this.props.currentUser.city
-    });
+    const { searchQuery, searchTopic } = this.state;
+
+    fetch(`${backend}/api/v1/professionals?${searchQuery}=${searchTopic}`)
+      .then(res => res.json())
+      .then(res => res.professionals.map(prof => {
+        return {
+          id: prof.id,
+          name: prof.professional_name,
+          // img ?
+          city: prof.professional_location,
+          email: prof.professional_email,
+          phone: prof.professional_phone,
+          insurance: prof.professional_insurance_providers,
+          specialties: prof.professional_specialties
+        };
+      }))
+      .then(res => this.props.search(res, 'profs'))
+      .catch(error => { throw error; });
 
     return <Redirect to="/list/profSearch" />;
   }
@@ -67,7 +80,7 @@ class SearchProfessionals extends Component {
       <div className="search-options">
         <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
           <MenuItem value="select query" primaryText="Select search query." />
-          <MenuItem value="insurance" primaryText="Search by insurance." />
+          <MenuItem value="insurance_provider" primaryText="Search by insurance." />
           <MenuItem value="specialty" primaryText="Search by specialty." />
         </DropDownMenu>
         {searchQuery === 'insurance' ? this.topicDropDown(insuranceList) : null}
