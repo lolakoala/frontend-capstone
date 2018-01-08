@@ -23,7 +23,6 @@ export const loginAttempt = email => {
             // user img
             city: resUser.location
           },
-          // set challenges when they come back
           userChallenges: resUser.user_challenges
         };
         return user;
@@ -106,6 +105,7 @@ const patchUser = newUser => {
     user_challenges: newUser.userChallenges
   };
 
+  // returns CORS error
   fetch(`${backend}/api/v1/users/${newUser.id}`, {
     method: 'PATCH',
     body: JSON.stringify(newUserObj),
