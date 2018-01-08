@@ -8,6 +8,7 @@ import minus from '../../assets/minus.png';
 const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
   const toggleView = () => {
     // if not shown
+    // make fetch for user challenges
     // show aboutMe and userChallenges
     // change button text to Show Less
     // else
@@ -27,14 +28,14 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
         onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}
       />
       <img src={minus} alt="show less" onClick={toggleView} />
-      {/* <RaisedButton label="Show Less" onClick={toggleView}/> */}
-      {/* hidden p tag with aboutMe */}
-      {/* hidden List from material-ui with userChallenges */}
+      {/* Not going to list their challenges yet because should happen on click of show more */}
+      <p>{buddy.aboutMe}</p>
     </div>;
   });
 
   return (
     <div>
+      <p>Click the heart to add or remove a user from your buddies.</p>
       {buddyStuff}
     </div>
   );
