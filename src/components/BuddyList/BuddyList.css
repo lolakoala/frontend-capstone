@@ -1,0 +1,63 @@
+.buddylist p {
+  color: #253031;
+  font-weight: bold;
+}
+
+.username-faveicon {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.username-faveicon img {
+  height: 50px;
+  width: 50px;
+}
+
+.buddylist-shell {
+  margin-right: 20px;
+}
+
+.add-buddy {
+  position: absolute;
+  right: 0;
+}
+
+.add-buddy:hover {
+  cursor: pointer;
+  height: 60px;
+  width: 60px;
+}
+
+.username-faveicon p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #253031;
+}
+
+.buddy-about {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.buddy-about p {
+  width: 80%;
+  height: 100px;
+  overflow: hidden;
+  color: #253031;
+}
+
+.buddy-about img {
+  height: 40px;
+  width: 40px;
+}
+
+.buddy-about img:hover {
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
