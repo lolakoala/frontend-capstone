@@ -34,7 +34,7 @@ export default class Root extends Component {
           <MuiThemeProvider muiTheme={muiTheme}>
             <Routes />
           </MuiThemeProvider>
-          <DevTools />
+          {/* <DevTools /> */}
         </div>
       </BrowserRouter>
     );
