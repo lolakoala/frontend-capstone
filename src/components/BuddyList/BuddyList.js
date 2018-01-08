@@ -3,10 +3,8 @@ import PropTypes from 'prop-types';
 import { RaisedButton, FloatingActionButton } from 'material-ui';
 import addHeart from '../../assets/add-heart.png';
 import minusHeart from '../../assets/minus-heart.png';
+import minus from '../../assets/minus.png';
 
-
-
-// make this component how it would look if everything were open
 const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
   const toggleView = () => {
     // if not shown
@@ -28,11 +26,8 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
         alt='favorite indicator'
         onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}
       />
-      {/* </FloatingActionButton> */}
-      {/* if favorite, render icon button to unfavorite */}
-      {/* else, render icon button to favorite */}
-      {/* change to icon button */}
-      <RaisedButton label="Show Less" onClick={toggleView}/>
+      <img src={minus} alt="show less" onClick={toggleView} />
+      {/* <RaisedButton label="Show Less" onClick={toggleView}/> */}
       {/* hidden p tag with aboutMe */}
       {/* hidden List from material-ui with userChallenges */}
     </div>;
