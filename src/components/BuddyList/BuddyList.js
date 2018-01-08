@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { RaisedButton } from 'material-ui';
+import { RaisedButton, FloatingActionButton } from 'material-ui';
+import icon from '../../assets/snail-shell.svg';
 
 const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
   const showMore = () => {
@@ -12,11 +13,18 @@ const BuddyList = ({ buddies, toggleFavorite, currentUser, faves }) => {
     // change button text to Show More
   };
 
+  const faveButton = <FloatingActionButton
+    mini={true}
+  >
+    <img src={icon} alt='snail shell' />
+  </FloatingActionButton>;
+
   const buddyStuff = buddies.map((buddy, index) => {
     const isFave = faves.find(fave => fave.userName === buddy.userName);
     return <div key={`${buddy.userName}${index}`}>
       {/* img tag w/ avatar- must send avatar in all user objects */}
       <p onClick={() => toggleFavorite(currentUser, 'buddy', buddy, isFave)}>{buddy.userName}</p>
+      {faveButton}
       {/* if favorite, render icon button to unfavorite */}
       {/* else, render icon button to favorite */}
       {/* change to icon button */}

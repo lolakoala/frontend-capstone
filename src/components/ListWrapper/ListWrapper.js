@@ -18,9 +18,17 @@ class ListWrapper extends Component {
   componentWillMount() {
     const { currentUser, getBuddies, getPreferredProfs } = this.props;
 
+    // these fetches are not working, need restructuring to handle 404, json() needs to be in its own .then
+
     fetch(`${backend}/api/v1/favoriteUsers/${currentUser.id}`)
-      .then(res => res.json())
-      .then(res => getBuddies(res.favoriteUsers.map(user => {
+      .then(res => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return { favoriteUsers: [] };
+        }
+      })
+      .then(res => res.favoriteUsers.map(user => {
         return {
           userName: user.user_name,
           // img
@@ -28,32 +36,36 @@ class ListWrapper extends Component {
           city: user.user_location,
           id: user.id
         };
-      })))
+      }))
+      .then(res => getBuddies(res))
       .catch(error => { throw error; });
 
-    fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
-      .then(res => res.json())
-      .then(res => getPreferredProfs(res.favoriteProfessionals.map(prof => {
-        return {
-          id: prof.id,
-          name: prof.professional_name,
-          // img ?
-          city: prof.professional_location,
-          email: prof.professional_email,
-          phone: prof.professional_phone
-        };
-      })))
-      .catch(error => { throw error; });
+    // fetch(`${backend}/api/v1/favoriteProfessionals/${currentUser.id}`)
+    //   .then(res => {
+    //     if (res.ok) {
+    //       return getPreferredProfs(res.json().favoriteProfessionals.map(prof => {
+    //         return {
+    //           id: prof.id,
+    //           name: prof.professional_name,
+    //           // img ?
+    //           city: prof.professional_location,
+    //           email: prof.professional_email,
+    //           phone: prof.professional_phone
+    //         };
+    //       }));
+    //     }
+    //   })
+    //   .catch(error => { throw error; });
   }
 
-  checkPath() {
+  checkPath(nextProps) {
     const {
       location,
       buddySearch,
       profSearch,
       userBuddies,
       userProfs
-    } = this.props;
+    } = nextProps;
     let list;
     let listName;
 
@@ -81,8 +93,8 @@ class ListWrapper extends Component {
     return this.setState({ list, listName });
   }
 
-  componentWillReceiveProps = () => {
-    this.checkPath();
+  componentWillReceiveProps = nextProps => {
+    this.checkPath(nextProps);
   }
 
   handleChange = (event) => {
