@@ -20,7 +20,8 @@ class Dash extends Component {
       search,
       allChallenges,
       getAllChallenges,
-      currentUser
+      currentUser,
+      profSearch
     } = this.props;
     return (
       <div>
@@ -44,6 +45,8 @@ class Dash extends Component {
               specialtyList={specialtyList}
               search={search}
               currentUser={currentUser}
+              profSearch={profSearch}
+              pushHistory={(string) => this.props.history.push(string)}
             />
           </Tab>
           <Tab label="Search Buddies">
@@ -71,5 +74,7 @@ Dash.propTypes = {
   clearSearchResults: PropTypes.func,
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  profSearch: PropTypes.array,
+  history: PropTypes.object
 };

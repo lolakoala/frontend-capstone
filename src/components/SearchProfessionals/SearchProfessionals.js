@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
-import { Redirect } from 'react-router-dom';
 import css from './SearchProfessionals.css';
 import backend from './backend';
 
@@ -10,7 +9,8 @@ class SearchProfessionals extends Component {
     super();
     this.state = {
       searchQuery: 'select query',
-      searchTopic: ''
+      searchTopic: '',
+      searched: false
     };
   }
 
@@ -64,28 +64,38 @@ class SearchProfessionals extends Component {
           specialties: prof.professional_specialties
         };
       }))
-      .then(res => this.props.search(res, 'profs'))
+      .then(res => this.props.search(res, 'professionals'))
       .catch(error => { throw error; });
 
-    return <Redirect to="/list/profSearch" />;
+    this.setState({ searched: true });
   }
 
   render() {
+    let searchResults = true;
+    if (this.props.profSearch.length) {
+      console.log('in search if');
+      this.props.pushHistory('/list/profSearch');
+    } else if (this.state.searched){
+      searchResults = false;
+    }
     const { insuranceList, specialtyList } = this.props;
     const { searchQuery, searchTopic } = this.state;
 
     const submitButton = <RaisedButton label="Submit" onClick={this.handleSubmit} />;
 
     return (
-      <div className="search-options">
-        <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
-          <MenuItem value="select query" primaryText="Select search query." />
-          <MenuItem value="insurance_provider" primaryText="Search by insurance." />
-          <MenuItem value="specialty" primaryText="Search by specialty." />
-        </DropDownMenu>
-        {searchQuery === 'insurance_provider' ? this.topicDropDown(insuranceList) : null}
-        {searchQuery === 'specialty' ? this.topicDropDown(specialtyList) : null}
-        {searchTopic ? submitButton : null}
+      <div>
+        <div className="search-options">
+          <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
+            <MenuItem value="select query" primaryText="Select search query." />
+            <MenuItem value="insurance_provider" primaryText="Search by insurance." />
+            <MenuItem value="specialty" primaryText="Search by specialty." />
+          </DropDownMenu>
+          {searchQuery === 'insurance_provider' ? this.topicDropDown(insuranceList) : null}
+          {searchQuery === 'specialty' ? this.topicDropDown(specialtyList) : null}
+          {searchTopic ? submitButton : null}
+        </div>
+        <p>{!searchResults && this.state.searched ? 'There are no results for that search.': null}</p>
       </div>
     );
   }
@@ -99,5 +109,7 @@ SearchProfessionals.propTypes = {
   insuranceList: PropTypes.array,
   specialtyList: PropTypes.array,
   search: PropTypes.func,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  profSearch: PropTypes.array,
+  pushHistory: PropTypes.func
 };

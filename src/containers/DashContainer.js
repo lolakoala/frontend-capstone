@@ -5,14 +5,16 @@ import {
   getSpecialtyList,
   search,
   clearSearchResults,
-  getAllChallenges
+  getAllChallenges,
+  profSearch
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   insuranceList: store.insuranceList,
   specialtyList: store.specialtyList,
   allChallenges: store.allChallenges,
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
+  profSearch: store.profSearch
 });
 
 const mapDispatchToProps = (dispatch) => ({
