@@ -41,8 +41,6 @@ describe('SearchBuddies', () => {
     expect(button.length).toEqual(1);
   });
 
-  // this test returns undefined... not sure why
-  // mount instead of shallow might fix, but muiTheme context problem
   it.skip('should change state on change of drop down menu', () => {
     const ddm = wrapper.find('DropDownMenu');
 

@@ -32,7 +32,6 @@ describe('SelectCity', () => {
     expect(ddm.length).toEqual(1);
   });
 
-  // state returns undefined
   it.skip('should change state on change of drop down', () => {
     const ddm = wrapper.find('DropDownMenu');
 

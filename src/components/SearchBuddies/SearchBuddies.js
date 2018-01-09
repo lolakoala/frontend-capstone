@@ -22,7 +22,7 @@ class SearchBuddies extends Component {
     this.setState({ value: nextProps.allChallenges[0] });
   }
 
-  handleChange = (event, index, value) => { console.log('in handlechange'); this.setState({value}); }
+  handleChange = (event, index, value) => this.setState({value});
 
   handleSubmit = () => {
     const challenge = this.state.value;
@@ -34,7 +34,6 @@ class SearchBuddies extends Component {
         return {
           id: user.id,
           userName: user.user_name,
-          // img
           aboutMe: user.user_about,
           city: user.user_location,
           email: user.user_email

@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import Routes from './Routes.jsx';
 import { BrowserRouter } from 'react-router-dom';
-import DevTools from '../containers/DevTools';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import { fade } from 'material-ui/utils/colorManipulator';
@@ -34,7 +33,6 @@ export default class Root extends Component {
           <MuiThemeProvider muiTheme={muiTheme}>
             <Routes />
           </MuiThemeProvider>
-          {/* <DevTools /> */}
         </div>
       </BrowserRouter>
     );

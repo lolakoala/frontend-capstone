@@ -9,13 +9,7 @@ import css from './ProfsList.css';
 
 const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
   const toggleView = () => {
-    // if not shown
-    // make fetch for user challenges
-    // show aboutMe and userChallenges
-    // change button text to Show Less
-    // else
-    // hide aboutMe and userChallenges
-    // change button text to Show More
+
   };
 
   const mapList = list => list.map((item, index) => {
@@ -35,7 +29,6 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
   const profStuff = profs.map((prof, index) => {
     const isFave = faves.find(fave => fave.name === prof.name);
     return <div key={`${prof.name}${index}`}>
-      {/* img tag w/ avatar */}
       <div className='profname-faveicon'>
         <img src={shell} alt="shell icon" className='proflist-shell'/>
         <p>{prof.name}</p>

@@ -37,36 +37,10 @@ describe('SearchProfessionals', () => {
     expect(ddm.length).toEqual(1);
   });
 
-  // cannot test further b/c cannot figure out how to give component
-  // muiTheme context from test when using mount instead of shallow
   it.skip('should change state on drop down change', () => {
     const ddm = wrapper.find('DropDownMenu');
 
     ddm.simulate('change', { target: { value: 'insurance' } });
     expect(wrapper.state().searchQuery).toEqual('insurance');
   });
-
-
-  // it.skip('should have one button after state change', () => {
-  //   const button = wrapper.find('RaisedButton');
-  //
-  //   expect(button.length).toEqual(1);
-  // });
-
-  // tests below here are copied from SearchBuddies and need to be modified
-  //
-  // // this test returns undefined... not sure why
-  // it.skip('should change state on change of drop down menu', () => {
-  //   const ddm = wrapper.find('DropDownMenu');
-  //
-  //   ddm.simulate('change', { target: { value: allChallenges[1] } });
-  //   expect(wrapper.state().value).toEqual(allChallenges[1]);
-  // });
-  //
-  // it('should call function when button clicked', () => {
-  //   const button = wrapper.find('RaisedButton');
-  //
-  //   button.simulate('click');
-  //   expect(mockFn).toHaveBeenCalledTimes(2);
-  // });
 });

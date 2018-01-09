@@ -56,7 +56,6 @@ class SearchProfessionals extends Component {
         return {
           id: prof.id,
           name: prof.professional_name,
-          // img ?
           city: prof.professional_location,
           email: prof.professional_email,
           phone: prof.professional_phone,

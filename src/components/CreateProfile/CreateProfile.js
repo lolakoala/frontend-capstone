@@ -18,11 +18,6 @@ class CreateProfile extends Component {
     this.props.getAllChallenges();
   }
 
-  // might not need this function if using react-upload
-  uploadPhoto = () => {
-    //dunno wtf will happen here
-  }
-
   toggleChallenge = challenge => {
     const { userChallenges } = this.props;
 
@@ -51,7 +46,6 @@ class CreateProfile extends Component {
 
   submitProfile = () => {
     const { submitProfile, currentUser, userChallenges } = this.props;
-    // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
       currentUser,
@@ -78,7 +72,6 @@ class CreateProfile extends Component {
       .then(res => res.json())
       .then(res => submitProfile(newUser, res))
       .catch(error => { throw error; });
-    // somehow send image in submitProfile action?
   }
 
   render() {
@@ -88,7 +81,6 @@ class CreateProfile extends Component {
     return (<div>
       <div className='pic-name-city'>
         <div className='pic-button'>
-          {/* on upload, display photo */}
           <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
         </div>
         <div className='name-city'>

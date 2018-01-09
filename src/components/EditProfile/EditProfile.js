@@ -23,12 +23,6 @@ class EditProfile extends Component {
     this.props.getAllChallenges();
   }
 
-  // might not need this function if using react-upload
-  uploadPhoto = () => {
-    //dunno wtf will happen here
-    // replace current photo
-  }
-
   toggleChallenge = challenge => {
     const { userChallenges } = this.props;
 
@@ -57,14 +51,12 @@ class EditProfile extends Component {
 
   editProfile = () => {
     const { editProfile, currentUser, userChallenges, history } = this.props;
-    // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
       currentUser,
       { userChallenges },
       this.state
     );
-    // somehow send image in editProfile action?
     editProfile(newUser);
     history.push('/profile');
 
@@ -73,16 +65,6 @@ class EditProfile extends Component {
   render() {
     return (<div>
       <div className="pic-name-city">
-        {/* if user has photo, display photo */}
-        {/* <div className='pic-button'>
-          <img
-            // placeholder img url
-            src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-            alt="Your avatar"
-            className="profile-pic"
-          />
-          <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} className="change-pic"/>
-        </div> */}
         <div className="name-city">
           <TextField
             name="userName"

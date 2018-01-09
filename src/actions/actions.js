@@ -20,7 +20,6 @@ export const loginAttempt = email => {
             id: resUser.id,
             userName: resUser.user_name,
             aboutMe: resUser.user_about,
-            // user img
             city: resUser.location
           },
           userChallenges: resUser.user_challenges
@@ -102,7 +101,6 @@ const patchUser = newUser => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
@@ -194,7 +192,6 @@ const postBuddy = (user, personObject) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
@@ -207,7 +204,6 @@ const postProf = (user, personObject) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
@@ -219,7 +215,6 @@ const deleteBuddy = (user, buddy) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
@@ -231,7 +226,6 @@ const deleteProf = (user, prof) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
