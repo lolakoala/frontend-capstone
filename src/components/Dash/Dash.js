@@ -30,7 +30,7 @@ class Dash extends Component {
         <Toolbar style={{ backgroundColor: '#d4c9a9'}}>
           <Link to="/chat" className="toolbar-link">Chat</Link>
 
-          <Link to="/list/userProfs" className="toolbar-link">My Preferred Proffesionals</Link>
+          <Link to="/list/userProfs" className="toolbar-link">My Preferred Professionals</Link>
           <Link to="/list/userBuddies" className="toolbar-link">My Buddies</Link>
           {/* In My Toolbox, should we add ability to add your own resources? */}
 
