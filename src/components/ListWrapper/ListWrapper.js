@@ -107,21 +107,23 @@ class ListWrapper extends Component {
     });
   };
 
-  filterList = array => {
-    return array.filter(person => {
-      const searchablePerson = Object.assign({}, person, { city: '' });
-      const personValues = Object.keys(searchablePerson).map(key => {
-        return searchablePerson[key];
-      });
-      let isMatch = false;
-      personValues.forEach(value => {
-        if (value.includes(this.state.value)) {
-          isMatch = true;
-        }
-      });
-      return isMatch === true;
-    });
-  }
+  // We're not filtering right now
+
+  // filterList = array => {
+  //   return array.filter(person => {
+  //     const searchablePerson = Object.assign({}, person, { city: '' });
+  //     const personValues = Object.keys(searchablePerson).map(key => {
+  //       return searchablePerson[key];
+  //     });
+  //     let isMatch = false;
+  //     personValues.forEach(value => {
+  //       if (value.includes(this.state.value)) {
+  //         isMatch = true;
+  //       }
+  //     });
+  //     return isMatch === true;
+  //   });
+  // }
 
   render() {
     const { location, currentUser, toggleFavorite, userBuddies, userProfs } = this.props;
@@ -141,11 +143,11 @@ class ListWrapper extends Component {
 
     return (
       <div>
-        <TextField
+        {/* <TextField
           value={this.state.value}
           onChange={this.handleChange}
           hintText={`Type here to filter your ${this.state.listName}.`}
-        />
+        /> */}
         {location.pathname.toLowerCase().includes('bud') ? buddyComponent : profsComponent}
       </div>
     );
