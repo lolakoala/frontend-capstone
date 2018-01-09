@@ -54,6 +54,11 @@ ShallowWrapper {
       "children": Array [
         <Toolbar
           noGutter={false}
+          style={
+                    Object {
+                              "backgroundColor": "#d4c9a9",
+                            }
+          }
 >
           <Link
                     className="toolbar-link"
@@ -67,7 +72,7 @@ ShallowWrapper {
                     replace={false}
                     to="/list/userProfs"
           >
-                    My Preferred Proffesionals
+                    My Preferred Professionals
           </Link>
           <Link
                     className="toolbar-link"
@@ -91,6 +96,11 @@ ShallowWrapper {
                     My Profile
           </Link>
 </Toolbar>,
+        <div
+          className="dash-instruction"
+>
+          Use the tabs below to connect with professionals or buddies.
+</div>,
         <Tabs
           initialSelectedIndex={0}
           onChange={[Function]}
@@ -116,6 +126,8 @@ ShallowWrapper {
                                                   "aetna",
                                                 ]
                               }
+                              profSearch={undefined}
+                              pushHistory={[Function]}
                               search={[Function]}
                               specialtyList={
                                         Array [
@@ -136,6 +148,7 @@ ShallowWrapper {
                                                   "depression",
                                                 ]
                               }
+                              buddySearch={undefined}
                               currentUser={
                                         Object {
                                                   "aboutMe": "Lola loves doggos.",
@@ -145,6 +158,7 @@ ShallowWrapper {
                                                 }
                               }
                               getAllChallenges={[Function]}
+                              pushHistory={[Function]}
                               search={[Function]}
                     />
           </Tab>
@@ -171,7 +185,7 @@ ShallowWrapper {
               replace={false}
               to="/list/userProfs"
 >
-              My Preferred Proffesionals
+              My Preferred Professionals
 </Link>,
             <Link
               className="toolbar-link"
@@ -196,6 +210,9 @@ ShallowWrapper {
 </Link>,
           ],
           "noGutter": false,
+          "style": Object {
+            "backgroundColor": "#d4c9a9",
+          },
         },
         "ref": null,
         "rendered": Array [
@@ -218,13 +235,13 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "class",
             "props": Object {
-              "children": "My Preferred Proffesionals",
+              "children": "My Preferred Professionals",
               "className": "toolbar-link",
               "replace": false,
               "to": "/list/userProfs",
             },
             "ref": null,
-            "rendered": "My Preferred Proffesionals",
+            "rendered": "My Preferred Professionals",
             "type": [Function],
           },
           Object {
@@ -275,6 +292,18 @@ ShallowWrapper {
       Object {
         "instance": null,
         "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Use the tabs below to connect with professionals or buddies.",
+          "className": "dash-instruction",
+        },
+        "ref": null,
+        "rendered": "Use the tabs below to connect with professionals or buddies.",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
         "nodeType": "class",
         "props": Object {
           "children": Array [
@@ -299,6 +328,8 @@ ShallowWrapper {
                                                         "aetna",
                                                       ]
                             }
+                            profSearch={undefined}
+                            pushHistory={[Function]}
                             search={[Function]}
                             specialtyList={
                                           Array [
@@ -319,6 +350,7 @@ ShallowWrapper {
                                                         "depression",
                                                       ]
                             }
+                            buddySearch={undefined}
                             currentUser={
                                           Object {
                                                         "aboutMe": "Lola loves doggos.",
@@ -328,6 +360,7 @@ ShallowWrapper {
                                                       }
                             }
                             getAllChallenges={[Function]}
+                            pushHistory={[Function]}
                             search={[Function]}
               />
 </Tab>,
@@ -360,6 +393,8 @@ ShallowWrapper {
                                                 "aetna",
                                               ]
                 }
+                profSearch={undefined}
+                pushHistory={[Function]}
                 search={[Function]}
                 specialtyList={
                                 Array [
@@ -390,6 +425,8 @@ ShallowWrapper {
                   "bcbs",
                   "aetna",
                 ],
+                "profSearch": undefined,
+                "pushHistory": [Function],
                 "search": [Function],
                 "specialtyList": Array [
                   "couples",
@@ -415,6 +452,7 @@ ShallowWrapper {
                                                 "depression",
                                               ]
                 }
+                buddySearch={undefined}
                 currentUser={
                                 Object {
                                                 "aboutMe": "Lola loves doggos.",
@@ -424,6 +462,7 @@ ShallowWrapper {
                                               }
                 }
                 getAllChallenges={[Function]}
+                pushHistory={[Function]}
                 search={[Function]}
 />,
               "label": "Search Buddies",
@@ -438,6 +477,7 @@ ShallowWrapper {
                   "anxiety",
                   "depression",
                 ],
+                "buddySearch": undefined,
                 "currentUser": Object {
                   "aboutMe": "Lola loves doggos.",
                   "city": "Denver",
@@ -445,6 +485,7 @@ ShallowWrapper {
                   "userName": "lolakoala",
                 },
                 "getAllChallenges": [Function],
+                "pushHistory": [Function],
                 "search": [Function],
               },
               "ref": null,
@@ -468,6 +509,11 @@ ShallowWrapper {
         "children": Array [
           <Toolbar
             noGutter={false}
+            style={
+                        Object {
+                                    "backgroundColor": "#d4c9a9",
+                                  }
+            }
 >
             <Link
                         className="toolbar-link"
@@ -481,7 +527,7 @@ ShallowWrapper {
                         replace={false}
                         to="/list/userProfs"
             >
-                        My Preferred Proffesionals
+                        My Preferred Professionals
             </Link>
             <Link
                         className="toolbar-link"
@@ -505,6 +551,11 @@ ShallowWrapper {
                         My Profile
             </Link>
 </Toolbar>,
+          <div
+            className="dash-instruction"
+>
+            Use the tabs below to connect with professionals or buddies.
+</div>,
           <Tabs
             initialSelectedIndex={0}
             onChange={[Function]}
@@ -530,6 +581,8 @@ ShallowWrapper {
                                                             "aetna",
                                                           ]
                                     }
+                                    profSearch={undefined}
+                                    pushHistory={[Function]}
                                     search={[Function]}
                                     specialtyList={
                                                 Array [
@@ -550,6 +603,7 @@ ShallowWrapper {
                                                             "depression",
                                                           ]
                                     }
+                                    buddySearch={undefined}
                                     currentUser={
                                                 Object {
                                                             "aboutMe": "Lola loves doggos.",
@@ -559,6 +613,7 @@ ShallowWrapper {
                                                           }
                                     }
                                     getAllChallenges={[Function]}
+                                    pushHistory={[Function]}
                                     search={[Function]}
                         />
             </Tab>
@@ -585,7 +640,7 @@ ShallowWrapper {
                 replace={false}
                 to="/list/userProfs"
 >
-                My Preferred Proffesionals
+                My Preferred Professionals
 </Link>,
               <Link
                 className="toolbar-link"
@@ -610,6 +665,9 @@ ShallowWrapper {
 </Link>,
             ],
             "noGutter": false,
+            "style": Object {
+              "backgroundColor": "#d4c9a9",
+            },
           },
           "ref": null,
           "rendered": Array [
@@ -632,13 +690,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "class",
               "props": Object {
-                "children": "My Preferred Proffesionals",
+                "children": "My Preferred Professionals",
                 "className": "toolbar-link",
                 "replace": false,
                 "to": "/list/userProfs",
               },
               "ref": null,
-              "rendered": "My Preferred Proffesionals",
+              "rendered": "My Preferred Professionals",
               "type": [Function],
             },
             Object {
@@ -689,6 +747,18 @@ ShallowWrapper {
         Object {
           "instance": null,
           "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Use the tabs below to connect with professionals or buddies.",
+            "className": "dash-instruction",
+          },
+          "ref": null,
+          "rendered": "Use the tabs below to connect with professionals or buddies.",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
           "nodeType": "class",
           "props": Object {
             "children": Array [
@@ -713,6 +783,8 @@ ShallowWrapper {
                                                                 "aetna",
                                                               ]
                                 }
+                                profSearch={undefined}
+                                pushHistory={[Function]}
                                 search={[Function]}
                                 specialtyList={
                                                 Array [
@@ -733,6 +805,7 @@ ShallowWrapper {
                                                                 "depression",
                                                               ]
                                 }
+                                buddySearch={undefined}
                                 currentUser={
                                                 Object {
                                                                 "aboutMe": "Lola loves doggos.",
@@ -742,6 +815,7 @@ ShallowWrapper {
                                                               }
                                 }
                                 getAllChallenges={[Function]}
+                                pushHistory={[Function]}
                                 search={[Function]}
                 />
 </Tab>,
@@ -774,6 +848,8 @@ ShallowWrapper {
                                                       "aetna",
                                                     ]
                   }
+                  profSearch={undefined}
+                  pushHistory={[Function]}
                   search={[Function]}
                   specialtyList={
                                     Array [
@@ -804,6 +880,8 @@ ShallowWrapper {
                     "bcbs",
                     "aetna",
                   ],
+                  "profSearch": undefined,
+                  "pushHistory": [Function],
                   "search": [Function],
                   "specialtyList": Array [
                     "couples",
@@ -829,6 +907,7 @@ ShallowWrapper {
                                                       "depression",
                                                     ]
                   }
+                  buddySearch={undefined}
                   currentUser={
                                     Object {
                                                       "aboutMe": "Lola loves doggos.",
@@ -838,6 +917,7 @@ ShallowWrapper {
                                                     }
                   }
                   getAllChallenges={[Function]}
+                  pushHistory={[Function]}
                   search={[Function]}
 />,
                 "label": "Search Buddies",
@@ -852,6 +932,7 @@ ShallowWrapper {
                     "anxiety",
                     "depression",
                   ],
+                  "buddySearch": undefined,
                   "currentUser": Object {
                     "aboutMe": "Lola loves doggos.",
                     "city": "Denver",
@@ -859,6 +940,7 @@ ShallowWrapper {
                     "userName": "lolakoala",
                   },
                   "getAllChallenges": [Function],
+                  "pushHistory": [Function],
                   "search": [Function],
                 },
                 "ref": null,

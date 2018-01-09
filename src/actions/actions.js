@@ -185,10 +185,6 @@ export const getPreferredProfs = profs => {
   };
 };
 
-// the four server calls below depend on stuff happening in BuddyList and ProfsList
-// so cannot yet test, need to finish those components to test
-
-// needs to be tested manually
 const postBuddy = (user, personObject) => {
   fetch(`${backend}/api/v1/favoriteUsers/${user.id}`, {
     method: 'POST',
@@ -198,25 +194,23 @@ const postBuddy = (user, personObject) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => res.status)
+    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
-// needs to be tested manually
 const postProf = (user, personObject) => {
   fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}`, {
-    method: 'DELETE',
+    method: 'POST',
     body: JSON.stringify({ favoriteProfessionalID: personObject.id }),
     headers: {
       'Accept': 'application/json',
       'Content-Type': 'application/json'
     }
   })
-    .then(res => res.status)
+    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
-// needs to be manually tested
 const deleteBuddy = (user, buddy) => {
   fetch(`${backend}/api/v1/favoriteUsers/${user.id}/${buddy.id}`, {
     method: 'DELETE',
@@ -225,11 +219,10 @@ const deleteBuddy = (user, buddy) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => res.status)
+    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
-// needs to be manually tested
 const deleteProf = (user, prof) => {
   fetch(`${backend}/api/v1/favoriteProfessionals/${user.id}/${prof.id}`, {
     method: 'DELETE',
@@ -238,24 +231,24 @@ const deleteProf = (user, prof) => {
       'Content-Type': 'application/json'
     }
   })
-    .then(res => res.status)
+    .then(res => console.log(res.status))
     .catch(error => { throw error; });
 };
 
 export const toggleFavorite = (user, type, personObject, isFave) => {
-  if (type === 'buddy' && isFave) {
+  if (type === 'buddy' && !isFave) {
     postBuddy(user, personObject);
     return {
       type: 'ADD_BUDDY',
       personObject
     };
-  } else if (type === 'buddy' && !isFave) {
+  } else if (type === 'buddy' && isFave) {
     deleteBuddy(user, personObject);
     return {
       type: 'DELETE_BUDDY',
       personObject
     };
-  } else if (isFave) {
+  } else if (!isFave) {
     postProf(user, personObject);
     return {
       type: 'ADD_PROF',

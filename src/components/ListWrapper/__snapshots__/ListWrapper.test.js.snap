@@ -47,20 +47,65 @@ ShallowWrapper {
     "key": undefined,
     "nodeType": "host",
     "props": Object {
-      "children": Array [
-        <TextField
-          disabled={false}
-          floatingLabelFixed={false}
-          fullWidth={false}
-          hintText="Type here to filter your ."
-          multiLine={false}
-          onChange={[Function]}
-          rows={1}
-          type="text"
-          underlineShow={true}
-          value=""
+      "children": <BuddyList
+        buddies={Array []}
+        currentUser={
+                Object {
+                        "aboutMe": "Lola loves doggos.",
+                        "city": "Denver",
+                        "email": "lola@gmail.com",
+                        "userName": "lolakoala",
+                      }
+        }
+        faves={
+                Array [
+                        Object {
+                          "aboutMe": "Lola loves doggos.",
+                          "city": "Denver",
+                          "email": "lola@gmail.com",
+                          "userName": "lolakoala",
+                        },
+                      ]
+        }
+        toggleFavorite={[Function]}
 />,
-        <BuddyList
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "buddies": Array [],
+        "currentUser": Object {
+          "aboutMe": "Lola loves doggos.",
+          "city": "Denver",
+          "email": "lola@gmail.com",
+          "userName": "lolakoala",
+        },
+        "faves": Array [
+          Object {
+            "aboutMe": "Lola loves doggos.",
+            "city": "Denver",
+            "email": "lola@gmail.com",
+            "userName": "lolakoala",
+          },
+        ],
+        "toggleFavorite": [Function],
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <BuddyList
           buddies={Array []}
           currentUser={
                     Object {
@@ -82,31 +127,9 @@ ShallowWrapper {
           }
           toggleFavorite={[Function]}
 />,
-      ],
-    },
-    "ref": null,
-    "rendered": Array [
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "class",
-        "props": Object {
-          "disabled": false,
-          "floatingLabelFixed": false,
-          "fullWidth": false,
-          "hintText": "Type here to filter your .",
-          "multiLine": false,
-          "onChange": [Function],
-          "rows": 1,
-          "type": "text",
-          "underlineShow": true,
-          "value": "",
-        },
-        "ref": null,
-        "rendered": null,
-        "type": [Function],
       },
-      Object {
+      "ref": null,
+      "rendered": Object {
         "instance": null,
         "key": undefined,
         "nodeType": "function",
@@ -132,101 +155,6 @@ ShallowWrapper {
         "rendered": null,
         "type": [Function],
       },
-    ],
-    "type": "div",
-  },
-  Symbol(enzyme.__nodes__): Array [
-    Object {
-      "instance": null,
-      "key": undefined,
-      "nodeType": "host",
-      "props": Object {
-        "children": Array [
-          <TextField
-            disabled={false}
-            floatingLabelFixed={false}
-            fullWidth={false}
-            hintText="Type here to filter your ."
-            multiLine={false}
-            onChange={[Function]}
-            rows={1}
-            type="text"
-            underlineShow={true}
-            value=""
-/>,
-          <BuddyList
-            buddies={Array []}
-            currentUser={
-                        Object {
-                                    "aboutMe": "Lola loves doggos.",
-                                    "city": "Denver",
-                                    "email": "lola@gmail.com",
-                                    "userName": "lolakoala",
-                                  }
-            }
-            faves={
-                        Array [
-                                    Object {
-                                      "aboutMe": "Lola loves doggos.",
-                                      "city": "Denver",
-                                      "email": "lola@gmail.com",
-                                      "userName": "lolakoala",
-                                    },
-                                  ]
-            }
-            toggleFavorite={[Function]}
-/>,
-        ],
-      },
-      "ref": null,
-      "rendered": Array [
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "class",
-          "props": Object {
-            "disabled": false,
-            "floatingLabelFixed": false,
-            "fullWidth": false,
-            "hintText": "Type here to filter your .",
-            "multiLine": false,
-            "onChange": [Function],
-            "rows": 1,
-            "type": "text",
-            "underlineShow": true,
-            "value": "",
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "buddies": Array [],
-            "currentUser": Object {
-              "aboutMe": "Lola loves doggos.",
-              "city": "Denver",
-              "email": "lola@gmail.com",
-              "userName": "lolakoala",
-            },
-            "faves": Array [
-              Object {
-                "aboutMe": "Lola loves doggos.",
-                "city": "Denver",
-                "email": "lola@gmail.com",
-                "userName": "lolakoala",
-              },
-            ],
-            "toggleFavorite": [Function],
-          },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
-      ],
       "type": "div",
     },
   ],

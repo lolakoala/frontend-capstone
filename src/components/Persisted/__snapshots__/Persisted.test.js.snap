@@ -35,10 +35,12 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <RaisedButton
+          backgroundColor="#be5971"
           disabled={false}
           fullWidth={false}
           id="panic-button"
           label="PANIC"
+          labelColor="white"
           labelPosition="after"
           onClick={[Function]}
           primary={false}
@@ -112,10 +114,12 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "backgroundColor": "#be5971",
           "disabled": false,
           "fullWidth": false,
           "id": "panic-button",
           "label": "PANIC",
+          "labelColor": "white",
           "labelPosition": "after",
           "onClick": [Function],
           "primary": false,
@@ -247,10 +251,12 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <RaisedButton
+            backgroundColor="#be5971"
             disabled={false}
             fullWidth={false}
             id="panic-button"
             label="PANIC"
+            labelColor="white"
             labelPosition="after"
             onClick={[Function]}
             primary={false}
@@ -324,10 +330,12 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "backgroundColor": "#be5971",
             "disabled": false,
             "fullWidth": false,
             "id": "panic-button",
             "label": "PANIC",
+            "labelColor": "white",
             "labelPosition": "after",
             "onClick": [Function],
             "primary": false,

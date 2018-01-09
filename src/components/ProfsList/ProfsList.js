@@ -41,7 +41,7 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
         <p>{prof.name}</p>
         <img
           className='add-prof'
-          src={isFave ? addHeart : minusHeart}
+          src={isFave ? minusHeart : addHeart}
           alt='favorite indicator'
           onClick={() => toggleFavorite(currentUser, 'prof', prof, isFave)}
         />
