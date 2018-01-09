@@ -25,6 +25,7 @@ class SearchBuddies extends Component {
 
   handleSubmit = () => {
     const challenge = this.state.value;
+    const { currentUser, search } = this.props;
 
     fetch(`${backend}/api/v1/users?user_challenge=${challenge}`)
       .then(res => res.json())
@@ -38,7 +39,8 @@ class SearchBuddies extends Component {
           email: user.user_email
         };
       }))
-      .then(res => this.props.search(res, 'buddies'))
+      .then(res => res.filter(user => user.id !== currentUser.id))
+      .then(res => search(res, 'buddies'))
       .catch(error => { throw error; });
     this.setState({ searched: true });
   }
