@@ -35,9 +35,3 @@ jobs:
 
       # run tests!
       - run: yarn test
-
-      - deployment:
-          production:
-            branch: master
-            heroku:
-              appname: mentalhealthy
