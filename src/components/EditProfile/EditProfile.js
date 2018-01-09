@@ -56,7 +56,7 @@ class EditProfile extends Component {
   }
 
   editProfile = () => {
-    const { editProfile, currentUser, userChallenges } = this.props;
+    const { editProfile, currentUser, userChallenges, history } = this.props;
     // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
@@ -66,6 +66,8 @@ class EditProfile extends Component {
     );
     // somehow send image in editProfile action?
     editProfile(newUser);
+    history.push('/profile');
+
   }
 
   render() {
@@ -126,5 +128,6 @@ EditProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  editProfile: PropTypes.func
+  editProfile: PropTypes.func,
+  history: PropTypes.object
 };
