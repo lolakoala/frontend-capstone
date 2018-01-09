@@ -1,0 +1,16 @@
+machine:
+  timezone:
+    America/Denver
+  node:
+    version: 7.10.0
+
+test:
+  override:
+    - npm run test
+    - npm run lint
+
+deployment:
+  production:
+    branch: master
+    heroku:
+      appname: mentalhealthy
