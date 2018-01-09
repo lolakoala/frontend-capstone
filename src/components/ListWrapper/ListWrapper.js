@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
 import ProfsList from '../ProfsList/ProfsList';
-import backend from './backend';
+import backend from '../../utils/backend';
 
 class ListWrapper extends Component {
   constructor() {
@@ -128,18 +128,22 @@ class ListWrapper extends Component {
   render() {
     const { location, currentUser, toggleFavorite, userBuddies, userProfs } = this.props;
     const listToRender = this.state.value ? this.filterList(this.state.list) : this.state.list;
-    const buddyComponent = <BuddyList
+    const noFaveBuddies = (this.state.list === userBuddies) && !userBuddies.length;
+    const buddyListComponent = <BuddyList
       buddies={listToRender}
       faves={userBuddies}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
-    const profsComponent = <ProfsList
+    const buddyComponent = noFaveBuddies ? <p>You currently have no buddies favorited.</p> : buddyListComponent;
+    const noFaveProfs = (this.state.list === userProfs) && !userProfs.length;
+    const profsListComponent = <ProfsList
       profs={listToRender}
       faves={userProfs}
       toggleFavorite={toggleFavorite}
       currentUser={currentUser}
     />;
+    const profsComponent = noFaveProfs ? <p>You currently have no professionals favorited.</p> : profsListComponent;
 
     return (
       <div>

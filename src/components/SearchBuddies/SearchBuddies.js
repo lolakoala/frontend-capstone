@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import { Redirect } from 'react-router-dom';
-import backend from './backend';
+import backend from '../../utils/backend';
+import css from './SearchBuddies.css';
 
 class SearchBuddies extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class SearchBuddies extends Component {
 
   handleSubmit = () => {
     const challenge = this.state.value;
+    const { currentUser, search } = this.props;
 
     fetch(`${backend}/api/v1/users?user_challenge=${challenge}`)
       .then(res => res.json())
@@ -38,7 +40,8 @@ class SearchBuddies extends Component {
           email: user.user_email
         };
       }))
-      .then(res => this.props.search(res, 'buddies'))
+      .then(res => res.filter(user => user.id !== currentUser.id))
+      .then(res => search(res, 'buddies'))
       .catch(error => { throw error; });
     this.setState({ searched: true });
   }
@@ -53,7 +56,7 @@ class SearchBuddies extends Component {
     const { allChallenges } = this.props;
 
     return (
-      <div>
+      <div className='search-buddies'>
         <div className="search-options">
           <DropDownMenu value={this.state.value} onChange={this.handleChange}>
             {allChallenges.map((challenge, index) => {
