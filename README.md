@@ -21,3 +21,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - From the dashboard, a user can search for professionals by insurance or specialty. They can also search for buddies by challenges. They can favorite professionals or buddies from the search results.
 - Also from the dashboard, a user can view favorite buddies or professionals, view and consequently edit their profile, or view their toolbox- a list of helpful resources.
 - The chat feature does not currently work. 
+
+
+![Wireframes](https://user-images.githubusercontent.com/29164755/34736681-0e55c1a2-f531-11e7-9d97-449c99b1c09b.png)
+
+![Landing Page](https://user-images.githubusercontent.com/29164755/34736717-2151b810-f531-11e7-90cf-e6e2911ea692.png)
