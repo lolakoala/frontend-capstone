@@ -27,19 +27,20 @@ describe('ListWrapper', () => {
   it('should match snap', () => {
     expect(wrapper).toMatchSnapshot();
   });
-
-  it('should have textfield', () => {
-    const search = wrapper.find('TextField');
-
-    expect(search.length).toEqual(1);
-  });
-
-  it('should change state on change of inputs', () => {
-    const input = wrapper.find('TextField');
-
-    input.simulate('change', { target: { value: 'lola' } });
-    expect(wrapper.state().value).toEqual('lola');
-  });
+  // no textfield right now
+  //
+  // it('should have textfield', () => {
+  //   const search = wrapper.find('TextField');
+  //
+  //   expect(search.length).toEqual(1);
+  // });
+  //
+  // it('should change state on change of inputs', () => {
+  //   const input = wrapper.find('TextField');
+  //
+  //   input.simulate('change', { target: { value: 'lola' } });
+  //   expect(wrapper.state().value).toEqual('lola');
+  // });
 
   it('should render BuddyList', () => {
     const budList = wrapper.find('BuddyList');

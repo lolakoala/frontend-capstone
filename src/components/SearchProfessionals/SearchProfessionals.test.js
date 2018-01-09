@@ -16,6 +16,7 @@ describe('SearchProfessionals', () => {
     specialtyList={[]}
     search={mockFn}
     currentUser={currentUser1}
+    profSearch={[]}
   />);
 
   it('should exist', () => {
@@ -46,7 +47,7 @@ describe('SearchProfessionals', () => {
   });
 
 
-  // it('should have one button after state change', () => {
+  // it.skip('should have one button after state change', () => {
   //   const button = wrapper.find('RaisedButton');
   //
   //   expect(button.length).toEqual(1);

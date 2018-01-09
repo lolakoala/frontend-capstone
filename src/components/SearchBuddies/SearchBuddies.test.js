@@ -14,6 +14,7 @@ describe('SearchBuddies', () => {
     getAllChallenges={mockFn}
     search={mockFn}
     currentUser={currentUser1}
+    buddySearch={[]}
   />);
 
   it('should exist', () => {
