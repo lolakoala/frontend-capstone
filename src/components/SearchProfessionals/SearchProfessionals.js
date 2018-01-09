@@ -83,7 +83,7 @@ class SearchProfessionals extends Component {
           <MenuItem value="insurance_provider" primaryText="Search by insurance." />
           <MenuItem value="specialty" primaryText="Search by specialty." />
         </DropDownMenu>
-        {searchQuery === 'insurance' ? this.topicDropDown(insuranceList) : null}
+        {searchQuery === 'insurance_provider' ? this.topicDropDown(insuranceList) : null}
         {searchQuery === 'specialty' ? this.topicDropDown(specialtyList) : null}
         {searchTopic ? submitButton : null}
       </div>
