@@ -6,7 +6,8 @@ import {
   search,
   clearSearchResults,
   getAllChallenges,
-  profSearch
+  profSearch,
+  buddySearch
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
@@ -14,7 +15,8 @@ const mapStateToProps =  store => ({
   specialtyList: store.specialtyList,
   allChallenges: store.allChallenges,
   currentUser: store.currentUser,
-  profSearch: store.profSearch
+  profSearch: store.profSearch,
+  buddySearch: store.buddySearch
 });
 
 const mapDispatchToProps = (dispatch) => ({

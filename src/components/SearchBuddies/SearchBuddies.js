@@ -8,7 +8,8 @@ class SearchBuddies extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: ''
+      value: '',
+      searched: false
     };
   }
 
@@ -39,24 +40,33 @@ class SearchBuddies extends Component {
       }))
       .then(res => this.props.search(res, 'buddies'))
       .catch(error => { throw error; });
-    return <Redirect to="/list/buddySearch" />;
+    this.setState({ searched: true });
   }
 
   render() {
+    let searchResults = true;
+    if (this.props.buddySearch.length) {
+      this.props.pushHistory('/list/buddySearch');
+    } else if (this.state.searched){
+      searchResults = false;
+    }
     const { allChallenges } = this.props;
 
     return (
-      <div className="search-options">
-        <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-          {allChallenges.map((challenge, index) => {
-            return <MenuItem
-              value={challenge}
-              primaryText={challenge}
-              key={`${challenge}${index}`}
-            />;
-          })}
-        </DropDownMenu>
-        <RaisedButton label="Submit" onClick={this.handleSubmit} />
+      <div>
+        <div className="search-options">
+          <DropDownMenu value={this.state.value} onChange={this.handleChange}>
+            {allChallenges.map((challenge, index) => {
+              return <MenuItem
+                value={challenge}
+                primaryText={challenge}
+                key={`${challenge}${index}`}
+              />;
+            })}
+          </DropDownMenu>
+          <RaisedButton label="Submit" onClick={this.handleSubmit} />
+        </div>
+        <p>{!searchResults && this.state.searched ? 'There are no results for that search.': null}</p>
       </div>
     );
   }
@@ -68,5 +78,7 @@ SearchBuddies.propTypes = {
   allChallenges: PropTypes.array,
   getAllChallenges: PropTypes.func,
   search: PropTypes.func,
-  currentUser: PropTypes.object
+  currentUser: PropTypes.object,
+  buddySearch: PropTypes.array,
+  pushHistory: PropTypes.func
 };

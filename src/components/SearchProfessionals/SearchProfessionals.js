@@ -73,7 +73,6 @@ class SearchProfessionals extends Component {
   render() {
     let searchResults = true;
     if (this.props.profSearch.length) {
-      console.log('in search if');
       this.props.pushHistory('/list/profSearch');
     } else if (this.state.searched){
       searchResults = false;
