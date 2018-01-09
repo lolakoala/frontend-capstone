@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import css from './SearchProfessionals.css';
-import backend from './backend';
+import backend from '../../utils/backend';
 
 class SearchProfessionals extends Component {
   constructor() {

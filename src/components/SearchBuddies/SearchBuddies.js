@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import { Redirect } from 'react-router-dom';
-import backend from './backend';
+import backend from '../../utils/backend';
 import css from './SearchBuddies.css';
 
 class SearchBuddies extends Component {

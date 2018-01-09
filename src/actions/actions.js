@@ -1,4 +1,4 @@
-import backend from './backend';
+import backend from '../utils/backend';
 
 export const login = user => {
   return {

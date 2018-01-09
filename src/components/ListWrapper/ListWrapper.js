@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TextField } from 'material-ui';
 import BuddyList from '../BuddyList/BuddyList';
 import ProfsList from '../ProfsList/ProfsList';
-import backend from './backend';
+import backend from '../../utils/backend';
 
 class ListWrapper extends Component {
   constructor() {
