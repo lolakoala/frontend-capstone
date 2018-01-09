@@ -44,12 +44,12 @@ const ViewProfile = ({ currentUser, userChallenges, history }) => {
   return (
     <div>
       <div className='pic-name-city'>
-        <img
+        {/* <img
           // placeholder img url
           src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
           alt="Your avatar"
           className="profile-pic"
-        />
+        /> */}
         <div className='name-city'>
           <h3>{currentUser.userName}</h3>
           <h4>{currentUser.city}</h4>

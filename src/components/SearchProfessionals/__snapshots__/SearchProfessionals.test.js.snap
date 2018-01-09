@@ -124,6 +124,7 @@ ShallowWrapper {
 </div>,
         <p />,
       ],
+      "className": "search-profs",
     },
     "ref": null,
     "rendered": Array [
@@ -500,6 +501,7 @@ ShallowWrapper {
 </div>,
           <p />,
         ],
+        "className": "search-profs",
       },
       "ref": null,
       "rendered": Array [

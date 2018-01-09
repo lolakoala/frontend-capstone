@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
 import css from './CreateProfile.css';
-import backend from './backend';
+import backend from '../../utils/backend';
 
 class CreateProfile extends Component {
   constructor() {

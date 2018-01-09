@@ -67,6 +67,20 @@ ShallowWrapper {
                     value="Denver"
           />
 </DropDownMenu>,
+        <RaisedButton
+          disabled={false}
+          fullWidth={false}
+          label="Submit"
+          labelPosition="after"
+          onClick={[Function]}
+          primary={false}
+          secondary={false}
+          style={
+                    Object {
+                              "marginTop": "30px",
+                            }
+          }
+/>,
       ],
       "className": "select-city",
     },
@@ -151,6 +165,26 @@ ShallowWrapper {
         },
         "type": [Function],
       },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "disabled": false,
+          "fullWidth": false,
+          "label": "Submit",
+          "labelPosition": "after",
+          "onClick": [Function],
+          "primary": false,
+          "secondary": false,
+          "style": Object {
+            "marginTop": "30px",
+          },
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
     ],
     "type": "div",
   },
@@ -203,6 +237,20 @@ ShallowWrapper {
                         value="Denver"
             />
 </DropDownMenu>,
+          <RaisedButton
+            disabled={false}
+            fullWidth={false}
+            label="Submit"
+            labelPosition="after"
+            onClick={[Function]}
+            primary={false}
+            secondary={false}
+            style={
+                        Object {
+                                    "marginTop": "30px",
+                                  }
+            }
+/>,
         ],
         "className": "select-city",
       },
@@ -285,6 +333,26 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "disabled": false,
+            "fullWidth": false,
+            "label": "Submit",
+            "labelPosition": "after",
+            "onClick": [Function],
+            "primary": false,
+            "secondary": false,
+            "style": Object {
+              "marginTop": "30px",
+            },
+          },
+          "ref": null,
+          "rendered": null,
           "type": [Function],
         },
       ],

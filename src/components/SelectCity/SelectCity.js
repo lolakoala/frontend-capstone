@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { DropDownMenu, MenuItem } from 'material-ui';
+import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import css from './SelectCity.css';
 
 class SelectCity extends Component {
@@ -12,11 +12,10 @@ class SelectCity extends Component {
 
   handleChange = (event, index, value) => this.setState({value});
 
-  addCity = (event, index, value) => {
+  addCity = () => {
     const { currentUser, addCity } = this.props;
 
-    this.handleChange(event, index, value);
-    addCity(value, currentUser);
+    addCity(this.state.value, currentUser);
   }
 
   render() {
@@ -27,9 +26,10 @@ class SelectCity extends Component {
     return (
       <div className="select-city">
         <h2>Please select your city.</h2>
-        <DropDownMenu value={this.state.value} onChange={this.addCity}>
+        <DropDownMenu value={this.state.value} onChange={this.handleChange}>
           <MenuItem value="Denver" primaryText="Denver" />
         </DropDownMenu>
+        <RaisedButton label="Submit" onClick={this.addCity} style={{ marginTop: '30px' }}/>
       </div>
     );
   }

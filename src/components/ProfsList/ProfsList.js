@@ -53,7 +53,7 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
       <div className='prof-about'>
         <List>
           <Subheader style={{
-            fontSize: '30px',
+            fontSize: '20px',
             fontWeight: 'bold',
             color: '#253031'
           }}>Insurance Accepted</Subheader>
@@ -61,7 +61,7 @@ const ProfsList = ({ profs, toggleFavorite, currentUser, faves }) => {
         </List>
         <List>
           <Subheader style={{
-            fontSize: '30px',
+            fontSize: '20px',
             fontWeight: 'bold',
             color: '#253031'
           }}>Specialties</Subheader>

@@ -53,18 +53,6 @@ ShallowWrapper {
                             }
           }
 />,
-        <div
-          id="current-user"
->
-          <Avatar
-                    alt="Your user photo"
-                    size={40}
-                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-          />
-          <h3>
-                    lolakoala
-          </h3>
-</div>,
         <img
           alt="logo"
           id="logo"
@@ -133,52 +121,6 @@ ShallowWrapper {
         "ref": null,
         "rendered": null,
         "type": [Function],
-      },
-      Object {
-        "instance": null,
-        "key": undefined,
-        "nodeType": "host",
-        "props": Object {
-          "children": Array [
-            <Avatar
-              alt="Your user photo"
-              size={40}
-              src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-/>,
-            <h3>
-              lolakoala
-</h3>,
-          ],
-          "id": "current-user",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "class",
-            "props": Object {
-              "alt": "Your user photo",
-              "size": 40,
-              "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": "lolakoala",
-            },
-            "ref": null,
-            "rendered": "lolakoala",
-            "type": "h3",
-          },
-        ],
-        "type": "div",
       },
       Object {
         "instance": null,
@@ -269,18 +211,6 @@ ShallowWrapper {
                                   }
             }
 />,
-          <div
-            id="current-user"
->
-            <Avatar
-                        alt="Your user photo"
-                        size={40}
-                        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-            />
-            <h3>
-                        lolakoala
-            </h3>
-</div>,
           <img
             alt="logo"
             id="logo"
@@ -349,52 +279,6 @@ ShallowWrapper {
           "ref": null,
           "rendered": null,
           "type": [Function],
-        },
-        Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "host",
-          "props": Object {
-            "children": Array [
-              <Avatar
-                alt="Your user photo"
-                size={40}
-                src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-/>,
-              <h3>
-                lolakoala
-</h3>,
-            ],
-            "id": "current-user",
-          },
-          "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "class",
-              "props": Object {
-                "alt": "Your user photo",
-                "size": 40,
-                "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": "lolakoala",
-              },
-              "ref": null,
-              "rendered": "lolakoala",
-              "type": "h3",
-            },
-          ],
-          "type": "div",
         },
         Object {
           "instance": null,

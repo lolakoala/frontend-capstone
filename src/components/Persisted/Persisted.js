@@ -10,6 +10,7 @@ class Persisted extends Component {
   };
 
   goHome = () => {
+    this.props.clearSearchResults();
     this.props.history.push('/dash');
   }
 
@@ -69,7 +70,8 @@ class Persisted extends Component {
           backgroundColor={'#be5971'}
           labelColor={'white'}
         />
-        {renderUser()}
+        {/* not rendering user info until we can get avatar */}
+        {/* {renderUser()} */}
         <img src={logo} alt="logo" id="logo"/>
         {pathname !== '/' ? signOutButton : null}
         {!pathArray.includes(pathname) ? dashLink : null}
@@ -84,5 +86,6 @@ Persisted.propTypes = {
   currentUser: PropTypes.object,
   location: PropTypes.object,
   signOut: PropTypes.func,
-  history: PropTypes.object
+  history: PropTypes.object,
+  clearSearchResults: PropTypes.func
 };

@@ -56,7 +56,7 @@ class EditProfile extends Component {
   }
 
   editProfile = () => {
-    const { editProfile, currentUser, userChallenges } = this.props;
+    const { editProfile, currentUser, userChallenges, history } = this.props;
     // userImage key on this object to send image?
     const newUser = Object.assign(
       {},
@@ -66,13 +66,15 @@ class EditProfile extends Component {
     );
     // somehow send image in editProfile action?
     editProfile(newUser);
+    history.push('/profile');
+
   }
 
   render() {
     return (<div>
       <div className="pic-name-city">
         {/* if user has photo, display photo */}
-        <div className='pic-button'>
+        {/* <div className='pic-button'>
           <img
             // placeholder img url
             src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
@@ -80,7 +82,7 @@ class EditProfile extends Component {
             className="profile-pic"
           />
           <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} className="change-pic"/>
-        </div>
+        </div> */}
         <div className="name-city">
           <TextField
             name="userName"
@@ -126,5 +128,6 @@ EditProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  editProfile: PropTypes.func
+  editProfile: PropTypes.func,
+  history: PropTypes.object
 };

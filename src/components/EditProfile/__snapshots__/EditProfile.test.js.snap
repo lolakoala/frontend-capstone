@@ -46,25 +46,6 @@ ShallowWrapper {
           className="pic-name-city"
 >
           <div
-                    className="pic-button"
-          >
-                    <img
-                              alt="Your avatar"
-                              className="profile-pic"
-                              src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-                    />
-                    <RaisedButton
-                              className="change-pic"
-                              disabled={false}
-                              fullWidth={false}
-                              label="Upload New Photo"
-                              labelPosition="after"
-                              onClick={[Function]}
-                              primary={false}
-                              secondary={false}
-                    />
-          </div>
-          <div
                     className="name-city"
           >
                     <TextField
@@ -205,202 +186,45 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <div
-              className="pic-button"
+          "children": <div
+            className="name-city"
 >
-              <img
-                            alt="Your avatar"
-                            className="profile-pic"
-                            src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-              />
-              <RaisedButton
-                            className="change-pic"
-                            disabled={false}
-                            fullWidth={false}
-                            label="Upload New Photo"
-                            labelPosition="after"
-                            onClick={[Function]}
-                            primary={false}
-                            secondary={false}
-              />
-</div>,
-            <div
-              className="name-city"
->
-              <TextField
-                            disabled={false}
-                            floatingLabelFixed={false}
-                            fullWidth={false}
-                            multiLine={false}
-                            name="userName"
-                            onChange={[Function]}
-                            rows={1}
-                            type="text"
-                            underlineShow={true}
-                            value="lolakoala"
-              />
-              <DropDownMenu
-                            anchorOrigin={
-                                          Object {
-                                                        "horizontal": "left",
-                                                        "vertical": "top",
-                                                      }
-                            }
-                            animated={true}
-                            autoWidth={true}
-                            className="city-dd"
-                            disabled={false}
-                            iconButton={<NavigationArrowDropDown />}
-                            maxHeight={500}
-                            multiple={false}
-                            onChange={[Function]}
-                            openImmediately={false}
-                            value="Denver"
-              >
-                            <MenuItem
-                                          anchorOrigin={
-                                                        Object {
-                                                                      "horizontal": "right",
-                                                                      "vertical": "top",
-                                                                    }
-                                          }
-                                          checked={false}
-                                          desktop={false}
-                                          disabled={false}
-                                          focusState="none"
-                                          insetChildren={false}
-                                          primaryText="Denver"
-                                          targetOrigin={
-                                                        Object {
-                                                                      "horizontal": "left",
-                                                                      "vertical": "top",
-                                                                    }
-                                          }
-                                          value="Denver"
-                            />
-              </DropDownMenu>
-              <TextField
-                            disabled={false}
-                            floatingLabelFixed={false}
-                            fullWidth={false}
-                            multiLine={true}
-                            name="aboutMe"
-                            onChange={[Function]}
-                            rows={3}
-                            rowsMax={5}
-                            type="text"
-                            underlineShow={true}
-                            value="Lola loves doggos."
-              />
-</div>,
-          ],
-          "className": "pic-name-city",
-        },
-        "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <img
-                  alt="Your avatar"
-                  className="profile-pic"
-                  src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-/>,
-                <RaisedButton
-                  className="change-pic"
-                  disabled={false}
-                  fullWidth={false}
-                  label="Upload New Photo"
-                  labelPosition="after"
-                  onClick={[Function]}
-                  primary={false}
-                  secondary={false}
-/>,
-              ],
-              "className": "pic-button",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "alt": "Your avatar",
-                  "className": "profile-pic",
-                  "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": "img",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "className": "change-pic",
-                  "disabled": false,
-                  "fullWidth": false,
-                  "label": "Upload New Photo",
-                  "labelPosition": "after",
-                  "onClick": [Function],
-                  "primary": false,
-                  "secondary": false,
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
-              },
-            ],
-            "type": "div",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <TextField
-                  disabled={false}
-                  floatingLabelFixed={false}
-                  fullWidth={false}
-                  multiLine={false}
-                  name="userName"
-                  onChange={[Function]}
-                  rows={1}
-                  type="text"
-                  underlineShow={true}
-                  value="lolakoala"
-/>,
-                <DropDownMenu
-                  anchorOrigin={
+            <TextField
+                        disabled={false}
+                        floatingLabelFixed={false}
+                        fullWidth={false}
+                        multiLine={false}
+                        name="userName"
+                        onChange={[Function]}
+                        rows={1}
+                        type="text"
+                        underlineShow={true}
+                        value="lolakoala"
+            />
+            <DropDownMenu
+                        anchorOrigin={
                                     Object {
-                                                      "horizontal": "left",
-                                                      "vertical": "top",
-                                                    }
-                  }
-                  animated={true}
-                  autoWidth={true}
-                  className="city-dd"
-                  disabled={false}
-                  iconButton={<NavigationArrowDropDown />}
-                  maxHeight={500}
-                  multiple={false}
-                  onChange={[Function]}
-                  openImmediately={false}
-                  value="Denver"
->
-                  <MenuItem
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                        }
+                        animated={true}
+                        autoWidth={true}
+                        className="city-dd"
+                        disabled={false}
+                        iconButton={<NavigationArrowDropDown />}
+                        maxHeight={500}
+                        multiple={false}
+                        onChange={[Function]}
+                        openImmediately={false}
+                        value="Denver"
+            >
+                        <MenuItem
                                     anchorOrigin={
-                                                      Object {
-                                                                        "horizontal": "right",
-                                                                        "vertical": "top",
-                                                                      }
+                                                Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
                                     }
                                     checked={false}
                                     desktop={false}
@@ -409,146 +233,220 @@ ShallowWrapper {
                                     insetChildren={false}
                                     primaryText="Denver"
                                     targetOrigin={
-                                                      Object {
-                                                                        "horizontal": "left",
-                                                                        "vertical": "top",
-                                                                      }
+                                                Object {
+                                                            "horizontal": "left",
+                                                            "vertical": "top",
+                                                          }
                                     }
                                     value="Denver"
-                  />
-</DropDownMenu>,
-                <TextField
-                  disabled={false}
-                  floatingLabelFixed={false}
-                  fullWidth={false}
-                  multiLine={true}
-                  name="aboutMe"
-                  onChange={[Function]}
-                  rows={3}
-                  rowsMax={5}
-                  type="text"
-                  underlineShow={true}
-                  value="Lola loves doggos."
+                        />
+            </DropDownMenu>
+            <TextField
+                        disabled={false}
+                        floatingLabelFixed={false}
+                        fullWidth={false}
+                        multiLine={true}
+                        name="aboutMe"
+                        onChange={[Function]}
+                        rows={3}
+                        rowsMax={5}
+                        type="text"
+                        underlineShow={true}
+                        value="Lola loves doggos."
+            />
+</div>,
+          "className": "pic-name-city",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <TextField
+                disabled={false}
+                floatingLabelFixed={false}
+                fullWidth={false}
+                multiLine={false}
+                name="userName"
+                onChange={[Function]}
+                rows={1}
+                type="text"
+                underlineShow={true}
+                value="lolakoala"
 />,
-              ],
-              "className": "name-city",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "disabled": false,
-                  "floatingLabelFixed": false,
-                  "fullWidth": false,
-                  "multiLine": false,
-                  "name": "userName",
-                  "onChange": [Function],
-                  "rows": 1,
-                  "type": "text",
-                  "underlineShow": true,
-                  "value": "lolakoala",
-                },
-                "ref": null,
-                "rendered": null,
-                "type": [Function],
+              <DropDownMenu
+                anchorOrigin={
+                                Object {
+                                                "horizontal": "left",
+                                                "vertical": "top",
+                                              }
+                }
+                animated={true}
+                autoWidth={true}
+                className="city-dd"
+                disabled={false}
+                iconButton={<NavigationArrowDropDown />}
+                maxHeight={500}
+                multiple={false}
+                onChange={[Function]}
+                openImmediately={false}
+                value="Denver"
+>
+                <MenuItem
+                                anchorOrigin={
+                                                Object {
+                                                                "horizontal": "right",
+                                                                "vertical": "top",
+                                                              }
+                                }
+                                checked={false}
+                                desktop={false}
+                                disabled={false}
+                                focusState="none"
+                                insetChildren={false}
+                                primaryText="Denver"
+                                targetOrigin={
+                                                Object {
+                                                                "horizontal": "left",
+                                                                "vertical": "top",
+                                                              }
+                                }
+                                value="Denver"
+                />
+</DropDownMenu>,
+              <TextField
+                disabled={false}
+                floatingLabelFixed={false}
+                fullWidth={false}
+                multiLine={true}
+                name="aboutMe"
+                onChange={[Function]}
+                rows={3}
+                rowsMax={5}
+                type="text"
+                underlineShow={true}
+                value="Lola loves doggos."
+/>,
+            ],
+            "className": "name-city",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "floatingLabelFixed": false,
+                "fullWidth": false,
+                "multiLine": false,
+                "name": "userName",
+                "onChange": [Function],
+                "rows": 1,
+                "type": "text",
+                "underlineShow": true,
+                "value": "lolakoala",
               },
-              Object {
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "anchorOrigin": Object {
+                  "horizontal": "left",
+                  "vertical": "top",
+                },
+                "animated": true,
+                "autoWidth": true,
+                "children": <MenuItem
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "right",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  checked={false}
+                  desktop={false}
+                  disabled={false}
+                  focusState="none"
+                  insetChildren={false}
+                  primaryText="Denver"
+                  targetOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  value="Denver"
+/>,
+                "className": "city-dd",
+                "disabled": false,
+                "iconButton": <NavigationArrowDropDown />,
+                "maxHeight": 500,
+                "multiple": false,
+                "onChange": [Function],
+                "openImmediately": false,
+                "value": "Denver",
+              },
+              "ref": null,
+              "rendered": Object {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
                 "props": Object {
                   "anchorOrigin": Object {
+                    "horizontal": "right",
+                    "vertical": "top",
+                  },
+                  "checked": false,
+                  "desktop": false,
+                  "disabled": false,
+                  "focusState": "none",
+                  "insetChildren": false,
+                  "primaryText": "Denver",
+                  "targetOrigin": Object {
                     "horizontal": "left",
                     "vertical": "top",
                   },
-                  "animated": true,
-                  "autoWidth": true,
-                  "children": <MenuItem
-                    anchorOrigin={
-                                        Object {
-                                                            "horizontal": "right",
-                                                            "vertical": "top",
-                                                          }
-                    }
-                    checked={false}
-                    desktop={false}
-                    disabled={false}
-                    focusState="none"
-                    insetChildren={false}
-                    primaryText="Denver"
-                    targetOrigin={
-                                        Object {
-                                                            "horizontal": "left",
-                                                            "vertical": "top",
-                                                          }
-                    }
-                    value="Denver"
-/>,
-                  "className": "city-dd",
-                  "disabled": false,
-                  "iconButton": <NavigationArrowDropDown />,
-                  "maxHeight": 500,
-                  "multiple": false,
-                  "onChange": [Function],
-                  "openImmediately": false,
                   "value": "Denver",
-                },
-                "ref": null,
-                "rendered": Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "anchorOrigin": Object {
-                      "horizontal": "right",
-                      "vertical": "top",
-                    },
-                    "checked": false,
-                    "desktop": false,
-                    "disabled": false,
-                    "focusState": "none",
-                    "insetChildren": false,
-                    "primaryText": "Denver",
-                    "targetOrigin": Object {
-                      "horizontal": "left",
-                      "vertical": "top",
-                    },
-                    "value": "Denver",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
-                "type": [Function],
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "class",
-                "props": Object {
-                  "disabled": false,
-                  "floatingLabelFixed": false,
-                  "fullWidth": false,
-                  "multiLine": true,
-                  "name": "aboutMe",
-                  "onChange": [Function],
-                  "rows": 3,
-                  "rowsMax": 5,
-                  "type": "text",
-                  "underlineShow": true,
-                  "value": "Lola loves doggos.",
                 },
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
               },
-            ],
-            "type": "div",
-          },
-        ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "disabled": false,
+                "floatingLabelFixed": false,
+                "fullWidth": false,
+                "multiLine": true,
+                "name": "aboutMe",
+                "onChange": [Function],
+                "rows": 3,
+                "rowsMax": 5,
+                "type": "text",
+                "underlineShow": true,
+                "value": "Lola loves doggos.",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       Object {
@@ -781,25 +679,6 @@ ShallowWrapper {
             className="pic-name-city"
 >
             <div
-                        className="pic-button"
-            >
-                        <img
-                                    alt="Your avatar"
-                                    className="profile-pic"
-                                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-                        />
-                        <RaisedButton
-                                    className="change-pic"
-                                    disabled={false}
-                                    fullWidth={false}
-                                    label="Upload New Photo"
-                                    labelPosition="after"
-                                    onClick={[Function]}
-                                    primary={false}
-                                    secondary={false}
-                        />
-            </div>
-            <div
                         className="name-city"
             >
                         <TextField
@@ -940,350 +819,267 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <div
-                className="pic-button"
+            "children": <div
+              className="name-city"
 >
-                <img
-                                alt="Your avatar"
-                                className="profile-pic"
-                                src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-                />
-                <RaisedButton
-                                className="change-pic"
-                                disabled={false}
-                                fullWidth={false}
-                                label="Upload New Photo"
-                                labelPosition="after"
-                                onClick={[Function]}
-                                primary={false}
-                                secondary={false}
-                />
+              <TextField
+                            disabled={false}
+                            floatingLabelFixed={false}
+                            fullWidth={false}
+                            multiLine={false}
+                            name="userName"
+                            onChange={[Function]}
+                            rows={1}
+                            type="text"
+                            underlineShow={true}
+                            value="lolakoala"
+              />
+              <DropDownMenu
+                            anchorOrigin={
+                                          Object {
+                                                        "horizontal": "left",
+                                                        "vertical": "top",
+                                                      }
+                            }
+                            animated={true}
+                            autoWidth={true}
+                            className="city-dd"
+                            disabled={false}
+                            iconButton={<NavigationArrowDropDown />}
+                            maxHeight={500}
+                            multiple={false}
+                            onChange={[Function]}
+                            openImmediately={false}
+                            value="Denver"
+              >
+                            <MenuItem
+                                          anchorOrigin={
+                                                        Object {
+                                                                      "horizontal": "right",
+                                                                      "vertical": "top",
+                                                                    }
+                                          }
+                                          checked={false}
+                                          desktop={false}
+                                          disabled={false}
+                                          focusState="none"
+                                          insetChildren={false}
+                                          primaryText="Denver"
+                                          targetOrigin={
+                                                        Object {
+                                                                      "horizontal": "left",
+                                                                      "vertical": "top",
+                                                                    }
+                                          }
+                                          value="Denver"
+                            />
+              </DropDownMenu>
+              <TextField
+                            disabled={false}
+                            floatingLabelFixed={false}
+                            fullWidth={false}
+                            multiLine={true}
+                            name="aboutMe"
+                            onChange={[Function]}
+                            rows={3}
+                            rowsMax={5}
+                            type="text"
+                            underlineShow={true}
+                            value="Lola loves doggos."
+              />
 </div>,
-              <div
-                className="name-city"
->
-                <TextField
-                                disabled={false}
-                                floatingLabelFixed={false}
-                                fullWidth={false}
-                                multiLine={false}
-                                name="userName"
-                                onChange={[Function]}
-                                rows={1}
-                                type="text"
-                                underlineShow={true}
-                                value="lolakoala"
-                />
-                <DropDownMenu
-                                anchorOrigin={
-                                                Object {
-                                                                "horizontal": "left",
-                                                                "vertical": "top",
-                                                              }
-                                }
-                                animated={true}
-                                autoWidth={true}
-                                className="city-dd"
-                                disabled={false}
-                                iconButton={<NavigationArrowDropDown />}
-                                maxHeight={500}
-                                multiple={false}
-                                onChange={[Function]}
-                                openImmediately={false}
-                                value="Denver"
-                >
-                                <MenuItem
-                                                anchorOrigin={
-                                                                Object {
-                                                                                "horizontal": "right",
-                                                                                "vertical": "top",
-                                                                              }
-                                                }
-                                                checked={false}
-                                                desktop={false}
-                                                disabled={false}
-                                                focusState="none"
-                                                insetChildren={false}
-                                                primaryText="Denver"
-                                                targetOrigin={
-                                                                Object {
-                                                                                "horizontal": "left",
-                                                                                "vertical": "top",
-                                                                              }
-                                                }
-                                                value="Denver"
-                                />
-                </DropDownMenu>
-                <TextField
-                                disabled={false}
-                                floatingLabelFixed={false}
-                                fullWidth={false}
-                                multiLine={true}
-                                name="aboutMe"
-                                onChange={[Function]}
-                                rows={3}
-                                rowsMax={5}
-                                type="text"
-                                underlineShow={true}
-                                value="Lola loves doggos."
-                />
-</div>,
-            ],
             "className": "pic-name-city",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <img
-                    alt="Your avatar"
-                    className="profile-pic"
-                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <TextField
+                  disabled={false}
+                  floatingLabelFixed={false}
+                  fullWidth={false}
+                  multiLine={false}
+                  name="userName"
+                  onChange={[Function]}
+                  rows={1}
+                  type="text"
+                  underlineShow={true}
+                  value="lolakoala"
 />,
-                  <RaisedButton
-                    className="change-pic"
-                    disabled={false}
-                    fullWidth={false}
-                    label="Upload New Photo"
-                    labelPosition="after"
-                    onClick={[Function]}
-                    primary={false}
-                    secondary={false}
+                <DropDownMenu
+                  anchorOrigin={
+                                    Object {
+                                                      "horizontal": "left",
+                                                      "vertical": "top",
+                                                    }
+                  }
+                  animated={true}
+                  autoWidth={true}
+                  className="city-dd"
+                  disabled={false}
+                  iconButton={<NavigationArrowDropDown />}
+                  maxHeight={500}
+                  multiple={false}
+                  onChange={[Function]}
+                  openImmediately={false}
+                  value="Denver"
+>
+                  <MenuItem
+                                    anchorOrigin={
+                                                      Object {
+                                                                        "horizontal": "right",
+                                                                        "vertical": "top",
+                                                                      }
+                                    }
+                                    checked={false}
+                                    desktop={false}
+                                    disabled={false}
+                                    focusState="none"
+                                    insetChildren={false}
+                                    primaryText="Denver"
+                                    targetOrigin={
+                                                      Object {
+                                                                        "horizontal": "left",
+                                                                        "vertical": "top",
+                                                                      }
+                                    }
+                                    value="Denver"
+                  />
+</DropDownMenu>,
+                <TextField
+                  disabled={false}
+                  floatingLabelFixed={false}
+                  fullWidth={false}
+                  multiLine={true}
+                  name="aboutMe"
+                  onChange={[Function]}
+                  rows={3}
+                  rowsMax={5}
+                  type="text"
+                  underlineShow={true}
+                  value="Lola loves doggos."
 />,
-                ],
-                "className": "pic-button",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "alt": "Your avatar",
-                    "className": "profile-pic",
-                    "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": "img",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "className": "change-pic",
-                    "disabled": false,
-                    "fullWidth": false,
-                    "label": "Upload New Photo",
-                    "labelPosition": "after",
-                    "onClick": [Function],
-                    "primary": false,
-                    "secondary": false,
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
-                },
               ],
-              "type": "div",
+              "className": "name-city",
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <TextField
-                    disabled={false}
-                    floatingLabelFixed={false}
-                    fullWidth={false}
-                    multiLine={false}
-                    name="userName"
-                    onChange={[Function]}
-                    rows={1}
-                    type="text"
-                    underlineShow={true}
-                    value="lolakoala"
-/>,
-                  <DropDownMenu
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "disabled": false,
+                  "floatingLabelFixed": false,
+                  "fullWidth": false,
+                  "multiLine": false,
+                  "name": "userName",
+                  "onChange": [Function],
+                  "rows": 1,
+                  "type": "text",
+                  "underlineShow": true,
+                  "value": "lolakoala",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "anchorOrigin": Object {
+                    "horizontal": "left",
+                    "vertical": "top",
+                  },
+                  "animated": true,
+                  "autoWidth": true,
+                  "children": <MenuItem
                     anchorOrigin={
+                                        Object {
+                                                            "horizontal": "right",
+                                                            "vertical": "top",
+                                                          }
+                    }
+                    checked={false}
+                    desktop={false}
+                    disabled={false}
+                    focusState="none"
+                    insetChildren={false}
+                    primaryText="Denver"
+                    targetOrigin={
                                         Object {
                                                             "horizontal": "left",
                                                             "vertical": "top",
                                                           }
                     }
-                    animated={true}
-                    autoWidth={true}
-                    className="city-dd"
-                    disabled={false}
-                    iconButton={<NavigationArrowDropDown />}
-                    maxHeight={500}
-                    multiple={false}
-                    onChange={[Function]}
-                    openImmediately={false}
                     value="Denver"
->
-                    <MenuItem
-                                        anchorOrigin={
-                                                            Object {
-                                                                                "horizontal": "right",
-                                                                                "vertical": "top",
-                                                                              }
-                                        }
-                                        checked={false}
-                                        desktop={false}
-                                        disabled={false}
-                                        focusState="none"
-                                        insetChildren={false}
-                                        primaryText="Denver"
-                                        targetOrigin={
-                                                            Object {
-                                                                                "horizontal": "left",
-                                                                                "vertical": "top",
-                                                                              }
-                                        }
-                                        value="Denver"
-                    />
-</DropDownMenu>,
-                  <TextField
-                    disabled={false}
-                    floatingLabelFixed={false}
-                    fullWidth={false}
-                    multiLine={true}
-                    name="aboutMe"
-                    onChange={[Function]}
-                    rows={3}
-                    rowsMax={5}
-                    type="text"
-                    underlineShow={true}
-                    value="Lola loves doggos."
 />,
-                ],
-                "className": "name-city",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "disabled": false,
-                    "floatingLabelFixed": false,
-                    "fullWidth": false,
-                    "multiLine": false,
-                    "name": "userName",
-                    "onChange": [Function],
-                    "rows": 1,
-                    "type": "text",
-                    "underlineShow": true,
-                    "value": "lolakoala",
-                  },
-                  "ref": null,
-                  "rendered": null,
-                  "type": [Function],
+                  "className": "city-dd",
+                  "disabled": false,
+                  "iconButton": <NavigationArrowDropDown />,
+                  "maxHeight": 500,
+                  "multiple": false,
+                  "onChange": [Function],
+                  "openImmediately": false,
+                  "value": "Denver",
                 },
-                Object {
+                "ref": null,
+                "rendered": Object {
                   "instance": null,
                   "key": undefined,
                   "nodeType": "class",
                   "props": Object {
                     "anchorOrigin": Object {
+                      "horizontal": "right",
+                      "vertical": "top",
+                    },
+                    "checked": false,
+                    "desktop": false,
+                    "disabled": false,
+                    "focusState": "none",
+                    "insetChildren": false,
+                    "primaryText": "Denver",
+                    "targetOrigin": Object {
                       "horizontal": "left",
                       "vertical": "top",
                     },
-                    "animated": true,
-                    "autoWidth": true,
-                    "children": <MenuItem
-                      anchorOrigin={
-                                            Object {
-                                                                  "horizontal": "right",
-                                                                  "vertical": "top",
-                                                                }
-                      }
-                      checked={false}
-                      desktop={false}
-                      disabled={false}
-                      focusState="none"
-                      insetChildren={false}
-                      primaryText="Denver"
-                      targetOrigin={
-                                            Object {
-                                                                  "horizontal": "left",
-                                                                  "vertical": "top",
-                                                                }
-                      }
-                      value="Denver"
-/>,
-                    "className": "city-dd",
-                    "disabled": false,
-                    "iconButton": <NavigationArrowDropDown />,
-                    "maxHeight": 500,
-                    "multiple": false,
-                    "onChange": [Function],
-                    "openImmediately": false,
                     "value": "Denver",
-                  },
-                  "ref": null,
-                  "rendered": Object {
-                    "instance": null,
-                    "key": undefined,
-                    "nodeType": "class",
-                    "props": Object {
-                      "anchorOrigin": Object {
-                        "horizontal": "right",
-                        "vertical": "top",
-                      },
-                      "checked": false,
-                      "desktop": false,
-                      "disabled": false,
-                      "focusState": "none",
-                      "insetChildren": false,
-                      "primaryText": "Denver",
-                      "targetOrigin": Object {
-                        "horizontal": "left",
-                        "vertical": "top",
-                      },
-                      "value": "Denver",
-                    },
-                    "ref": null,
-                    "rendered": null,
-                    "type": [Function],
-                  },
-                  "type": [Function],
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "class",
-                  "props": Object {
-                    "disabled": false,
-                    "floatingLabelFixed": false,
-                    "fullWidth": false,
-                    "multiLine": true,
-                    "name": "aboutMe",
-                    "onChange": [Function],
-                    "rows": 3,
-                    "rowsMax": 5,
-                    "type": "text",
-                    "underlineShow": true,
-                    "value": "Lola loves doggos.",
                   },
                   "ref": null,
                   "rendered": null,
                   "type": [Function],
                 },
-              ],
-              "type": "div",
-            },
-          ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "disabled": false,
+                  "floatingLabelFixed": false,
+                  "fullWidth": false,
+                  "multiLine": true,
+                  "name": "aboutMe",
+                  "onChange": [Function],
+                  "rows": 3,
+                  "rowsMax": 5,
+                  "type": "text",
+                  "underlineShow": true,
+                  "value": "Lola loves doggos.",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
         Object {
