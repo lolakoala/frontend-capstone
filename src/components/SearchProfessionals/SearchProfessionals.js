@@ -83,7 +83,7 @@ class SearchProfessionals extends Component {
     const submitButton = <RaisedButton label="Submit" onClick={this.handleSubmit} />;
 
     return (
-      <div>
+      <div className='search-profs'>
         <div className="search-options">
           <DropDownMenu value={searchQuery} onChange={this.handleQuery}>
             <MenuItem value="select query" primaryText="Select search query." />

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { DropDownMenu, MenuItem, RaisedButton } from 'material-ui';
 import { Redirect } from 'react-router-dom';
 import backend from './backend';
+import css from './SearchBuddies.css';
 
 class SearchBuddies extends Component {
   constructor(props) {
@@ -55,7 +56,7 @@ class SearchBuddies extends Component {
     const { allChallenges } = this.props;
 
     return (
-      <div>
+      <div className='search-buddies'>
         <div className="search-options">
           <DropDownMenu value={this.state.value} onChange={this.handleChange}>
             {allChallenges.map((challenge, index) => {
