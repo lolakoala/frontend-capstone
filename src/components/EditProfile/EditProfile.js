@@ -74,7 +74,7 @@ class EditProfile extends Component {
     return (<div>
       <div className="pic-name-city">
         {/* if user has photo, display photo */}
-        <div className='pic-button'>
+        {/* <div className='pic-button'>
           <img
             // placeholder img url
             src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
@@ -82,7 +82,7 @@ class EditProfile extends Component {
             className="profile-pic"
           />
           <RaisedButton label="Upload New Photo" onClick={this.uploadPhoto} className="change-pic"/>
-        </div>
+        </div> */}
         <div className="name-city">
           <TextField
             name="userName"
