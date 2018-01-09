@@ -243,19 +243,19 @@ const deleteProf = (user, prof) => {
 };
 
 export const toggleFavorite = (user, type, personObject, isFave) => {
-  if (type === 'buddy' && !isFave) {
+  if (type === 'buddy' && isFave) {
     postBuddy(user, personObject);
     return {
       type: 'ADD_BUDDY',
       personObject
     };
-  } else if (type === 'buddy' && isFave) {
+  } else if (type === 'buddy' && !isFave) {
     deleteBuddy(user, personObject);
     return {
       type: 'DELETE_BUDDY',
       personObject
     };
-  } else if (!isFave) {
+  } else if (isFave) {
     postProf(user, personObject);
     return {
       type: 'ADD_PROF',
