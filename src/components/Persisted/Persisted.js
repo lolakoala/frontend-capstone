@@ -10,6 +10,7 @@ class Persisted extends Component {
   };
 
   goHome = () => {
+    this.props.clearSearchResults();
     this.props.history.push('/dash');
   }
 
@@ -84,5 +85,6 @@ Persisted.propTypes = {
   currentUser: PropTypes.object,
   location: PropTypes.object,
   signOut: PropTypes.func,
-  history: PropTypes.object
+  history: PropTypes.object,
+  clearSearchResults: PropTypes.func
 };

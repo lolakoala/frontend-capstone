@@ -1,6 +1,6 @@
 import Persisted from '../components/Persisted/Persisted.js';
 import { connect } from 'react-redux';
-import { signOut } from '../actions/actions';
+import { signOut, clearSearchResults } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser
@@ -9,6 +9,9 @@ const mapStateToProps =  store => ({
 const mapDispatchToProps = (dispatch) => ({
   signOut: () => {
     dispatch(signOut());
+  },
+  clearSearchResults: () => {
+    dispatch(clearSearchResults());
   }
 });
 
