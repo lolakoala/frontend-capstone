@@ -111,6 +111,7 @@ ShallowWrapper {
 </div>,
         <p />,
       ],
+      "className": "search-buddies",
     },
     "ref": null,
     "rendered": Array [
@@ -428,6 +429,7 @@ ShallowWrapper {
 </div>,
           <p />,
         ],
+        "className": "search-buddies",
       },
       "ref": null,
       "rendered": Array [

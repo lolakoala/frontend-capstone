@@ -36,11 +36,6 @@ ShallowWrapper {
         <div
           className="pic-name-city"
 >
-          <img
-                    alt="Your avatar"
-                    className="profile-pic"
-                    src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-          />
           <div
                     className="name-city"
           >
@@ -126,100 +121,78 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <img
-              alt="Your avatar"
-              className="profile-pic"
-              src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-/>,
-            <div
-              className="name-city"
+          "children": <div
+            className="name-city"
 >
-              <h3>
-                            lolakoala
-              </h3>
-              <h4>
-                            Denver
-              </h4>
-              <p>
-                            Lola loves doggos.
-              </p>
+            <h3>
+                        lolakoala
+            </h3>
+            <h4>
+                        Denver
+            </h4>
+            <p>
+                        Lola loves doggos.
+            </p>
 </div>,
-          ],
           "className": "pic-name-city",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "alt": "Your avatar",
-              "className": "profile-pic",
-              "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-            },
-            "ref": null,
-            "rendered": null,
-            "type": "img",
-          },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "host",
-            "props": Object {
-              "children": Array [
-                <h3>
-                  lolakoala
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <h3>
+                lolakoala
 </h3>,
-                <h4>
-                  Denver
+              <h4>
+                Denver
 </h4>,
-                <p>
-                  Lola loves doggos.
+              <p>
+                Lola loves doggos.
 </p>,
-              ],
-              "className": "name-city",
-            },
-            "ref": null,
-            "rendered": Array [
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "lolakoala",
-                },
-                "ref": null,
-                "rendered": "lolakoala",
-                "type": "h3",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Denver",
-                },
-                "ref": null,
-                "rendered": "Denver",
-                "type": "h4",
-              },
-              Object {
-                "instance": null,
-                "key": undefined,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "Lola loves doggos.",
-                },
-                "ref": null,
-                "rendered": "Lola loves doggos.",
-                "type": "p",
-              },
             ],
-            "type": "div",
+            "className": "name-city",
           },
-        ],
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "lolakoala",
+              },
+              "ref": null,
+              "rendered": "lolakoala",
+              "type": "h3",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Denver",
+              },
+              "ref": null,
+              "rendered": "Denver",
+              "type": "h4",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Lola loves doggos.",
+              },
+              "ref": null,
+              "rendered": "Lola loves doggos.",
+              "type": "p",
+            },
+          ],
+          "type": "div",
+        },
         "type": "div",
       },
       Object {
@@ -442,11 +415,6 @@ ShallowWrapper {
           <div
             className="pic-name-city"
 >
-            <img
-                        alt="Your avatar"
-                        className="profile-pic"
-                        src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-            />
             <div
                         className="name-city"
             >
@@ -532,100 +500,78 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <img
-                alt="Your avatar"
-                className="profile-pic"
-                src="https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg"
-/>,
-              <div
-                className="name-city"
+            "children": <div
+              className="name-city"
 >
-                <h3>
-                                lolakoala
-                </h3>
-                <h4>
-                                Denver
-                </h4>
-                <p>
-                                Lola loves doggos.
-                </p>
+              <h3>
+                            lolakoala
+              </h3>
+              <h4>
+                            Denver
+              </h4>
+              <p>
+                            Lola loves doggos.
+              </p>
 </div>,
-            ],
             "className": "pic-name-city",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "alt": "Your avatar",
-                "className": "profile-pic",
-                "src": "https://speakerdata2.s3.amazonaws.com/photo/image/839843/thats-what-she-said-0413-1-lgn.jpg",
-              },
-              "ref": null,
-              "rendered": null,
-              "type": "img",
-            },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "host",
-              "props": Object {
-                "children": Array [
-                  <h3>
-                    lolakoala
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h3>
+                  lolakoala
 </h3>,
-                  <h4>
-                    Denver
+                <h4>
+                  Denver
 </h4>,
-                  <p>
-                    Lola loves doggos.
+                <p>
+                  Lola loves doggos.
 </p>,
-                ],
-                "className": "name-city",
-              },
-              "ref": null,
-              "rendered": Array [
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "lolakoala",
-                  },
-                  "ref": null,
-                  "rendered": "lolakoala",
-                  "type": "h3",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Denver",
-                  },
-                  "ref": null,
-                  "rendered": "Denver",
-                  "type": "h4",
-                },
-                Object {
-                  "instance": null,
-                  "key": undefined,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Lola loves doggos.",
-                  },
-                  "ref": null,
-                  "rendered": "Lola loves doggos.",
-                  "type": "p",
-                },
               ],
-              "type": "div",
+              "className": "name-city",
             },
-          ],
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "lolakoala",
+                },
+                "ref": null,
+                "rendered": "lolakoala",
+                "type": "h3",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Denver",
+                },
+                "ref": null,
+                "rendered": "Denver",
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Lola loves doggos.",
+                },
+                "ref": null,
+                "rendered": "Lola loves doggos.",
+                "type": "p",
+              },
+            ],
+            "type": "div",
+          },
           "type": "div",
         },
         Object {
