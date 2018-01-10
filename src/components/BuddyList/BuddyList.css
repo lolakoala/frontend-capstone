@@ -3,6 +3,13 @@
   font-weight: bold;
 }
 
+.buddycard {
+  border: 1px solid #2F9C95;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
 .username-faveicon {
   display: flex;
   justify-content: flex-start;
@@ -23,6 +30,11 @@
 .add-buddy {
   position: absolute;
   right: 0;
+}
+
+.username-faveicon .plus-minus {
+  position: absolute;
+  right: 70px;
 }
 
 .add-buddy:hover {
@@ -51,12 +63,13 @@
   color: #253031;
 }
 
-.buddy-about img {
+.plus-minus,
+ {
   height: 40px;
   width: 40px;
 }
 
-.buddy-about img:hover {
+.plus-minus:hover {
   cursor: pointer;
   height: 50px;
   width: 50px;

@@ -16,6 +16,11 @@
   width: 50px;
 }
 
+.profname-faveicon .plus-minus {
+  position: absolute;
+  right: 70px;
+}
+
 .proflist-shell {
   margin-right: 20px;
 }
