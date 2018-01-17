@@ -19,7 +19,7 @@ class ImageUpload extends Component {
     let imageFormData = new FormData();
 
     imageFormData.append('imageFile', this.state.file);
-    this.props.addImage(imageFormData)
+    this.props.addImage(imageFormData);
     // fetch(`${backend}/api/v1/users/${this.props.currentUser.id}/upload`, {
     //   method: 'POST',
     //   body: JSON.stringify(imageFormData),
