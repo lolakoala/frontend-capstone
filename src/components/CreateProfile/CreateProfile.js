@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
-import css from './CreateProfile.css';
+import './CreateProfile.css';
 import backend from '../../utils/backend';
+import ImageUpload from '../ImageUpload/ImageUpload';
 
 class CreateProfile extends Component {
   constructor() {
@@ -64,7 +65,8 @@ class CreateProfile extends Component {
       user_about: newUser.aboutMe,
       user_location: newUser.city,
       user_email: newUser.email,
-      user_challenges: newUser.userChallenges
+      user_challenges: newUser.userChallenges,
+      user_photo: this.props.userImage
     };
 
     fetch(`${backend}/api/v1/users`, {
@@ -89,7 +91,11 @@ class CreateProfile extends Component {
       <div className='pic-name-city'>
         <div className='pic-button'>
           {/* on upload, display photo */}
-          <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
+          {/* <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} /> */}
+          <ImageUpload
+            currentUser={this.props.currentUser}
+            addImage={this.props.addImage}
+          />
         </div>
         <div className='name-city'>
           <TextField
@@ -131,5 +137,7 @@ CreateProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  submitProfile: PropTypes.func
+  submitProfile: PropTypes.func,
+  addImage: PropTypes.func,
+  userImage: PropTypes.object
 };
