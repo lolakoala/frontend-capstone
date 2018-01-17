@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Chip, RaisedButton, TextField } from 'material-ui';
-import css from './CreateProfile.css';
+import './CreateProfile.css';
 import backend from '../../utils/backend';
+import ImageUpload from '../ImageUpload/ImageUpload';
 
 class CreateProfile extends Component {
   constructor() {
@@ -89,7 +90,8 @@ class CreateProfile extends Component {
       <div className='pic-name-city'>
         <div className='pic-button'>
           {/* on upload, display photo */}
-          <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} />
+          {/* <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} /> */}
+          <ImageUpload />
         </div>
         <div className='name-city'>
           <TextField
