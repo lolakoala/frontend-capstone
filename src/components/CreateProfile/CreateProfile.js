@@ -65,7 +65,8 @@ class CreateProfile extends Component {
       user_about: newUser.aboutMe,
       user_location: newUser.city,
       user_email: newUser.email,
-      user_challenges: newUser.userChallenges
+      user_challenges: newUser.userChallenges,
+      user_photo: this.props.userImage
     };
 
     fetch(`${backend}/api/v1/users`, {
@@ -91,7 +92,10 @@ class CreateProfile extends Component {
         <div className='pic-button'>
           {/* on upload, display photo */}
           {/* <RaisedButton label="Upload Photo" onClick={this.uploadPhoto} /> */}
-          <ImageUpload />
+          <ImageUpload
+            currentUser={this.props.currentUser}
+            addImage={this.props.addImage}
+          />
         </div>
         <div className='name-city'>
           <TextField
@@ -133,5 +137,7 @@ CreateProfile.propTypes = {
   addUserChallenge: PropTypes.func,
   removeUserChallenge: PropTypes.func,
   userChallenges: PropTypes.array,
-  submitProfile: PropTypes.func
+  submitProfile: PropTypes.func,
+  addImage: PropTypes.func,
+  userImage: PropTypes.object
 };

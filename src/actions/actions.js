@@ -262,3 +262,10 @@ export const toggleFavorite = (user, type, personObject, isFave) => {
     };
   }
 };
+
+export const addImage = imageStuff => {
+  return {
+    type: 'ADD_IMAGE',
+    imageStuff
+  };
+};

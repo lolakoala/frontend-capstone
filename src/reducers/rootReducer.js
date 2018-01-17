@@ -8,6 +8,7 @@ import buddySearch from './buddySearch';
 import userBuddies from './userBuddies';
 import profSearch from './profSearch';
 import userProfs from './userProfs';
+import userImage from './userImage';
 
 const rootReducer = combineReducers({
   currentUser,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   buddySearch,
   userBuddies,
   profSearch,
-  userProfs
+  userProfs,
+  userImage
 });
 
 export default rootReducer;

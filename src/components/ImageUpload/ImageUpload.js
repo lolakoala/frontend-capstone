@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import backend from '../../utils/backend';
+import PropTypes from 'prop-types';
 
 class ImageUpload extends Component {
   constructor(props) {
@@ -13,7 +15,21 @@ class ImageUpload extends Component {
 
   _handleSubmit(event) {
     event.preventDefault();
-    // TODO: do something with -> this.state.file
+    // probably just put it in the store
+    let imageFormData = new FormData();
+
+    imageFormData.append('imageFile', this.state.file);
+    this.props.addImage(imageFormData)
+    // fetch(`${backend}/api/v1/users/${this.props.currentUser.id}/upload`, {
+    //   method: 'POST',
+    //   body: JSON.stringify(imageFormData),
+    //   headers: {
+    //     'Accept': 'application/json',
+    //     'Content-Type': 'application/json'
+    //   }
+    // })
+    //   .then(res => console.log(res.status))
+    //   .catch(error => { throw error; });
   }
 
   _handleImageChange(event) {
@@ -53,3 +69,8 @@ class ImageUpload extends Component {
 }
 
 export default ImageUpload;
+
+ImageUpload.propTypes = {
+  currentUser: PropTypes.object,
+  addImage: PropTypes.func
+};

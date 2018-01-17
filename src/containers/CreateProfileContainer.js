@@ -4,13 +4,15 @@ import {
   getAllChallenges,
   addUserChallenge,
   submitProfile,
-  removeUserChallenge
+  removeUserChallenge,
+  addImage
 } from '../actions/actions';
 
 const mapStateToProps =  store => ({
   currentUser: store.currentUser,
   allChallenges: store.allChallenges,
-  userChallenges: store.userChallenges
+  userChallenges: store.userChallenges,
+  userImage: store.userImage
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -25,6 +27,9 @@ const mapDispatchToProps = dispatch => ({
   },
   submitProfile: (newUser, id) => {
     dispatch(submitProfile(newUser, id));
+  },
+  addImage: imageStuff => {
+    dispatch(addImage(imageStuff));
   }
 });
 
